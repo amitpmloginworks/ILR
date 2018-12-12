@@ -1,0 +1,26 @@
+page-ourvoice {
+    ion-header {
+        background: #fff;
+    }
+    .box-3 {
+        width: 32% !important;
+    }
+    .nav-bar-style{
+        display: block;
+        text-align: right;
+        margin-top: -22px;
+        margin-right: 9px;
+    }
+    .nav-bar-img{
+        display: inline-block;
+        height: 13px;
+        margin-right: 9px;
+    }
+    .label-md {
+    margin-top: 17px;
+    color:#FFF;
+    }
+
+    .item-md.item-block .item-inner { 
+         border-bottom:none } .item-md { border-bottom: 1px solid #ccc; }
+}

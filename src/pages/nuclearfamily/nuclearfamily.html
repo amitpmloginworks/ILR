@@ -1,0 +1,72 @@
+<!--
+  Generated template for the NuclearfamilyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content >
+  
+  <div class="outer-div">
+
+      <div class="left-div">
+      <img style="border-radius: 50%;" [src]="imageProfile1" >
+      <div style="width:35%;    margin-left: 35px; margin-top: -25px; ">
+      <img src="assets/icon/cross.png" (click)="uploadpicture(1)" >
+      </div>
+      </div>
+
+      <div class="center-div">
+        <img text-center style="border-radius: 50%; display:block;margin:auto;" [src]="imageProfile2" >
+        <div style="width: 35%; margin: auto; text-align: center; margin-left: 36px; display: block; margin-top: -17px; ">
+        <img src="assets/icon/cross.png" (click)="uploadpicture(2)">
+        </div>
+        <span style="display:block;margin:auto;text-align:center">me</span>
+       </div>
+      
+      <div class="left-arrow">
+        <img text-center  src="assets/imgs/left-arrow.png" >
+      </div>
+
+   <div *ngIf="mapsibbling==true">
+
+      <div  class="right-arrow" *ngIf="mapsibblingforone">
+        <img text-center  src="assets/imgs/right-arrow.png" >
+      </div>
+      <div   *ngIf="mapsibblingfortwo" class="down-arrow" >
+        <img text-center src="assets/imgs/down-arrow.png" >
+      </div>  
+
+      <div class="right-div">
+
+
+        <div *ngIf="mapsibblingforone">
+        <img style="border-radius: 50%;margin-bottom:30px;" [src]="imageProfile3" >
+          <div style="width: 35%; text-align: center; margin-left: 36px; display: block; margin-top: -46px; ">
+        <img src="assets/icon/cross.png" (click)="uploadpicture(3)" >
+        </div>
+        </div>
+       
+       <div *ngIf="mapsibblingfortwo">
+        <div style="margin-top: 29px;">
+          <img style="border-radius: 50%;" [src]="imageProfile4" > 
+        <div style="width: 35%; text-align: center; margin-left: 36px; display: block; margin-top: -17px; ">
+          <img src="assets/icon/cross.png" (click)="uploadpicture(4)" >
+        </div>
+      </div>
+      </div>
+      </div> 
+    </div>
+       </div>
+
+<button ion-button full color="redtheme" style="position:relative;bottom:15%;top:50%;" (click)="navigateToTermsAndConditions()">Save</button> 
+</ion-content>
+
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+<!--
+  Generated template for the ImagzinedetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-header >
+    <headerbar></headerbar>
+  
+  
+  </ion-header>
+  <ion-content  padding>
+     <!-- <button style="margin-top: 42px; margin-top: 42px;
+     position: absolute;
+     right: 18px;" ion-button (click)="tap()">tap</button>
+     <div  *ngIf="popover==true" style="height: 10px;
+     width: 10px;
+     background-color: red;
+     position: absolute;
+     /* left: 27px; */
+     right: 21px;
+     height: 130px;
+     width: 133px;    top: 75px; ">
+  
+     </div> -->
+     <ion-fab  right edge>
+        <button ion-fab color="redtheme" ion-fab mini><img src="assets/asizesmall.png"></button>
+        <ion-fab-list side="left">
+          <button  color="redtheme" (click)="changefontsize(14)" ion-fab  ion-fab mini><img src="assets/asize.png"></button>
+          <button  color="redtheme" (click)="changefontsize(18)" ion-fab ion-fab mini><img src="assets/asizelarge.png" ></button>
+          <button  color="redtheme" (click)="changefontsize(22)" ion-fab ion-fab mini><img src="assets/asizeverylarge.png" ></button>
+        </ion-fab-list>
+      </ion-fab>
+  <ion-fab>
+      <button *ngIf="heart==false" (click)="contentFav()" ion-fab  style="background-color: #f56b6b;" color="redtheme" ion-fab mini><img src="assets/heart_1.png"></button>
+      <button *ngIf="heart==true" (click)="contentFav()" ion-fab   color="redtheme" ion-fab mini><img src="assets/heart_2.png"></button>
+    </ion-fab>
+     
+   <ion-list style="margin-top: 103px;" >
+       <div id="content_data" [innerHTML]="htmledittexts">
+       </div> 
+       <ion-row style="
+       margin-top: 4px;">
+          <ion-col>
+             <div style="color:#4F4F52;font-weight:700">{{totalcomment}} comments</div>
+          </ion-col>
+          <ion-col  style="display: flex;
+             justify-content: flex-end;" >
+             <div style="    color: #4F4F52;font-weight:700">{{totalviews}} Views</div>
+          </ion-col>
+       </ion-row>
+      
+          <ion-col col-12 >
+            
+               <div class="like-div">
+                 <div class="grid" >
+                    <div class="emoji1" (click)="share('1')">
+                        <img class="img-emoji" src=" assets/icon/Asset1.png">
+                       <span>{{emoji1}}</span>
+                       <br>
+                       <p class="p-moji" >Like</p>
+                    </div>
+                    <div class="emoji2"  (click)="share('5')">
+                        <img class="img-emoji" src="assets/icon/Asset2.png">
+                        <span>{{emoji2}}</span>
+                        <br>
+                        <p class="p-moji">Happy</p>
+                    </div>
+                    <div class="emoji3"  (click)="share('2')">
+                        <img class="img-emoji" src=" assets/icon/Asset3.png">
+                        <span>{{emoji3}}</span>
+                       <br>
+                       <p class="p-moji">Surprised</p>
+                    </div>
+                    <div class="emoji4"  (click)="share('3')">
+                        <img class="img-emoji" src="assets/icon/Asset4.png">
+                        <span>{{emoji4}}</span>
+                        <br>
+                        <p class="p-moji">Sad</p>
+                    </div>
+                    <div class="emoji5"  (click)="share('4')">
+                        <img class="img-emoji" src="assets/icon/Asset5.png">
+                        <span>{{emoji5}}</span>
+                        <br>
+                        <p class="p-moji">Angry</p>
+                    </div>
+                 </div>
+               </div>
+              <button ion-button icon-left clear small style=" width: 100%; text-transform: capitalize;" (click)="likes()"  >
+           
+             </button>
+          </ion-col>
+         <ion-row style="    margin-top: -16px;
+         margin-left: 5px;">
+          <ion-col col-11 style="border: 1px solid #eaeaea;" >
+             <button ion-button icon-left clear small style="width: 100%; text-transform: capitalize;" (click)="expandItem1()" >
+                <img style="width:18px " src="assets/imgs/icons/chat.png">
+                <div style="   color: #575d69;    margin-left: 6px;">Comment</div>
+             </button>
+          </ion-col>
+          <ion-col col-1></ion-col>
+          </ion-row>
+  
+    </ion-list>
+    <div *ngIf="hide" style="    margin-bottom: 50px;" >
+       <ion-list no-lines>  
+          <ion-item *ngFor="let value of comments" no-lines>
+             <ion-avatar item-start>
+                <img [src]="value.user_image">
+             </ion-avatar>
+             <div class="comments-style">
+                <p  style="font-weight: 700;" text-wrap>{{value.first_name}}</p>
+                <p text-wrap>{{value.comment}}</p>
+             </div>
+          </ion-item>
+       </ion-list>
+    </div> 
+  </ion-content>
+  <ion-footer style="border: 1px solid transparent;" *ngIf="hide">
+    <ion-toolbar>
+       <div style="background-color: #ecebeb;;
+          height: 37px;
+          width: 88%;
+          margin-left: 18px;">   
+          <ion-input style="width: 82%;" type="text" value="" [(ngModel)]="msginput"  #usrid (keyup)="commentsAbuse(usrid.value)"  placeholder="Write a comment"></ion-input>
+          <button style="    width: 17%;
+             right: -82%;
+             top: -46px;" clear ion-button icon-right color="homeclr" (click)="msgclick()">
+          <img src="assets/imgs/icons/send.png" >
+          </button>      
+       </div>
+    </ion-toolbar>
+  </ion-footer>
+  
+  
+  

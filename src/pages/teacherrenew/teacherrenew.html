@@ -1,0 +1,58 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <headerbar></headerbar> 
+</ion-header>
+
+<ion-content >
+  <div>
+    <div style="padding-left: 20px;">
+      <ion-row>
+        <ion-col col-12 no-padding style="font-size: 2.0rem; font-family: Century Gothic;">
+         Active Subscription :
+        </ion-col>
+        <ion-col col-12 no-padding style="font-size: 1.6rem;font-family: Century Gothic Regular; margin-top: 3px;
+        margin-bottom: 3px;">
+         Magazine : {{ MagazineName }}
+        </ion-col>
+        
+        <ion-col col-12 no-padding  style="font-size: 1.6rem; font-family: Century Gothic Regular;margin-bottom: 5px;">
+          Valid Until {{ MagazineExpiry }}
+        </ion-col>
+        <ion-col col-12 no-padding >
+          <button ion-button class="btnRenew" #lock (mouseover)="lock.isHover = true" (mouseout)="lock.isHover = false" >Renew Subscription</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+<ion-row >
+<ion-col (click)="goToPrevious()"  col-2 no-padding class="col-left">       
+          <ion-icon style="margin-left:10%" item-left class="slider-arrow-icon" >
+            <img width=12 src="assets/icon/leftarrow.png" ></ion-icon>
+  </ion-col>
+  <ion-col col-8 no-padding class="col-middle">
+      <ion-slides no-padding  (ionSlideDidChange)="slideChanged()"   slidesPerView="2.3" >
+          <ion-slide   (click)="selectedImage(i)"  no-padding *ngFor="let cards of magazine_list;let i=index">
+            
+    <img id="x_{{i}}" [src]=cards.image style="max-height: 100vh !important; max-width: 100vw !important;" >
+          </ion-slide>
+      </ion-slides>
+  </ion-col>
+  <ion-col col-2 no-padding class="col-right" (click)="goToNextSlide()">
+      <ion-icon item-right class="slider-arrow-icon" ><img width=12 src="assets/icon/rightarrow.png" ></ion-icon>
+    </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col col-3></ion-col>
+      <ion-col col-6 text-center>
+          <button ion-button [disabled]="buttonDisabled" no-margin no-padding style="box-shadow:none;background-color: #ffffff; height: 10.4rem !important; -webkit-box-shadow:none;" (click)="next()" >
+              <img src="assets/imgs/nextbtn.png" style="    width: 52%;" >
+      </button>
+      </ion-col>
+      <ion-col col-3></ion-col> 
+      </ion-row>
+</ion-content>

@@ -1,0 +1,62 @@
+
+
+<ion-header>
+   <headerbar></headerbar>
+</ion-header>
+<ion-content >
+   <ion-segment style="margin-top: 56px;" [(ngModel)]="chooseOptions" color="primary" (ionChange)="segmentChanged($event)">
+   <ion-segment-button value="Create">
+      Create Event
+   </ion-segment-button>
+   <ion-segment-button value="Join">
+      Join Event
+   </ion-segment-button>
+   </ion-segment>
+   <div *ngIf="chooseOptions=='Create'">
+      <ion-item >
+         <ion-label floating>Event Name</ion-label>
+         <ion-input  type="text" #usrid (keyup)="dublicateCheck(usrid.value)" [(ngModel)]="getevents">
+         </ion-input>
+      </ion-item>  
+      <p *ngIf="existalert==true" style="color:red;margin-left: 13px; ">{{textalert}}</p>
+      <div class="uploadimg" (click)="uploadpicture()">
+         <img class="image-profile" [src]="image" >
+         <p class="p-upload-style">Upload Event Image</p>
+      </div>    
+      <p *ngIf="existalert3==true" style="color:red;margin-left: 13px; ">{{imagealert}}</p>
+      <ion-item style=" margin-top: 26px;">
+         <ion-label>Event Date</ion-label>             
+         <ion-datetime   pickerFormat="DD MM YY hh:mm A"  displayFormat="DD MM YY hh:mm A" [(ngModel)]="myDate" (ngModelChange)="eventDate($event)"></ion-datetime> 
+      </ion-item> 
+      <p *ngIf="existalert1==true" style="color:red;margin-left: 13px; ">{{textalert1}}</p>
+      <ion-item >
+         <ion-label floating>Add Description</ion-label>
+         <ion-textarea  type="text"   #usrid1 (keyup)="dublicateCheck1(usrid1.value)" [(ngModel)]="getdesc">
+         </ion-textarea>
+      </ion-item>  
+      <p *ngIf="existalert2==true" style="color:red;margin-left: 13px; ">{{textalert4}}</p>
+      <button color="danger" [disabled]="!isenabled" style=" margin-top: 37px; margin-bottom: 76px;    height: 49px; " ion-button full (click)="saveevent()">Save</button>
+   </div>
+   <div *ngIf="chooseOptions=='Join'">
+      <ion-list>
+
+         <ion-item  no-lines *ngFor="let eventshow of eventlists;let i=index;" [ngClass]="(i+1)%2===0?'bgcolorfull':'bgwhite'" style="padding-right: 0px;">
+
+         <ion-avatar item-start>  <img [src]="eventshow.event_image">  </ion-avatar>
+
+         <h2 style="font-weight: 500;">{{ eventshow.event_name }}</h2>
+         <h3 style="font-weight: 100; font-size: 1rem;">{{ eventshow.event_date }}</h3>
+  
+    <p style="font-weight: 100;font-size: 11px;" text-wrap>{{ eventshow.event_description }}</p>
+
+         <button style="padding: 0 0.6em; height: 25px; font-size: 1rem; width: 35%;" ion-button block color="danger" id="btnclickEvent_{{i}}" item-end *ngIf="eventshow.is_join==0"  (click)="JoinEventBtn(eventshow.event_id,i)">Join Event</button>
+
+         <button ion-button block color="danger" id="btnclickEvent_{{i}}" item-end *ngIf="eventshow.is_join==1" style="padding: 0 0.6em; height: 25px; font-size: 1rem;width: 35%;background-color:#EC707F ">Joined</button>
+
+         <button ion-button block color="redtheme" item-end id="btnjoined_{{i}}" style="padding: 0 0.6em; height: 25px; font-size: 1.1rem; width: 35%; display: none;background-color:#EC707F">Joined</button>
+
+         </ion-item>
+
+      </ion-list>
+   </div>
+</ion-content>

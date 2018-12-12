@@ -1,0 +1,105 @@
+page-natureofcontentpage {
+    .toolbar-title-md {
+        padding: 0 12px;
+        font-size: 1.4rem;
+        font-weight: 100;
+        color: #424242;
+    }
+    
+    
+    .nav-bar-style{
+        display: block;
+        text-align: right;
+        margin-top: -22px;
+        margin-right: -3px;
+        font-size: 0px;
+    }
+    .nav-bar-img{
+        display: inline-block;
+        height: 20px;
+        margin-right: 9px;
+    }
+    .read-text{
+        color: red;
+        font-style: italic;
+    }
+        .text-pstyle{
+        font-size: 11px;
+        color:white;
+        margin-top: 3px;
+        margin-left: 10px; 
+    }
+    .card-style{
+        margin-top: 39px;
+        width: 111%;
+        margin-left: -15px;
+    }
+    .card-content-md {
+        padding: 0px 16px !important;
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    .card-title{
+        font-size: 13px;
+        font-weight: 700;
+        margin-left: 17px;
+        margin-top: 11px; 
+    }
+    .text-box{
+        height: 22px;
+        background-color: rgba(0, 0,0,.5);
+        position: absolute;
+        width: 274px;
+        top: 233px; 
+    }
+    .button-style{
+        POSITION: absolute;
+        bottom: 55px;
+        right: 19px;
+        width: 88%;
+      }
+      
+        .para-text-div-box{
+            margin-top: 88px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .card-box{
+           
+            height: 73px;
+            width: 81px;
+            margin-left: -4px;  
+        }
+        .div-box{
+            border: 1px solid white;
+        height: 19px;
+        width: 65px;
+        margin-top: -65px;
+        margin-left: 6px;
+        padding: 3px;
+        }
+        .para-text{
+            color: white;
+            font-size: 8.3px;
+            
+            text-align: center;
+        }
+        .div-check-box{
+            height: 19px;
+        width: 20px;
+        border: 1px solid white;
+        margin-top: 16px;
+        margin-left: 15px;
+        border-radius: 11px;
+        padding: 2px;
+        }
+        .item-md {
+            border: 1px solid black;
+            margin-top:50px;
+        }
+        .item-ios {
+            border: 1px solid black;
+            margin-top:50px;
+        }
+    
+}

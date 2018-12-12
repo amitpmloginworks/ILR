@@ -1,0 +1,126 @@
+page-enterdetailscreen {
+    .img-box{
+        height: 115px;
+        width: 115px;
+      
+    }
+    .img-outer_box
+    {
+        display: flex;
+        justify-content: center;
+    }
+.image-profile{
+    width: 131px;
+    height: 113px;
+}
+.text-para{
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+}
+.login-text{
+    height: 4.5rem !important; 
+    
+}
+.login-text{
+    font-weight: bolder;
+     font-size: 17px;
+     margin-bottom: 20px;
+     
+}
+.item-md {
+    padding-left: 0px;
+    border: 1px solid #ADADAD;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    height: 30px;
+    text-indent: 6px;
+
+}
+
+.list-md .item-block .item-inner {
+    border-bottom: none; 
+}
+
+.item-md.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: none; 
+}
+.outer-div
+{
+    margin-top: 22px;
+    display: block;
+    width: 100%;
+}
+.inner-divimg
+{ 
+    display: inline-block;
+    width: 8%;
+    height: 25px;
+    float: left;
+    text-align: left;
+    margin-left: 6px;
+}
+
+.select-text {
+    margin-left: 15px !important;
+}
+
+.item-block {
+    min-height: 3.0rem;
+}
+
+
+.select-md .select-icon {
+    display: none;
+}
+
+ion-select {
+    display: flex;
+    overflow: hidden;
+    max-width: 70%;
+}
+
+.list-md .item-input:last-child {
+    border-bottom: px solid #dedede;
+}
+
+.footerdiv
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #454647;
+    color: white;
+    text-align: center;
+
+}
+
+.scroll-content {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding: 25px !important;
+}
+
+
+// new redesign...
+
+.texttittle
+{
+    padding-top: 3px;
+    font-size: 15px;
+    font-family: 'Century Gothic'; 
+}
+.errormsg
+{
+    color:red; 
+       margin-top: 5px;
+       font-size: 14px;
+       font-family: 'Century Gothic';  
+}
+
+
+
+}

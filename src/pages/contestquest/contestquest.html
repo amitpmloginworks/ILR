@@ -1,0 +1,103 @@
+
+<ion-header>
+   <headerbar></headerbar>
+</ion-header>
+<ion-content padding>
+   <ion-list style="margin-top: 57px;border: 2px solid #EC707F;">
+      <button no-lines ion-item style="background-color:#EC707F;color: #fff;">
+      Contests
+      </button> 
+      <button no-lines ion-item *ngFor="let item of ContestListArr" (click)="GetQuestByID(item.contest_id)"  [ngStyle]="(item.status == 1  )?{'text-decoration': 'line-through'}:{}">
+      {{ item.title }}
+      </button>  
+   </ion-list>
+   <p class="title-box" >Readsfeed Contest</p>
+   <div style="height:103px; margin-bottom: -2px;" *ngIf="ContestType=='3'">
+      <div *ngIf="surveyForm">
+         <form [formGroup]="surveyForm">
+            <div formArrayName="answers">
+               <div  *ngFor="let question of answers; let i = index" [formGroupName]="i">
+               <P class="pQuest1" >
+                  {{ i+1 }}.  {{ question.question }}
+               </P>
+               <ion-row>
+                  <ion-col col-10>
+                     <ng-container>
+                        <div formArrayName="answer_by_user">
+                           <div *ngFor="let choice of question.answers; let j = index">
+                              <P class="AnsCl" [innerHTML]="choice.id">  </P>
+                              <ion-list   >
+                                 <ion-item >
+                                    <ion-textarea color="redtheme" (ionBlur)="Openchange(question.id, $event, i)" pin="true">
+                                    </ion-textarea>
+                                 </ion-item>
+                              </ion-list>
+                           </div>
+                        </div>
+                     </ng-container>
+                  </ion-col>
+               </ion-row>
+            </div>
+      </div>
+      </form> 
+   </div>
+   <button color="redtheme" style="margin-top: 29px; margin-bottom: 39px; height: 47px;" [hidden]="openBtnHide" ion-button full (click)="openBtnClick()">Submit</button>
+   </div>
+   <div *ngIf="ContestType=='1'" >
+      <div style="height:103px;" *ngFor="let itemval of ContestMCQ;let i = index">
+         <P class="pQuest" >
+            {{ i+1 }}.  {{ itemval.question }}
+         </P>
+         <ion-list radio-group [(ngModel)]="selectAnswer">
+         <ion-item no-lines>
+            <ion-radio style="    width: 0px;" item-left color="redtheme" value="{{ itemval.answer_a }}" (ionSelect)="RadioBtn(itemval.id)" name="radAnswer"></ion-radio>
+            <ion-label > {{ itemval.answer_a }}</ion-label>
+         </ion-item>
+         <ion-item no-lines>
+            <ion-radio  style="    width: 0px;" item-left color="redtheme" value="{{ itemval.answer_b }}" (ionSelect)="RadioBtn(itemval.id)" name="radAnswer"></ion-radio>
+            <ion-label>{{ itemval.answer_b }}</ion-label>
+         </ion-item>
+         <ion-item no-lines>
+            <ion-radio style="    width: 0px;" item-left color="redtheme" value="{{ itemval.answer_c }}" (ionSelect)="RadioBtn(itemval.id)" name="radAnswer"></ion-radio>
+            <ion-label>{{ itemval.answer_c }} </ion-label>
+         </ion-item>
+         <ion-item no-lines>
+            <ion-radio  style="    width: 0px;" item-left color="redtheme" value="{{ itemval.answer_d }}" (ionSelect)="RadioBtn(itemval.id)"  name="radAnswer"></ion-radio>
+            <ion-label>{{ itemval.answer_d }}</ion-label>
+         </ion-item>
+         </ion-list>
+      </div>
+      <button color="red" style="margin-top: 181px;
+      margin-bottom: 53px;
+      background-color: #EC707F;height:43px
+      " [hidden]="mcqBtnHide" ion-button full (click)="MCBtnClick()">Submit</button>
+   </div>
+   <div *ngIf="ContestType=='2'">
+      <div *ngIf="surveyForm">
+         <form [formGroup]="surveyForm">
+            <div formArrayName="answers">
+               <div  *ngFor="let question of answers; let i = index" [formGroupName]="i">
+               <P class="pQuest1" >
+                  {{ i+1 }}.  {{ question.question }}
+               </P>
+               <ion-row>
+                  <ion-col col-10>
+                     <ng-container>
+                        <div formArrayName="answer_by_user">
+                           <div *ngFor="let choice of question.answers; let j = index">
+                              <ion-item no-lines>
+                                 <ion-label style="white-space: normal;">{{ choice.id }}</ion-label>
+                                 <ion-checkbox color="redtheme" (ionChange)="onChange(choice.id, $event.checked, i)" value="choice.id"></ion-checkbox>
+                              </ion-item>
+                           </div>
+                        </div>
+                     </ng-container>
+                  </ion-col>
+               </ion-row>
+            </div>
+      </div>
+      </form> 
+   </div>
+   <button color="redtheme" style="margin-top: 29px; margin-bottom: 39px; height: 47px;" [hidden]="mcqsBtnHide" ion-button full (click)="mcqsBtnClick()">Submit</button>
+   </div>
+</ion-content>

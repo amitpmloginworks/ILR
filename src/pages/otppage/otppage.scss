@@ -1,0 +1,103 @@
+.ios, .md {
+    page-otppage {
+    .p-tag-t{
+    margin-top: 2px;
+    text-align: center;
+    }
+    .text-block
+    {
+    margin-top:10px;
+    position: absolute;
+    top: 152px;
+    padding: 7px; 
+    }
+    .img-style
+    {
+    position: absolute;
+    bottom: 180px;
+    height: 100px;
+    width: 100px;
+    right: 121px;
+    height: 72px;
+    width: 70px;
+    }
+    .p-style{
+    position: absolute;
+    top: 241px;
+    left: 31%;
+    font-size: 11.2px;
+    color: #11baff;
+    font-weight: bolder;
+    }
+    .text-input-md {
+    margin: -2px 21px;
+    padding: 0;
+    width: calc(100% - 8px - 8px);
+    font-size: 31px;
+    }
+    ion-input {
+    background-color: map-get($colors, light);
+    padding-left: 10px;
+    
+    
+    padding-left: 10px;
+    color: #6c6c6c;
+    
+    position: absolute;
+    top: 212px;
+    width: 76%;
+    
+    left: 39px;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    height: 35px;
+    background-color:#fff 
+    }
+    
+    ion-label {
+    color: #6c6c6c;
+    }
+    .style-header
+    {
+    height:61px ;
+    text-align: center;
+    padding: 14px;
+    }
+    [floating] {
+    margin-left: 10px;
+    }
+    
+    button {
+    float: right;
+    margin-right: 20px;
+    }
+    .input-otp {
+    position: absolute;
+    top: 40%; 
+    left: 0px;
+    align-items: center;
+    text-align: center;
+    color: black;
+    }
+    .p-tag{
+    display: inline;
+    }
+    .otp-button{
+    margin-top: 244px;
+    width: 129px;
+    position: absolute;
+    right: -8px;
+    }
+    
+    .row-col-p{
+    font-size: 18px;
+    font-family: "Century Gothic";
+    text-align: center;
+    color: #7d7d7d;
+    margin-bottom: 3px !important;
+    margin-top: 7px !important;
+    } 
+    
+    }
+      
+    }

@@ -1,0 +1,95 @@
+page-contestquest {
+    ion-header {
+        background: #fff;
+    }
+    .nav-bar-style{
+        display: block;
+        text-align: right;
+        margin-top: -22px;
+        margin-right: 9px;
+    }
+    .nav-bar-img{
+        display: inline-block;
+        height: 20px;
+        margin-right: 9px;
+    }
+    ion-header {
+        background: #fff;
+    }
+    .div-box1{
+display: block;
+width: 100%;
+height:10px;
+
+    }
+    .div-box2{
+        display:inline-block;
+        width:15%;
+        float: left;  
+        height:20px;
+       
+        text-align: right;
+    }
+    .div-box3{
+        display:inline-block;
+        width:33%;
+        float: left; 
+        height:20px;
+      
+    }
+    .div-box4{
+        display:inline-block;
+        width:15%;
+        float: left;  
+        height:20px;
+       
+        text-align: right;
+    }
+    .div-box5{
+        display:inline-block;
+        width:33%;
+        float: left; 
+        height:20px;
+       
+    }
+
+
+.QuestCl
+    {
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #232323;
+    }
+    .AnsCl
+    {
+        font-size: 14px;
+        margin-left: 10px;
+        
+        margin-bottom: 28px;
+    }
+
+    .leftRtP{
+        margin-top: -2px;
+        margin-left: 6px;
+    }
+    .pQuest {
+        font-size: 16px;
+    margin-left: 9px;
+    padding-top: 10px;
+    font-weight: bold;
+    margin-top:24px 
+    }
+    .pQuest1{
+        font-size: 16px;
+        margin-left: 9px;
+        padding-top: 10px;
+        font-weight: bold;
+        margin-top: 30px;
+       
+    }
+    .button-md-redtheme {
+      background-color: #EC707F;
+    }
+}

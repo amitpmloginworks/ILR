@@ -1,0 +1,145 @@
+
+<ion-header>
+  <headerbar></headerbar>
+</ion-header>
+<ion-content no-padding >
+  <ion-segment style="margin-top: 55px;" [(ngModel)]="chooseOptions" (ionChange)="segmentChanged($event)">
+  <ion-segment-button style="background-color:#E9BC75; " value="Create">
+     <p class="text-header">Create Group</p>
+  </ion-segment-button>
+  <ion-segment-button value="list"    style="background-color: #94C7DA;">
+     <p class="text-header"> Group List</p>
+  </ion-segment-button>
+  <ion-segment-button value="Join" style=" background-color: #DD8287;">
+     <p class="text-header">Join Group</p>
+  </ion-segment-button>
+  </ion-segment> 
+  <div *ngIf="chooseOptions=='Create'"> 
+     <ion-list style="margin:20px">
+        <ion-label>Group Name:</ion-label>
+        <ion-item class="item-style" >
+           <ion-input type="text" placeholder="Group Name" #usrid (keyup)="dublicateCheck(usrid.value)"    [(ngModel)]="getevents"></ion-input>
+        </ion-item>
+        <p *ngIf="existalert==true" class="text-alert">{{textalert}}</p>
+        <ion-label>Group Image:</ion-label>
+        <ion-row>
+           <ion-col col-9 no-padding>
+              <ion-item class="item-style"  style="border-radius:8px 0px 0px 8px">
+                 <ion-input type="text"  value={{image}}  placeholder="Group Image" readonly="true" ></ion-input>
+              </ion-item> 
+           </ion-col>    
+           <ion-col col-3 no-padding class='btn-browse' (click)="uploadpicture()">
+              <p class="text-browse">Browse</p>
+           </ion-col>
+        </ion-row>
+        <p *ngIf="existalert3==true" class="text-alert" >{{imagealert}}</p>
+        <ion-label>Group Description:</ion-label>
+        <ion-item class="item-style">
+           <ion-textarea placeholder="Description" rows="5" #usrid1 (keyup)="dublicateCheck1(usrid1.value)"    [(ngModel)]="getdesc"></ion-textarea>
+        </ion-item>
+        <p *ngIf="existalert2==true" class="text-alert">{{textalert4}}</p>
+        <button ion-button class="btn-save"  [disabled]="!isenabled" (click)="saveevent()">Save</button>
+     </ion-list>
+  </div>
+  <div *ngIf="chooseOptions=='list'">
+     <div *ngIf="ListShowStatus ==1" >
+
+        <div *ngIf="group==0">
+
+            <ion-searchbar placeholder="Search Group Chat" [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="getItems($event)" >       
+              </ion-searchbar>
+
+           <ion-list   *ngFor="let eventshow of Grouplists;let i=index;" >
+              <ion-item class="item-border">
+                 <img  width='45'  height='40' item-start style="border-radius:50%"  [src]="eventshow.group_image">
+                 <ion-label>{{ eventshow.group_name }}</ion-label>
+                 <img  width='25' item-end src="assets/imgs/groups/right-arrow.png" (click)="openGroup(i)">
+              </ion-item>
+           </ion-list>
+        </div>
+        <div *ngIf="group==1"  > 
+               
+            <ion-searchbar placeholder="Search Group Chat" [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="getItemsChat($event)" >       
+              </ion-searchbar>
+
+           <ion-list>
+              <ion-item style="border-bottom:1px solid #dedede">
+                 <p text-center class="text-name" >{{groupName}}</p>
+                 <img item-end width="40" src="assets/imgs/groups/groupinfo_btn.png" (click)="groupInfo()" />
+                 <p item-center text-center class="text-members">{{totalGroupNumbers}} member</p>
+              </ion-item>
+           </ion-list>
+     
+           <ion-list  id="chat-autoscroll" style="margin-bottom: 75px;">
+              <div *ngFor="let eventshow of  groupData;let i=index;" >
+                 <ion-item no-lines *ngIf="eventshow.user_id != Useridactive">
+                    <div item-start>
+                       <img item-start width="73" height="65" style="border-radius:50%" [src]="eventshow.user_image">
+                       <ion-row no-margin no-padding *ngIf="eventshow.is_online==1">
+                          <ion-col col-3>
+                             <div class="div-status"></div>
+                          </ion-col>
+                          <ion-col col-9 no-padding >
+                             <div class="text-active" >Active now</div>
+                          </ion-col>
+                       </ion-row>
+                    </div>
+                    <p text-wrap  class="text-info" >{{eventshow.comment }}  </p>
+                 </ion-item>
+                 <ion-item no-lines *ngIf="eventshow.user_id == Useridactive">
+                    <div item-end>
+                       <img  width="73" height="65" style="border-radius:50%"   [src]="eventshow.user_image">
+                       <ion-row no-margin no-padding *ngIf="eventshow.is_online==1">
+                          <ion-col col-3>
+                             <div class="div-status" style="width: 100%;"></div>
+                          </ion-col>
+                          <ion-col col-9 no-padding >
+                             <div class="text-active" style="font-size: 1.0rem;" >Active now</div>
+                          </ion-col>
+                       </ion-row>
+                    </div>
+                    <p text-wrap class="text-info" style="text-align-last: right;" >{{eventshow.comment }}
+                    </p>
+                 </ion-item>
+              </div>
+           </ion-list>
+
+
+        </div>
+     </div> 
+     <div *ngIf="ListShowStatus ==0"   style="text-align: center;">
+        <p class="groplistmsg">Please create a group</p>
+     </div>
+  </div>
+  <div *ngIf="chooseOptions=='Join'">
+     <ion-searchbar    
+     placeholder="Search Group Chat"
+     [(ngModel)]="myInput"
+     [showCancelButton]="shouldShowCancel"
+     (ionInput)="getJoinItems($event)"
+     >
+     </ion-searchbar>
+     <ion-list>
+        <ion-item   class="item-border" item-start  *ngFor="let eventshow of GroupJoins;let i=index;" >
+           <img width='45'  height='40' style="border-radius:50%" item-start  [src]='sanitizer.bypassSecurityTrustUrl(eventshow.image)'> 
+           <ion-label>{{ eventshow.name }}</ion-label>
+           <button class="btn-join" item-end ion-button  color="BtnJoinG" id="btnclickEvent_{{i}}"  *ngIf="eventshow.user_joined!=1" (click)="JoinEventBtn(eventshow.id,i)">Join</button>
+           <button class="btn-join" item-end ion-button  color="redtheme" id="btnclickEvent_{{i}}"  *ngIf="eventshow.user_joined==1" >Joined</button> -->
+           <button  class="btn-join"  ion-button color="redtheme" item-end id="btnjoined_{{i}}"  style=" display: none;">Joined</button> 
+        </ion-item>
+     </ion-list>
+  </div>
+</ion-content>        
+<ion-footer *ngIf="group==1" style="border: 1px solid transparent;" >
+  <ion-toolbar>
+     <div style="
+        border: 2px solid #ecebeb;
+        height: 37px;
+        border-radius:10px;">  
+        <ion-input class="text-placeholder" #usrid (keyup)="commentsAbuse(usrid.value)" id="CommentTxt_{{i}}" [(ngModel)]="CommentTxt"  style="width: 82%;" type="text" value="" placeholder="Aa"></ion-input>
+        <button style="width: 17%;right: -82%; top: -43px;" clear ion-button icon-right color="homeclr"  (click)="SendBtn(groupId,i)">      
+        <img src="assets/imgs/icons/send.png" >          
+        </button>           
+     </div>
+  </ion-toolbar>
+</ion-footer>

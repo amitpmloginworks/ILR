@@ -1,0 +1,78 @@
+<!--
+  Generated template for the ContactUsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+   <headerbar></headerbar>
+</ion-header>
+<ion-content padding>
+
+  <p text-center class="headertittle">Let's Get in Touch</p>
+
+
+<button color="black" clear ion-button> <i class="fa fa-user-o" aria-hidden="true"></i>  <label style="margin-left: 10px;color: #000000;">Name:</label> </button>
+<ion-item no-lines>
+
+ <ion-input placeholder="Name" [(ngModel)]="name" type='text'> </ion-input>
+</ion-item>
+<button color="black" clear ion-button> <i class="fa fa-envelope-o" aria-hidden="true"></i>  <label style="margin-left: 10px;color: #000000;">Email id:</label> </button>
+<ion-item no-lines>
+ 
+   <ion-input placeholder="Email" type='email' [(ngModel)]="email"> </ion-input>
+ </ion-item>
+ <button color="black" clear ion-button><i class="fa fa-sticky-note-o" aria-hidden="true"></i> <label style="margin-left: 10px;color: #000000;">Subject:</label> </button>
+ <ion-item no-lines>
+   
+     <ion-input placeholder="Subject" type='text' [(ngModel)]="subject"> </ion-input>
+   </ion-item>  
+   <button color="black" clear ion-button> <i class="fa fa-comments-o" aria-hidden="true"></i>  <label style="margin-left: 10px;color: #000000;">Message:</label> </button>
+   <ion-item no-lines>
+     
+       <!-- <ion-input placeholder="Email" type='text'> </ion-input> -->
+       <ion-textarea placeholder="Message" rows="4" maxLength="500"  [(ngModel)]="message"></ion-textarea>
+     </ion-item>
+        
+ <button class="btn-submit" ion-button (click)="emailsend()">submit</button>
+
+
+<div #map id="map"></div>
+
+<ion-row style="margin-top:15px">
+<ion-col col-1>
+   <i class="fa fa-map-marker contd" aria-hidden="true"></i>
+</ion-col>
+<ion-col col-3 class="contentleft">Address </ion-col>
+<ion-col col-1>:</ion-col>
+<ion-col col-7>629 Aljunied Road ,03-09 CitiTech Industrial Building</ion-col>   
+</ion-row>
+<ion-row>
+<ion-col col-1>
+  <i class="fa fa-phone contd" aria-hidden="true"></i>
+</ion-col>
+<ion-col col-3 class="contentleft">Phone </ion-col>
+<ion-col col-1>:</ion-col>
+<ion-col col-7>91993758</ion-col>
+</ion-row>
+<ion-row>
+<ion-col col-1>
+  <i class="fa fa-fax contd" aria-hidden="true"></i>  
+</ion-col>
+<ion-col col-3 class="contentleft">Fax </ion-col>
+<ion-col col-1>:</ion-col>
+<ion-col col-7>67449233</ion-col>
+</ion-row>
+  
+<ion-row margin-bottom>
+<ion-col col-1>   
+  <i class="fa fa-envelope contd" aria-hidden="true"></i>
+</ion-col>
+<ion-col col-3 class="contentleft">Email </ion-col>
+<ion-col col-1>:</ion-col>
+<ion-col col-7>support@readsfeed.com</ion-col>
+</ion-row>
+  
+     
+</ion-content>

@@ -1,0 +1,176 @@
+<!--
+  Generated template for the PaymentoptionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+   
+<ion-header>
+    <headerbar></headerbar> 
+</ion-header>
+
+
+<ion-content >
+
+  <img src="assets/imgs/payment/paymentheader.png">
+  <div class="div-main" >
+  
+    <div class="div-subtotal" >
+      <p  class="payment-text" style="float: left;">Subtotal</p>
+      <p  class="payment-text" style="float: right"> {{ actualamount }}</p>
+    </div>
+  
+    <div class="div-total" >
+      <p  class="payment-text" style="float: left;">Total</p>
+      <p  class="payment-text" style="float: right"> {{ actualamount }}</p>
+    </div>
+   
+    <div style="margin-bottom: 36px; width: 100%;" > 
+      <p class="txt-choose-payment">Choose your payment method</p>
+      <p class="txt-click-below"> (Click one of the options below)</p>
+    </div>
+  
+  <ion-row style="width: 100%;">
+  <ion-col  col-6 class="img-pay">
+  
+      <button ion-button no-margin no-padding style="box-shadow:none;background-color: #ffffff; height: auto; -webkit-box-shadow:none;" (click)="PaypalSelectBtn()" *ngIf="PaypalSelectimg"  >
+    <img src="assets/imgs/payment/paypalbtn2.png">
+  </button>
+  
+  <button ion-button no-margin no-padding style="box-shadow:none;background-color: #ffffff; height: auto; -webkit-box-shadow:none;" (click)="PaypalUnSelectBtn()" *ngIf="PaypalUnSelectimg"  >
+      <img src="assets/imgs/payment/paypalbtn.png">
+  </button>
+  
+  </ion-col>
+  <ion-col  col-6 class="img-pay">
+      <button ion-button no-margin no-padding style="box-shadow:none;background-color: #ffffff; height: auto; -webkit-box-shadow:none;" (click)="StripeSelectBtn()" *ngIf="StripeSelectimg"  >
+    <img src="assets/imgs/payment/stripebtn2.png">
+  </button>
+  
+  <button ion-button no-margin no-padding style="box-shadow:none;background-color: #ffffff; height: auto; -webkit-box-shadow:none;" (click)="StripeUnSelectBtn()" *ngIf="StripeUnSelectimg"  >
+  <img src="assets/imgs/payment/stripebtn.png">
+  </button>
+  
+  </ion-col>
+  </ion-row>
+  
+  <ion-row style="width: 100%;">
+  <ion-col  no-padding col-6 >
+    <p class="txt-pay-with"> Pay with PayPal<sup>TM</sup></p>
+  </ion-col>
+  <ion-col  no-padding col-6 >
+    <p class="txt-pay-with"> Pay with Stripe<sup>TM</sup></p>
+  </ion-col>
+  </ion-row>
+  
+  
+  
+  <div *ngIf="CardDataShow">
+  <ion-row>
+  <ion-col col-12> 
+    <div style="margin-top: 4%;"><img style="width: 60%; display: block; margin: 0 auto;" src="assets/imgs/payment/paymentmethod.png"></div>
+  </ion-col>
+  </ion-row>
+  
+  
+  
+  
+  
+  
+  <div class="div-header1" > Total Amount:   </div>  
+  
+    <ion-item style="border: 1px solid #ADADAD;">  
+        <ion-input  type="text" readonly [(ngModel)]="actualamount" style="    color: #6c6b70;
+        font-weight: bold;"  ></ion-input>
+    </ion-item>
+      
+    <div style="margin-bottom: 10px;" *ngIf="this.PaypalStripe !='stripe'"> 
+     
+    </div>
+    
+    <div class="div-header2" *ngIf="this.PaypalStripe=='stripe'">
+        <div class="div-header2-1">
+            <div class="div-header2-2">
+            </div>
+            <div class="div-header2-tittle">Card number: </div>   
+        </div>
+    <div class="div-header2-3"></div>
+      <div class="div-header2-4">
+          <div  class="div-header2-5">
+          </div>
+          <div class="div-header2-tittle">Expiry Month:</div>
+      </div>
+    </div>
+  
+    <div class="div-contents" *ngIf="this.PaypalStripe=='stripe'">
+        <div class="div-contents-left">
+            <ion-item style="border: 1px solid #ADADAD;">
+                <ion-input #mobid (keypress)="MobCheck(mobid.value)" type="number" [(ngModel)]="cardNumber" ></ion-input>
+            </ion-item>
+        </div>
+   <div class="div-contents-center"></div>
+      <div class="div-contents-right">
+          <ion-item style="border: 1px solid #ADADAD;">
+              <ion-select [(ngModel)]="cardMonth" interface="popover">
+                  <ion-option value="01">01</ion-option>
+                  <ion-option value="02">02</ion-option>
+                  <ion-option value="03">03</ion-option>
+                  <ion-option value="04">04</ion-option>
+                  <ion-option value="05">05</ion-option>
+                  <ion-option value="06">06</ion-option>
+                  <ion-option value="07">07</ion-option>
+                  <ion-option value="08">08</ion-option>
+                  <ion-option value="09">09</ion-option>
+                  <ion-option value="10">10</ion-option>
+                  <ion-option value="11">11</ion-option>
+                  <ion-option value="12">12</ion-option>
+              </ion-select>
+          </ion-item>
+      </div>
+    </div> 
+  
+  
+    <div class="div-header2" style="margin-top: 8px;" *ngIf="this.PaypalStripe=='stripe'">
+        <div class="div-header2-1">
+            <div class="div-header2-2">
+            </div>
+            <div class="div-header2-tittle">Expiry Year: </div>
+        </div>
+    <div class="div-header2-3"></div>
+      <div class="div-header2-4">
+          <div  class="div-header2-5">
+          </div>
+          <div class="div-header2-tittle">Cvv Code:</div>
+      </div>
+    </div>
+  
+    <div class="div-contents" *ngIf="this.PaypalStripe=='stripe'">
+        <div class="div-contents-left">
+            <ion-item style="border: 1px solid #ADADAD;">
+                <ion-datetime [min]="minyear"  max="2050" displayFormat="YY" pickerFormat="YYYY" [(ngModel)]="myYear"
+                ></ion-datetime>
+            </ion-item>
+        </div>
+   <div class="div-contents-center"></div>
+      <div class="div-contents-right">
+          <ion-item style="border: 1px solid #ADADAD;">
+              <ion-input  #cvvno (keypress)="CVVCheck(cvvno.value)"  type="number" [(ngModel)]="CVV"></ion-input>
+          </ion-item>
+      </div>
+    </div>
+  
+  
+  <button ion-button no-margin no-padding style="box-shadow:none;background-color: #ffffff; height: auto; -webkit-box-shadow:none;" [disabled]="!NextBtnDisable" (click)="navigatetopayment()" *ngIf="PaypalSelectimg"  >
+  <img src="assets/imgs/payment/makepaymentbtn.png" style="width: 62%; height: 5rem;" >
+  </button> 
+  
+  <button ion-button no-margin no-padding style="box-shadow:none;background-color: #ffffff; height: auto; -webkit-box-shadow:none;" [disabled]="!NextBtnDisable" (click)="navigatetopayment()" *ngIf="StripeSelectimg"  >
+    <img src="assets/imgs/payment/stripe_button.png" style="width: 62%; height: 5rem;" >
+  </button> 
+  
+  </div>
+  
+  </div>
+  
+  </ion-content>
+  

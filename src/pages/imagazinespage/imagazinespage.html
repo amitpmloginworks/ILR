@@ -1,0 +1,172 @@
+
+<ion-header style="background-color:white">
+    <headerbar></headerbar>
+  </ion-header> 
+  <ion-content>
+    <div style="padding-left: 19px; padding-right: 30px;" >
+
+
+        <ion-row no-padding no-margin style="    width: 102%;"> 
+            <ion-col no-padding no-margin style=" margin-top: 14px;">       
+            <ion-searchbar [(ngModel)]="searchMagazineString" (input)="searchMagazines($event)" 
+            placeholder="Search"  no-shadow no-border no-margin no-padding></ion-searchbar>  
+            <ion-icon (click)="mic()" class="mic-style" name="mic"></ion-icon>
+            </ion-col>
+        </ion-row>
+
+
+       <ion-card class="card-style" *ngFor="let content of contents;let i=index"  >
+          <div *ngIf="content.survey_id">
+             <ion-card-title class="card-title">
+                {{content.title}}.
+             </ion-card-title>
+             <ion-card-content>
+                <div class="container"> 
+                   <img src="{{content.image}}" class="imgB1" (click)="SurveyBtn(i)"  >
+                </div>
+             </ion-card-content>
+          </div>
+     
+  
+          <div *ngIf="content.contest_id">
+             <ion-card-title class="card-title">
+                {{content.title}}.
+             </ion-card-title>
+             <ion-card-content>
+                <div class="container"> 
+                   <img src="{{content.image}}" class="imgB1" (click)="ContestBtn(i)"  >
+                </div>
+             </ion-card-content>
+          </div>
+  
+          <div *ngIf="content.event_id">  
+            <ion-card-title class="card-title">
+               <p class="title"  style="width: 100%;" >{{content.title}}.  
+                   
+                  <button style="padding: 0 0.6em; height: 25px; font-size: 1rem; width: 35%;    right: 15px;float: right;" ion-button block color="danger" id="btnclickEvent_{{i}}" item-end *ngIf="content.is_join==0"  (click)="JoinEventBtn(content.event_id,i)">Join Event</button>  
+  
+                  <button ion-button block color="danger" id="btnclickEvent_{{i}}" item-end *ngIf="content.is_join==1" style="padding: 0 0.6em; height: 25px; font-size: 1rem;width: 35%;background-color:#EC707F;right: 15px;float: right; ">Joined</button>  
+         
+                  <button ion-button block color="redtheme" item-end id="btnjoined_{{i}}" style="padding: 0 0.6em; height: 25px; font-size: 1.1rem; width: 35%; display: none;background-color:#EC707F;right: 15px;float: right;">Joined</button>
+  
+               </p>
+            </ion-card-title>
+            <ion-card-content>
+               <div class="container"> 
+                  <img src="{{content.image}}" class="imgB1" (click)="ContestBtn(i)" style="height: 100%;"  > 
+               </div>
+            </ion-card-content>
+         </div>
+  
+   
+  
+          <div *ngIf="content.content_id">
+             <ion-card-title class="card-title">
+                <p class="title">{{content.title}}.</p>
+                <p class="subtitle">Post by {{ content.content_writer }}, {{ content.published_date  }}</p>
+             </ion-card-title>
+             <ion-card-content>
+                <div class="container">  
+                   <img (click)="fav(i)"  class="imgA1" *ngIf="content.is_favorite==0" src="assets/heart_1.png" right>
+                   <img   (click)="fav(i)" class="imgA1" *ngIf="content.is_favorite==1" src="assets/heart_2.png" right>
+                   
+                   
+                   <img src="{{content.image}}" *ngIf="content.image!=''"  class="imgB1" (click)="readmore(i)"  >
+                   <img *ngIf="content.image==''"  class="imgB1"  src="assets/imgs/NoImageAvailable.jpg" (click)="readmore(i)" >
+                   <div class="header-div">
+                      <p class="read-text" > {{ content.totalviews }} View |{{ content.comment.length }} comments |{{ content.totalshares }} Share</p>
+                      <div class="react-style-div" >
+                         <div *ngFor="let likec of content.likesCount">
+                            <div class="react-inside" *ngIf="likec.like_id==1" >
+                               <img class="col-style" src="assets/icon/Asset1.png" >
+                               <p class="react-p-style">{{ likec.total }}</p>
+                               <p class="text-react">Like</p>
+                            </div>
+                            <div class="react-inside" *ngIf="likec.like_id==5" >
+                               <img  class="col-style" src="assets/icon/Asset2.png" >
+                               <p class="react-p-style">{{ likec.total }}</p>
+                               <p class="text-react left-react">Happy</p>
+                            </div>
+                            <div class="react-inside" *ngIf="likec.like_id==2" >
+                               <img  class="col-style" src="assets/icon/Asset3.png" >
+                               <p class="react-p-style">{{ likec.total }}</p>
+                               <p class="text-react left-react">Surprised</p>
+                            </div>
+                            <div class="react-inside"  *ngIf="likec.like_id==3" >
+                               <img class="col-style" src="assets/icon/Asset4.png" >
+                               <p class="react-p-style">{{ likec.total }}</p>
+                               <p class="text-react">Sad</p>
+                            </div>
+                            <div class="react-inside" *ngIf="likec.like_id==4" >
+                               <img class="col-style" src="assets/icon/Asset5.png" >
+                               <p class="react-p-style">{{ likec.total }}</p>
+                               <p class="text-react">Angry</p>
+                            </div>
+                         </div>
+                         <div *ngIf="content.likesCount?.length ==0">
+                            <div class="react-inside" >
+                               <img class="col-style" src=" assets/imgs/happy-emoji.png" >
+                               <p class="react-p-style">0</p>
+                               <p class="text-react">Like</p>
+                            </div>
+                            <div class="react-inside"  >
+                               <img class="col-style" src="assets/imgs/aww-emoji.png" >
+                               <p class="react-p-style">0</p>
+                               <p class="text-react">Happy</p>
+                            </div>
+                            <div class="react-inside"  >
+                               <img  class="col-style" src="assets/imgs/sad-emoji.png" >
+                               <p class="react-p-style">0</p>
+                               <p class="text-react left-react">Surprised</p>
+                            </div>
+                            <div class="react-inside" >
+                               <img class="col-style" src="assets/imgs/angry-emoji.png" >
+                               <p class="react-p-style">0</p>
+                               <p class="text-react">Sad</p>
+                            </div>
+                            <div class="react-inside"  >
+                               <img class="col-style" src="assets/imgs/lol-emoji.png" >
+                               <p class="react-p-style">0</p>
+                               <p class="text-react">Angry</p>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="share-class">
+                      <div class="share-box" (click)="facebookShare(i)" >   
+                         <p>
+                            <img src="assets/imgs/share-icon/facebook.png">
+                         </p>
+                      </div>
+                      <div class="share-box" (click)="twitterShare(i)">
+                         <p>  
+                            <img src="assets/imgs/share-icon/twitter.png">
+                         </p>
+                      </div>
+                      <div class="share-box" (click)="InstagramShare(i)">
+                         <p>
+                            <img src="assets/imgs/share-icon/instagram.png">
+                         </p>
+                      </div>
+                      <div class="share-box" (click)="WhatsAppShare(i)">
+                         <p>
+                            <img src="assets/imgs/share-icon/wattsapp.png">
+                         </p>
+                      </div>  
+                      <!-- <div class="share-box" (click)="TumblrShare(i)">  
+                         <p>
+                            <img src="assets/imgs/share-icon/tumbler.png">
+                         </p>
+                      </div> -->
+                   </div>
+                </div>
+             </ion-card-content>
+          </div>
+  
+  
+  
+  
+       </ion-card>
+    </div>
+  </ion-content>
+  

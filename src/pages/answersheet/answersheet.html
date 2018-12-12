@@ -1,0 +1,34 @@
+<!--
+  Generated template for the AnswersheetPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+   <headerbar></headerbar>
+</ion-header>
+<ion-content >
+   <div class="div-header" text-center>
+      <p class="text-title">Answer Sheets</p>
+   </div>
+   <ion-row >
+      <ion-col col-1>  
+      </ion-col>
+      <ion-col col-10 no-padding class="col-middle">
+         <ion-slides no-padding  (ionSlideDidChange)="slideChanged()"   slidesPerView="2.3" >
+            <ion-slide   (click)="selectedImage(i,cards.magazine_id)"  no-padding *ngFor="let cards of magazine_list;let i=index">
+            <img id="x_{{i}}" [src]=cards.image style="max-height: 100vh !important; max-width: 100vw !important;" >
+            </ion-slide>
+         </ion-slides>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+   </ion-row>
+   <div *ngFor="let magazineitem of magazineitems">
+      <p class="text-heading" >{{ magazineitem.category_name}}</p>
+      <div *ngFor="  let answerdetail of magazineitem.answers">
+         <p class="text-info" (click)="DownloadPDFDoc(answerdetail.link_name,answerdetail.link,answerdetail.doc_ext)">{{ answerdetail.link_name }} </p>
+      </div>
+   </div>
+</ion-content>

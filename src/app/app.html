@@ -1,0 +1,256 @@
+<div class="{{global.state['theme']}}">
+   
+<ion-nav [root]="rootPage" [class]="selectedTheme"  #content swipeBackEnabled="false" (swiperight)="checkMenu()"></ion-nav>
+
+<ion-menu [content]="content"  class="menu-style" side="right" id="menu2" width="335" >
+    <ion-header >
+      
+      
+      <div class="title-innerdiv box-3" style=" width: 100% !important;"> 
+          <div class="title-profile"> <img class="div-profile_img" [src]="UpImgUsr" [ngStyle]="(UpImgUsr != 'assets/imgs/user.png')?{ 'height': '33px','border-radius': '50%'  }:{  }">    </div>
+        <div class="title-info_box" [ngClass]="{'one':flag, 'two':!flag}">
+        <div class="title-welcome_name" >
+          <div class="welcome-text">   <p style="margin-top: 4px;" class="p-style1">hello</p>    
+            <div>
+            <p style="height: 14px;
+            width: 83px;
+            overflow: hidden;margin-top: -16px;
+            ">{{ Usrname }}</p>
+          </div>
+          </div>
+        <div class="arrow-style">
+        </div>
+        </div>
+        <p  class="view-style1" style="font-size: 8.9px !important;
+        margin-top: 0px;">View more here</p>
+        </div>
+      </div>
+      <div class="black-line_stripe">    </div>  
+
+
+      </ion-header>
+
+<ion-content padding style="margin-top: 40px;">
+    <ion-list no-lines  style="margin-bottom: 45px;"> 
+        <button menuClose="menu2" ion-item *ngFor="let p of pages;let i=index" (click)="openPage(p)" [ngStyle]="(i == '16')?{ 'background': 'transparent','padding-left': '37px','font-family': 'Century Gothic' }:{  'background': 'transparent','padding-left': '37px','font-family': 'Century Gothic'  }">  
+          <img src="{{p.logo}}" style="      margin-bottom: -4px;  width: 24px !important;margin-right: 20px;width: 30px;">{{p.title}}
+        </button>
+      </ion-list>
+</ion-content>
+
+
+<style>
+.read-text{
+  color: red;
+  font-style: italic;
+}
+  .text-pstyle{
+  font-size: 11px;
+  color:white;
+  margin-top: 3px;
+  margin-left: 10px; 
+}
+  .nav-bar-style{
+  display: block;
+  text-align: right;
+  margin-top: -22px;
+  margin-right: 9px;
+}
+.nav-bar-img{
+  display: inline-block;
+  height: 13px;
+  margin-right: 9px;
+}
+
+.card-style{
+  margin-top: 39px;
+  width: 111%;
+  margin-left: -15px;
+}
+.card-content-md {
+  padding: 0px 16px !important;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+.card-title{
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 17px;
+  margin-top: 11px; 
+}
+.text-box{
+  height: 22px;
+  background-color: rgba(0, 0,0,.5);
+  position: absolute;
+  width: 274px;
+  top: 233px; 
+}
+.label-md {
+font-family: 'Quicksand', sans-serif !important;
+color:#525252;
+font-size: 12px;
+text-transform: initial;
+}
+.outer-div      {     width: 100%; height: auto;  }
+.outer-div-left     {  width: 55%; float: left; }
+.outer-div-right    { width: 34%;  float: left;     text-align: center; }
+.img1   {     text-align: center;    object-fit: cover;     margin-top: 15px;     }
+.img2 { width: 38%;     margin-top: 30px;      }
+.img-profiles
+{
+
+
+  display: block;
+  margin: 0 auto;
+  float: right; 
+}
+.imagecircle
+{
+  display: block;
+  margin: 0 auto;
+  float: right; 
+  padding:7px;
+  border:5px solid #39A5C3;
+  border-radius: 50%;
+}
+.avatar-p{
+  font-family: "Century Gothic";
+  display: inline-block;
+  margin-left: 70px;
+  font-size: 1.0rem;
+  margin-top: 5px;
+}
+
+  .img-style_arrow{
+      height: 18px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+  }
+  .view-style
+  {
+      font-size: 8.9px !important;
+      margin-top: 0px;
+      margin-left: 4px;
+      color: #fff;
+  }
+ 
+  .welcome-text
+  {
+    display: inline-block;
+    width: 20%;
+    height: 37px;
+    margin-top: 3px;
+  }
+  .arrow-style
+  {
+  display:inline-block; 
+  width:41%; 
+  height:30px;
+  }
+  .title-welcome_name
+  {
+      height: 37px;
+  }
+  .title-view_more
+  {
+      height:20px;
+  }
+  
+  .div-profile_img
+  {
+      width: 35px;
+      float: right;
+      margin-top: 8px;
+  }
+  .title-innerdiv
+  {
+      height:50px;
+      display:inline-block;
+      float: left; 
+  }
+  
+  .box-1
+  {
+      width:40%;
+      padding: 10px;
+  }
+  .box-2
+  {
+      width:29.9%;
+  }
+  .box-3{
+    background-color: #E8E8E8;
+      height:50px;
+      width:100%; 
+      display:block; 
+  }
+  
+
+  .title-profile
+  {
+      width: 16%;
+      height: 60px;
+      display: inline-block;
+  }
+  .title-info_box
+  {
+      width: 81%;
+      height: 60px;
+      display: inline-block;
+      float: right;
+  }
+  
+  .title-bar
+  {
+      height:10px;
+      width:100%;
+  }
+
+
+.content-md {
+  background-color:#E8E8E8 ! important;
+}
+.item-md{
+  padding-left:0px ! important;
+  color:#4d4d4d  ! important;
+
+}
+.list-md{
+  padding-left:0px ! important;
+  color:#4d4d4d ! important;
+}
+.content-ios {
+  background-color:#E8E8E8 ! important;
+}
+.item-ios{
+  padding-left:0px ! important;
+}
+.list-ios{
+  padding-left:0px ! important;
+}
+
+
+  .black-line_stripe
+  {
+      height: 54px;
+      background-color: black;
+  }
+
+.scroll-content
+  {
+    margin-bottom: 25px !important;
+  }
+
+.one
+{
+  color:#fff 
+}
+.two
+{
+  color: #000000; 
+}  
+
+</style>
+
+</ion-menu>
+</div>

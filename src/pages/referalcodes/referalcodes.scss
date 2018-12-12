@@ -1,0 +1,77 @@
+page-referalcodes {
+  
+    .content-md{
+        background-color: rgba(0,0,0,0.2);
+    }
+   
+    .item-md {
+        padding-left: 0px;
+        border: none; 
+        padding-left: 0px;
+        margin-bottom: 0px;
+        border-radius: 5px;
+        height: 30px;
+        text-indent: 6px; 
+    
+    }
+    .item-block
+    {
+        min-height: 3.4rem;
+    }
+    
+    .outer-div{
+        position: relative;
+        background: #fff;
+        text-align: center;
+        border-radius: 16px;
+        top: 50%;
+        transform: perspective(1px) translateY(-50%);
+    }
+
+    .inner-div
+{
+    display: block;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    // height: 135px;  
+    height: 160px;
+}
+
+   .scroll-content{
+    padding: 50px !important;
+        
+    }
+
+    .tittle{
+        color: #bbbbbb; 
+        font-family: 'Bebas Neue Bold';
+    font-size: 28px;
+    }
+
+    .item-block {
+        display: initial;
+        overflow: inherit;
+    }
+    .text-input-md {
+             margin: 0px !important; 
+    }
+    @media only screen and (max-width: 320px) {
+
+    }
+
+     @media only screen and (min-height: 667px) {
+   
+    }  
+
+    .item-md.item-block .item-inner{
+        border: 1px solid #ADADAD;
+        border-radius: 6px;
+             border-bottom-color: none !important; 
+     -webkit-box-shadow: none !important; 
+     box-shadow: none !important; 
+
+    } 
+
+  
+}

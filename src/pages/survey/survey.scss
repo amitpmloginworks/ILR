@@ -1,0 +1,122 @@
+page-survey {
+    ion-header {
+        background: #fff;
+    }
+
+    .nav-bar-style{
+        display: block;
+        text-align: right;
+        margin-top: -22px;
+        margin-right: 9px;
+    }
+    .nav-bar-img{
+        display: inline-block;
+        height: 13px;
+        margin-right: 9px;
+    }
+    .box-3 {
+        width: 32% !important;
+    }
+    .div-box1{
+display: block;
+width: 100%;
+height:10px;
+
+    }
+    .div-box2{
+        display:inline-block;
+        width:15%;
+        float: left;  
+        height:20px;
+       
+        text-align: right;
+    }
+    .div-box3{
+        display:inline-block;
+        width:33%;
+        float: left; 
+        height:20px;
+      
+    }
+    .div-box4{
+        display:inline-block;
+        width:15%;
+        float: left;  
+        height:20px;
+       
+        text-align: right;
+    }
+    .div-box5{
+        display:inline-block;
+        width:33%;
+        float: left; 
+        height:20px;
+       
+    }
+
+
+.QuestCl
+    {
+    font-size: 16px;
+    margin-left: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #232323;
+    }
+    .AnsCl
+    {
+        font-size: 14px;margin-left: 10px;padding-top:10px
+    }
+
+    .leftRtP{
+        margin-top: -2px;
+        margin-left: 6px;
+    }
+    .pQuest {
+        font-size: 16px;
+    margin-left: 5px;
+    padding-top: 10px;
+    font-weight: bold;
+    }
+.select-md .select-icon .select-icon-inner {
+    left: 5px;
+    top: 50%;
+    margin-top: -3px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+     color: #fff;
+    pointer-events: none;
+}
+.item.item-md .checkbox-md {
+    position: static;
+    margin-right: 30px;
+    display: block;
+}
+.item.item-ios .checkbox-ios {
+    position: static;
+    margin-right: 30px;
+    display: block;
+}
+.checkbox-md-redtheme .checkbox-checked {
+    border-color: #EC707F;
+    background-color: #EC707F;
+}
+
+.radio-md[item-left], .item-md .radio-md[item-start] {
+    margin-right:30px;
+}
+
+.item-md .radio-md[item-left]{
+    margin-right:32px ! important;
+}
+.badge-md {
+    border-radius: 4px;
+    color: #fff;
+    background-color: #222222;
+}
+}

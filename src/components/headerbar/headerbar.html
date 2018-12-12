@@ -1,0 +1,40 @@
+<div class="title-box" >
+    <div class="title-innerdiv box-1" (click)="homeNav()"> <img style="height: 33px;" src="assets/icon/logo02.png"> </div> 
+    <div class="title-innerdiv box-2" (click)="presentPopover()"> 
+    
+    <div class="notify-box"> 
+    
+    <img class="div-notify" *ngIf="notificationcount==false" src="assets/imgs/share-icon/notify02-01.png"> 
+    <img class="div-notify" *ngIf="notificationcount==true" src="assets/imgs/redemption/notify-01.png">
+    <p class="counter" *ngIf="notificationcount==false"> {{count}}</p>
+    
+    </div> 
+    </div> 
+
+    <div class="title-innerdiv box-3" id="1_x"> 
+        
+    <!-- <div class="title-profile"> <img class="div-profile_img" [src]="userimage" style="height: 25px; border-radius: 50%;"> </div> -->
+
+ 
+    <div class="title-info_box" menuToggle="right" >
+
+
+    <!-- <div class="title-welcome_name" >
+    <div class="welcome-text"> <p class="p-style1">hello<br>{{Usrname}}</p> </div>
+    <div class="arrow-style" >
+    <img class="img-style_arrow" *ngIf="blackmode==true" src="assets/icon/icon-white.png">
+    <img class="img-style_arrow" *ngIf="blackmode==false" src="assets/icon/icon-black.png">
+    </div>
+    </div>
+    <p class="view-style" style="font-size: .8rem;">View more here</p> -->
+   
+    <ion-icon name="menu"></ion-icon>
+    </div>
+
+
+
+    </div>
+
+
+    </div>
+    <div class="black-line_stripe"> </div>

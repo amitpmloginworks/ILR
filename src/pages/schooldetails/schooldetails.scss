@@ -1,0 +1,325 @@
+page-schooldetails {
+   
+.image-profile{
+    width: 100px;
+    height: 94px;
+    display: block;
+    margin: 0 auto;
+  
+}
+
+.text-para{
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+}
+.login-text{
+    height: 4.5rem !important; 
+    
+}
+.login-text{
+    font-weight: bolder;
+     font-size: 17px;
+     margin-bottom: 20px;
+     
+}
+.item-md {
+    padding-left: 0px;
+    border: 1px solid #ADADAD;
+    padding-left: 0px;
+    margin-bottom: 1px;
+    border-radius: 5px;
+    height: 30px;
+   
+
+}
+
+.list-md .item-block .item-inner {
+    border-bottom: none; 
+}
+
+.item-md.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: none; 
+}
+.outer-div
+{
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    margin-left: 5px;
+}
+.inner-divimg
+{
+    display: inline-block;
+    width: 7%;
+    height: 26px;
+    float: left;
+    text-align: left;
+}
+
+.inner-divimg-LR
+{
+    display: inline-block;
+    width: 15%;
+    height: 26px;
+    float: left;
+    text-align: left;
+}
+
+.div-tittle{
+    font-weight: bold;
+    width: 98%;
+    padding-top: 4px;
+    font-size: 1.0rem;
+    font-family: 'Century Gothic';
+    padding-left: 24px;
+}
+
+
+.select-text {
+    margin-left: 15px !important;
+}
+
+.item-block{
+    min-height: 2.8rem;
+}
+
+.div-updownarrow
+{
+    width: 14px; height: 14px; float: right; top: -23px; display: flex; position: relative; left: -5px;margin-right: 4px;
+}
+
+.errormsg{
+    color:red;    margin-top: 3px; 
+    font-size: 12px;
+    font-family: 'Century Gothic'; 
+}
+.errormsg1{
+    color:red;    margin-top: 5px; 
+    font-size: 12px;
+    font-family: 'Century Gothic'; 
+}
+.errormsg2
+{
+    color:red;margin-top: 5px;   
+    font-size: 12px;
+    font-family: 'Century Gothic'; 
+}
+
+.div-header1-out
+{
+    margin-top: 12px; display: block; width: 100%;     padding-top: 17px;     margin-left: 5px;
+}
+.div-header1-left
+{
+    display: inline-block;width: 47%; float: left;text-align: left;
+}
+.div-header1-center
+{
+    display: inline-block;width: 6%;height: 1px;float: left;text-align: left;
+}
+.div-header1-right
+{
+    display: inline-block;width: 47%;float: left;text-align: left;
+}
+
+
+.div-content1-out
+{
+    margin-top: 12px;height: 40px;display: block;width: 100%;
+}
+.div-content1-LR  
+{
+    display: inline-block;width: 47%;height: 40px;float: left;text-align: left;
+}
+.div-content1-center
+{
+    display: inline-block;width: 6%;height: 40px;float: left;text-align: left;
+}
+
+
+
+// start here new css 
+
+.searchbar-md .searchbar-input {
+    padding: 0px 24px;
+    font-size: 1.4rem;
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
+      -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.searchbar-md .searchbar-search-icon {
+    left: 2px;
+    top: 6px;
+    width: 20px;
+    height: 21px;
+}
+.searchbar-md
+{
+    padding: 0px;
+}
+.footerdiv
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #454647;
+    color: white;
+    text-align: center;
+
+}
+
+
+// header design ...
+
+.black-line_stripe
+{
+    height: 2px;
+  background-color: #515254;
+}
+
+.img-style_arrow{
+    height: 10px;
+    margin-bottom: 3px;
+    margin-left: -1px;
+}
+
+.p-style1
+{
+    font-size: .9rem;
+    margin-top: 12px;
+    margin-left: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.view-style
+{
+    font-size: 5.9px !important;
+    margin-top: -1px;
+    margin-left: 4px;
+    color: grey;
+}
+.welcome-text
+{
+display: inline-block;
+width:64% ;
+height:37px ;
+}
+.arrow-style
+{
+display:inline-block; 
+width:28%; 
+height:30px ;
+}
+.title-welcome_name
+{
+    height: 37px;
+}
+.title-view_more
+{
+    height:20px;
+}
+
+.div-profile_img
+{
+    width: 30px;
+    float: right;
+    margin-top: 11px;
+}
+.title-box
+{
+    height:50px;
+    width:100%; 
+    display:block; 
+}
+.title-innerdiv
+{
+    height:50px;
+    display:inline-block;
+    float: left; 
+}
+.box-1
+{
+    width:40%;
+    padding: 10px;
+}
+.box-2
+{
+    width:29.9%;
+}
+.box-3
+{
+    width:30%;
+    background-color: #cbcece;
+}
+.title-profile
+{
+    width: 43%;
+    height: 60px;
+    display: inline-block;
+}
+.title-info_box
+{
+    width: 57%;
+    height: 60px;
+    display: inline-block;
+    float: right;
+}
+
+
+.title-bar
+{
+    height:10px;
+    width:100%; 
+}
+
+// end of header ...
+
+
+
+// in serach select csss........
+
+
+.select-searchable-md .select-searchable-icon-inner {
+    display: none;
+} 
+
+.select-searchable
+{
+    max-width: 100%;
+    height: 2.8rem;
+    border-radius: 5px;
+    border: 1px solid #adadad;
+}
+.select-searchable-value {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+}
+.item-cover {
+    width: 0%;
+    height: 0%;
+}
+    
+}
+
+select-searchable-page{
+    .toolbar-md {
+        min-height: 48px !important;
+    }
+    ion-content {
+        top: 104px !important;
+    }
+
+   
+     
+
+
+}
+

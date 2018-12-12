@@ -1,0 +1,111 @@
+page-search {
+ 
+.p-text{
+    font-size: 1.4rem;
+    margin-top: 8px;
+    font-weight: 800;
+}
+
+    .segment-md-redtheme .segment-button {
+        color: black;
+    }
+    .searchbar-clear-icon {
+        display: none !important;
+        }
+    .searchbar-md {
+    background: inherit;
+ padding: 0px !important; 
+}
+.search-box{
+    margin-top:32px;
+    margin-top: 54px;
+    background-color: #e6e2e2;
+    height: 42px;
+    text-align:right;
+}
+.searchbar-md .searchbar-search-icon {
+   display: none !important;
+}
+.title-box{
+    text-align: right;
+    margin-top: -20px;
+    margin-right: 25px;
+  
+}
+.icon-box{
+    position: absolute;  
+    top: 77px;
+    right: 28px;
+    position: absolute;
+    z-index: 1;
+    font-size: 2.91rem;
+    color: #a5a3a3;
+}
+.input-box{
+    margin-top: 10px;
+    margin: 0px;
+    background-color: #e6e2e2;
+}
+.segment-box{
+    height: 75px;
+    font-size: .7rem;
+    padding: 13px;   
+}
+.div-text-box{
+    
+    display: inline-block;
+    width: 48%;
+    height: 127px;
+    float: left;
+}
+.div-text-bigbox{
+    display: block;
+    width: 100%;
+    height: 127px;
+  
+}
+.searchbar-md .searchbar-input{
+    background-color: #F2F2F2;
+    border: 1px solid #CFCFCF;
+    padding-right: 0px;
+    padding-left: 15px;
+    font-size: 1.3rem;
+    box-shadow: none;
+    padding-top:10px;
+}
+.searchbar-ios .searchbar-input{
+    background-color: #F2F2F2;
+    border: 1px solid #CFCFCF;
+    padding-right: 0px;
+    padding-left: 15px;
+    font-size: 1.3rem;
+    box-shadow: none ;
+    padding-top: 11px;
+}
+.searchbar-md .searchbar-search-icon {
+    left:250px;
+    float:left;
+}
+
+.searchbar-ios .searchbar-search-icon {
+    left:250px;
+    float:left;
+}
+.icon-box{
+    top: 79px;
+}
+.ion-icon {
+    padding-top: 2px ! important;
+}
+
+.segment-md .segment-button.segment-activated{
+    border-color: #EC707F;
+    color: #EC707F;
+    opacity: 1;  
+}
+.segment-md .segment-button {
+    border-color: #CFCFCF;
+    color: Black;
+    opacity: 1;
+}
+}

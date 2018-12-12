@@ -1,0 +1,77 @@
+<ion-content>
+                <div class="header-style"> <p class="textONcentre">WELCOME ON BOARD</p>  </div>
+        
+                <div class="logo-tag_style">
+                <!-- <img class="logo-img" src="assets/imgs/HomePage/logo01.png"> 
+                <br> 
+              <div  style="  width: 100px;
+              position: absolute;
+              height: 107px;
+              top: 336px;margin-top: 166px;">
+                <img class="logo-button" src="assets/imgs/HomePage/hellobtn.png" (click)="aboutUsBtn()">
+               </div> -->
+               <div class="title" >
+                  <img class="logo-img" src="assets/imgs/HomePage/logo01.png"> 
+               </div>
+               <div class="header">
+                  <img class="logo-button" src="assets/imgs/HomePage/hellobtn.png" (click)="aboutUsBtn()">
+               </div>
+        
+        
+        
+              </div>
+                
+                <div class="line-strip">
+                <div *ngIf="strip1==false" class="line-strip_div" >
+                <img   (click)="hidebutton()" class="plus-button_style pos_img0" src="assets/imgs/HomePage/home_plusbtn.png">
+
+                <img class="plus-button_style pos_img1" src="assets/imgs/HomePage/chat.png">
+   
+              
+                <p class="p-text">Language</p>
+                </div>
+                <div *ngIf="strip==true" class="line-strip_div1" >
+                        <img   (click)="hidebutton()" class="plus-button_style pos_img0" src="assets/imgs/HomePage/home_plusbtn.png">
+                        </div>
+                </div>
+        
+                <div class="footer-style" >
+                <div class="button_style color1" (click)="navigatetologin()">
+                <p  class="textONcentre1">SIGN IN</p>
+                </div>
+                
+                <div class="button_style color2" (click)="navigatetoSignup()">
+                        <p  class="textONcentre1">SIGN UP</p>
+                    </div>
+        
+        
+                  
+                         
+                </div>
+                <!-- <ion-card>
+                        <ion-list>
+        
+                                <ion-item>
+                                  <ion-label>Pepperoni</ion-label>
+                                  <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
+                                </ion-item>
+                              
+                              
+                                <ion-item>
+                                  <ion-label>Mushrooms</ion-label>
+                                  <ion-checkbox [(ngModel)]="mushrooms"></ion-checkbox>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label>roni</ion-label>
+                                    <ion-checkbox [(ngModel)]="peppeoni"></ion-checkbox>
+                                  </ion-item>
+                                
+                                
+                                  <ion-item>
+                                    <ion-label>rooms</ion-label>
+                                    <ion-checkbox [(ngModel)]="mushroom"></ion-checkbox>
+                                  </ion-item>
+                              
+                              </ion-list>
+                            </ion-card> -->
+                            </ion-content>

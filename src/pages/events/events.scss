@@ -1,0 +1,96 @@
+page-events {
+    .nav-bar-style{
+        display: block;
+        text-align: right;
+        margin-top: -22px;
+        margin-right: 9px;
+    }
+    .nav-bar-img{
+        display: inline-block;
+        height: 13px;
+        margin-right: 9px;
+    }
+    .nav-bar-img-fav{
+        display: inline-block;
+        margin-right: 9px;
+        position: absolute;
+        width: 19px;
+        margin-top: 9px;
+        margin-left: -7px
+    }
+    .item-md {
+        padding-left: 0px;
+    }
+    
+    .image-profile{
+        width: 19%;
+        height: 61px;
+        margin-top: 31px;
+    }
+    .p-upload-style
+    {
+    font-weight: 400;
+    color: #c1c1c1;
+    }
+    .uploadimg{
+        text-align: center;
+        object-fit: cover;
+        border: 2px solid #d8d6d6;
+        height: 156px;
+        width: 89%;
+        margin-left: 18px;
+        margin-top: 28px;
+        margin-left: 20px;
+    }
+    .segment-md .segment-button{
+    background-color: #272727;
+    color:#FFF;
+    padding:0px;
+    opacity: 1;
+    }
+
+    .segment-md-primary .segment-button.activated, .segment-md-primary .segment-button.segment-activated{
+        color:#FFF;
+        background-color: #272727;
+        border-color:#f53d3d;  
+        opacity: 1;
+    }
+    ion-segment {
+        margin-top:40px;
+    }
+     .item-md {
+         padding-left: 16px;
+         padding-right:16px;
+     }
+     .button-md {
+         width:90%;
+         margin: auto;
+         
+     }
+     .item-md ion-avatar[item-left], .item-md ion-thumbnail[item-left], .item-md ion-avatar[item-start], .item-md ion-thumbnail[item-start] {
+        margin: 8px 9px 8px 0;
+    }
+    .item-md ion-avatar ion-img, .item-md ion-avatar img {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+    }
+    .bgcolorfull
+    {
+        background: #f2f2f2;
+    }
+    .bgwhite
+    {
+        background: #fff;  
+    }
+    ion-header {
+        background: #fff;
+    }
+    .box-3 {
+        width: 32% !important;
+    }
+    ion-segment {
+        margin-top: 53px !important;
+    }
+}

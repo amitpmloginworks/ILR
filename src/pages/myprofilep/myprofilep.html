@@ -1,0 +1,117 @@
+<!--
+  Generated template for the MyprofilepPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+    <ion-navbar color="dark" >
+       <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+       </button>
+       <ion-title>My Profile</ion-title>
+       <div class="nav-bar-style" >
+          <img  class="nav-bar-img"  menuToggle="right"  src="assets/imgs/menu.png">
+       </div>
+    </ion-navbar>
+ </ion-header>
+ <ion-content padding  >
+    <div class="div-image-box">
+       <div style="    text-align: center;    object-fit: cover;">
+          <ion-avatar >
+             <img [src]="imageProfile" style="width: 90px; height: 90px; display: block;     border: 1px solid #ccc; margin: 0 auto;" [ngStyle]="(imageProfile == 'assets/imgs/man-user.png')?{ 'padding': '10px','border-radius': '50%'  }:{ 'border-radius': '50%'  }" (click)="uploadpicture()">
+          </ion-avatar>
+       </div>
+       <p style="font-size: 17px;
+          font-weight: 700;"  >{{userdata.username}}</p>
+    </div>
+    <div class="div-box" >
+       <div class="div-box1" >
+          <p style=" color: #07ab07;
+             margin-left: 5px;" *ngIf="subscribeStatus==1" >Active Subscription</p>
+          <p style="    margin-top: -16px;
+             margin-left: 5px;
+             font-size: 10px;
+             color: red;" >valid Until {{ subscribeExpiry }}</p>
+       </div>
+       <div class="div-box2" >
+          <img style="    height: 34px;    margin-right: 5px;    margin-top: 10px;
+             " src="assets/imgs/i.png" >
+       </div>
+    </div>
+    <div class="div-box9" >
+       <div class="div-box4">
+          <p style="    font-weight: 500;"  >Email:</p>
+       </div>
+       <div class="div-box5">
+          <p  *ngIf="ViewEmail==0">{{userdata.email}}</p>
+          <ion-item *ngIf="ViewEmail==1">
+             <ion-input type="text" [(ngModel)]="TxtEmail"  ></ion-input>
+          </ion-item>
+       </div>
+       <div class="div-box6">
+          <img style="max-width: 18px;
+          margin-top: 13px;    width: 12px;" src="assets/imgs/draw.png" (click)="editEmail()" [hidden]="hideEmail">
+          <ion-icon *ngIf="hideEmail==true" ios="ios-close" md="md-close" (click)="CancelEmail()"></ion-icon>
+          <ion-icon *ngIf="hideEmail==true" ios="ios-checkmark" md="md-checkmark" (click)="CheckmarkEmail()"></ion-icon>
+       </div>
+    </div>
+    <div class="div-box9" >
+       <div class="div-box4">
+          <p style="    font-weight: 500;" >Phone:</p>
+       </div>
+       <div class="div-box5">
+          <p *ngIf="ViewPhone==0">{{userdata.phone}}</p>
+          <ion-item *ngIf="ViewPhone==1">
+             <ion-input type="text" [(ngModel)]="TxtPhone"  ></ion-input>
+          </ion-item>
+       </div>
+       <div class="div-box6">
+          <img style="max-width: 18px;
+          margin-top: 13px;    width: 12px;" src="assets/imgs/draw.png" (click)="editPhone()" [hidden]="hidePhone">
+          <ion-icon *ngIf="hidePhone==true" ios="ios-close" md="md-close" (click)="CancelPhone()"></ion-icon>
+          <ion-icon *ngIf="hidePhone==true" ios="ios-checkmark" md="md-checkmark" (click)="CheckmarkPhone()"></ion-icon>
+       </div>
+    </div>
+    <div class="div-box9" >
+       <div class="div-box4">
+          <p style="    font-weight: 500;" >Addrees:</p>
+       </div>
+       <div class="div-box5">
+          <p style="margin-top: 15px;" *ngIf="ViewAdd==0" >{{userdata.school_address}} , {{userdata.school_city}},  {{userdata.school_state}},
+             {{userdata.school_country}} 
+          </p>
+          <ion-item *ngIf="ViewAdd==1">
+             <ion-input type="text" [(ngModel)]="TxtAdd" *ngIf="hideTxtAdd==true"   ></ion-input>
+             <ion-input type="text" [(ngModel)]="TxtCity" *ngIf="hideTxtCity==true"   ></ion-input>
+             <ion-input type="text" [(ngModel)]="TxtState" *ngIf="hideTxtState==true"   ></ion-input>
+             <ion-input type="text" [(ngModel)]="TxtCountry" *ngIf="hideTxtCountry==true"   ></ion-input>
+          </ion-item>
+       </div>
+       <div class="div-box6">
+          <img style="max-width: 18px;
+          margin-top: 13px;    width: 12px;" src="assets/imgs/draw.png" (click)="editAdd()" [hidden]="hideAddImg">
+          <ion-icon *ngIf="hideCancel==true" ios="ios-close" md="md-close" (click)="CancelAdd()"></ion-icon>
+          <ion-icon *ngIf="hideAdd==true" ios="ios-checkmark" md="md-checkmark" (click)="CheckmarkAdd()"></ion-icon>
+          <ion-icon *ngIf="hideCity==true" ios="ios-checkmark" md="md-checkmark" (click)="CheckmarkCity()"></ion-icon>
+          <ion-icon *ngIf="hideState==true" ios="ios-checkmark" md="md-checkmark" (click)="CheckmarkState()"></ion-icon>
+          <ion-icon *ngIf="hideCountry==true" ios="ios-checkmark" md="md-checkmark" (click)="CheckmarkCountry()"></ion-icon>
+       </div>
+    </div>
+    <div class="div-box9" >
+       <div class="div-box4">
+          <p style="    font-weight: 500;    " >Points Earned:</p>
+       </div>
+       <div class="div-box8">
+          <p *ngIf="totalPoints==0">{{ totalPoints }} point</p>
+          <p *ngIf="totalPoints!=0">{{ totalPoints }} points</p>
+       </div>
+       <div class="div-box7">
+          <p style="color: white;
+             font-size: 10px;
+             text-align: center;
+             margin-top: 6px;" (click)="itemSelected()" >Reedem Points</p>
+       </div>
+    </div>
+ </ion-content>

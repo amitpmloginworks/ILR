@@ -1,0 +1,54 @@
+page-aboutus {
+
+    ion-header {
+        background: #fff;
+    }
+    .box-3 {
+        width: 32% !important;
+    } 
+
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 80px;  
+    }
+    .grey-group {
+        background: #ededed;
+        float: left;
+        width: 100%;
+    }
+    .grey-h3 {
+        background: #313746;
+        padding: 26px 11px;
+        color: #fff;
+        text-align: center;
+        float: left;
+        width: 100%;
+        height: 79px;
+        margin-bottom: 0px;
+        font-size: 25px;
+        margin: 0px;
+        font-weight: bold;
+    }
+    .detail-page {
+        float: left;
+        width: 100%;
+        margin-bottom: 30px;
+        /* margin-top: 10px; */
+    }
+
+    p {
+        font-size: 18px !important;
+        color: #333 !important;
+        font-family: arial !important;
+        text-align: justify !important;
+        margin-bottom: 15px;
+        line-height: 40px;
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        font-size: 16px;  
+    }
+     
+
+}

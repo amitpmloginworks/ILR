@@ -1,0 +1,189 @@
+page-termsandconditions {
+    ion-label {
+        font-size: 10px;
+      }
+      .item-md {
+        padding-left: 0px
+      }
+      .checkbox-md .checkbox-icon {
+      border-width: 1px
+    }
+    
+    .item.item-md .checkbox-md {
+        margin-right: 10px;
+        margin-left: 22px;
+        margin-bottom: 15px;
+    }
+    page-home ion-label {
+        font-size: 10px;   
+    }
+    .item-md {
+        color: grey
+    }
+    page-home ion-label {
+        font-size: 10px
+    }
+    a {
+        color: grey;
+        font-size: 14px;  
+        text-decoration: none; 
+    }
+    .label-md {
+        margin: 0px
+    }
+    
+    
+
+    
+// header design ...
+
+.black-line_stripe
+{
+    height: 2px;
+  background-color: #515254;
+}
+
+.img-style_arrow{
+    height: 10px;
+    margin-bottom: 3px;
+    margin-left: -1px;
+}
+
+.p-style1
+{
+    font-size: .9rem;
+    margin-top: 12px;
+    margin-left: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.p-tittle{  
+    font-family: 'Century Gothic';
+    color: #231f20; font-size: 20px; font-weight: bold;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.p-content{
+    color: grey; text-align: justify;
+    font-family: 'Century Gothic';
+}
+.div-policy
+{
+    background: transparent;
+    font-family: 'Century Gothic';
+}
+.view-style
+{
+    font-size: 5.9px !important;
+    margin-top: -1px;
+    margin-left: 4px;
+    color: grey;
+}
+.welcome-text
+{
+display: inline-block;
+width:64% ;
+height:37px ;
+}
+.arrow-style
+{
+display:inline-block; 
+width:28%; 
+height:30px ;
+}
+.title-welcome_name
+{
+    height: 37px;
+}
+.title-view_more
+{
+    height:20px;
+}
+
+.div-profile_img
+{
+    width: 30px;
+    float: right;
+    margin-top: 11px;
+}
+.title-box
+{
+    height:50px;
+    width:100%; 
+    display:block; 
+}
+.title-innerdiv
+{
+    height:50px;
+    display:inline-block;
+    float: left; 
+}
+.box-1
+{
+    width:40%;
+    padding: 10px;
+}
+.box-2
+{
+    width:29.9%;
+}
+.box-3
+{
+    width:30%;
+    background-color: #cbcece;
+}
+.title-profile
+{
+    width: 43%;
+    height: 60px;
+    display: inline-block;
+}
+.title-info_box
+{
+    width: 57%;
+    height: 60px;
+    display: inline-block;
+    float: right;
+}
+
+
+.title-bar
+{
+    height:10px;
+    width:100%; 
+}
+
+// end of header ...
+
+.terms_condition {
+    font-size: 18px !important;
+    text-align: justify;
+    font-family: arial !important;
+    margin-left: 22px;
+    margin-right: 22px;
+    float: left;
+    line-height: 40px;
+}
+
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+   
+.listing {
+    line-height: 42px;
+    width: 100%;
+    float: left;
+    font-family: arial !important;
+    font-size: 18px !important;
+}
+
+.checkbox-md .checkbox-icon {
+    width: 17px;
+    height: 17px;
+}   
+
+    
+}

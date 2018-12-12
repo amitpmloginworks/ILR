@@ -1,0 +1,415 @@
+page-answersheet {
+    ion-header {
+        background-color: white;
+      }
+
+.outer-div      {     width: 100%; height: auto;  margin-top: 55px; }
+.outer-div-left     {  width: 55%; float: left; }
+.outer-div-right    { width: 35%;  float: left;     text-align: center; }
+.img1   {     text-align: center;    object-fit: cover;     margin-top: 15px;     }
+.img2 { width: 30%;     margin-top: 35px;      }
+.img-profiles
+{
+width: 70%;
+height: 22%;
+display: block;
+margin: 0 auto;
+float: right;  
+border-radius: 100px;
+}
+.avatar-p{
+display: inline-block;
+margin-left: 70px;
+font-size: 1.0rem;
+margin-top: 5px;
+font-family: "Century Gothic"; 
+}
+
+.div-txt{ 
+font-size: 2.9rem;
+color:#344861;
+font-family: "Century Gothic";                           
+}
+.div-txt1{
+color:#344861;
+font-family: "Century Gothic";
+font-size: 1.0rem;
+}
+.black-line_stripe
+{
+height: 5px;
+background-color :  #363A45;
+}
+
+.img-style_arrow{
+height: 12px;
+margin-bottom: 0px;
+margin-left: -2px;
+}
+
+
+
+.view-style
+{
+font-size: 5.9px !important;
+margin-left: 4px;
+margin-top: -2px;
+color: #FFF;
+}
+.welcome-text
+{
+display: inline-block;
+width:64% ;
+height:37px ;
+}
+.arrow-style
+{
+display:inline-block; 
+width:28%; 
+
+height:30px ;
+}
+.title-welcome_name
+{
+height: 37px;
+}
+.title-view_more
+{
+height:20px;
+}
+
+.div-profile_img
+{
+width: 30px;
+float: right;
+margin-top: 11px;
+}
+.div-notify{
+width: 35px;
+float: right;
+}
+
+.title-box
+{
+height:50px;
+width:100%; 
+display:block; 
+}
+
+.title-innerdiv
+{
+height:50px;
+display:inline-block;
+float: left; 
+}
+
+.box-1
+{
+width:40%;
+padding: 10px;
+}
+.box-2
+{
+width:27.9%;
+}
+
+.box-3
+{
+width:32% !important;
+}
+
+.title-profile
+{
+width: 39%;
+height: 60px;
+display: inline-block;
+}
+
+.title-info_box
+{
+width: 61%;
+height: 60px;
+display: inline-block;
+float: right;
+}
+
+.title-bar
+{
+height:10px;
+width:100%;
+}
+
+
+.div-badge
+{
+position: absolute;top: 7px; right: 122px; border-radius: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+
+.div-badge
+{
+position: absolute;top: 7px; right: 110px; border-radius: 100%;
+}
+}
+.badge-md-profileBtnBg {
+top: 8px;
+right: 108px;
+border-radius: 100%;
+text-indent: -1px;
+font-size: .5rem;
+height: 15px;
+width: 14px;
+position: absolute;
+right: 113px;
+padding: 4.1px;
+}
+
+.text-header{
+text-align:center;
+margin-top: 9px;
+color : white;
+font-size : 1.7rem;
+font-family: "Bebas Neue Bold";
+letter-spacing: 1px
+
+}
+
+.item-style{
+border:1px solid #CCCCCC;
+border-radius:7px 
+}
+
+
+
+
+
+
+.button-box{
+    color: #fff;
+    background-color: #32BEB3;
+    position: absolute;
+    bottom: 19px;
+    right: 21px;
+    width: 88%;
+    height: 4.5rem !important; 
+}
+.slider-box{
+
+    height: 160px;
+    margin-top: 64px; 
+    display: block;
+    width:100%;
+    height: 160px;     
+}
+.slider-card{
+display: inline-block;
+width:70%;
+
+float: left;
+height: 160px;
+}
+.slider-arrow{
+ display: inline-block;
+ width:15%;
+
+float:left;
+height: 160px;
+}
+.slider-arrow-icon{
+    display: inline-block;
+    font-size: 3.1em;
+    color: gray;
+    margin-top: 40px;
+    margin-left: 7px;
+}
+.slider-inner-card{
+    display:block;
+    width:100%;
+    height: 160px;
+}
+.slider-card-box{
+    display:inline-block;
+    width:33%; 
+    float: left; 
+    height: 160px;
+}
+.card-box{
+   
+    margin-top: 50px;
+}
+
+ion-scroll {
+    white-space: nowrap;
+    height: 150px
+  }
+  
+  
+  
+  ion-card{
+    width: 30%;
+    display: inline-block;
+  }
+  .card-md{
+      width: calc(55% - 0px)
+  }
+  .col-left{
+      margin-left:0%
+  }
+  .row{
+      padding-top:3%
+  }
+  .col-right{
+      margin-left:0%;
+      right: -56px;
+  }
+  .col-middle{
+  margin-left:-10%
+  }
+  ion-card img {
+      width:85px;
+  }
+
+  .swiper-slide {
+    width: 65px !important;
+   margin-right: 40px !important;
+    text-align: center;
+    margin-left: -6px !important;
+  }
+
+  .swiper-container {
+    margin-left: 20px;
+    margin-right: 10px;
+    width:110%;
+  }
+  ion-slides{
+      width:100%
+  }
+   .swiper-slide img {  
+    max-width: 170%;
+    width: 170%;
+   margin-top: 19px;
+    height: 90px;
+    margin-left:9px;
+  
+}
+.slide-zoom {
+    width: 120%;
+    margin-left: 10px;
+}
+
+
+
+
+
+.magazine-box{
+    margin-top: 74px;
+    font-weight: bold;
+    font-size: 300;
+    font-size: 16px;
+    text-align:center;
+    color: #000;
+}
+
+.black-line_stripe
+{
+    height: 2px;
+    background-color: #363A45;
+}
+
+.img-style_arrow{
+    height: 10px;
+    margin-bottom: 3px;
+    margin-left: -1px;
+}
+
+.p-style1
+{
+    font-size: .9rem;
+    margin-top: 12px;
+    margin-left: 3px;
+}
+
+.view-style
+{
+    font-size: 5.9px !important;
+    margin-top: -1px;
+    margin-left: 4px;
+    color: grey;
+}
+.welcome-text
+{
+display: inline-block;
+width:64% ;
+
+height:37px ;
+}
+.arrow-style
+{
+display:inline-block; 
+width:28%; 
+
+height:30px ;
+}
+.title-welcome_name
+{
+    height: 37px;
+    
+}
+.title-view_more
+{
+    height:20px;
+ 
+}
+
+.div-profile_img
+{
+    width: 30px;
+    float: right;
+    margin-top: 11px;
+}
+.title-box
+{
+    height:50px;
+    width:100%; 
+    
+    display:block; 
+}
+.title-innerdiv
+{
+    height:50px;
+    display:inline-block;
+    float: left; 
+}
+.div-header{
+    background-color: #434345;
+    width:100%;
+    height:10%;
+    margin-top: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-title{
+color:#FFF;
+font-size:2.0rem;
+font-family: "Century Gothic"
+
+}
+
+.text-heading{
+color:black;
+text-align:center;
+font-size:1.8rem;
+font-family: "Century Gothic"
+}
+.text-info{
+text-align:center;
+color:#A61B2E;
+font-size:1.2rem;
+font-family: "Century Gothic"
+}
+
+
+
+}

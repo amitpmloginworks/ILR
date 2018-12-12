@@ -1,0 +1,231 @@
+page-groupinfo {
+
+
+    ion-header {
+        background-color: white;
+      }
+
+.outer-div      {     width: 100%; height: auto;  margin-top: 55px; } 
+.outer-div-left     {  width: 55%; float: left; }
+.outer-div-right    { width: 35%;  float: left;     text-align: center; }
+.img1   {     text-align: center;    object-fit: cover;     margin-top: 15px;     }
+.img2 { width: 30%;     margin-top: 35px;      }
+.img-profiles
+{
+width: 70%;
+height: 22%;
+display: block;
+margin: 0 auto;
+float: right;  
+border-radius: 100px;
+}
+.avatar-p{
+display: inline-block;
+margin-left: 70px;
+font-size: 1.0rem;
+margin-top: 5px;
+font-family: "Century Gothic"; 
+}
+
+.div-txt{ 
+font-size: 2.9rem;
+color:#344861;
+font-family: "Century Gothic";                           
+}
+.div-txt1{
+color:#344861;
+font-family: "Century Gothic";
+font-size: 1.0rem;
+}
+.black-line_stripe
+{
+height: 5px;
+background-color :  #363A45;
+}
+
+.img-style_arrow{
+height: 10px;
+margin-bottom: 3px;
+margin-left: -1px;
+}
+
+
+.welcome-text
+{
+display: inline-block;
+width:64% ;
+height:37px ;
+}
+.arrow-style
+{
+display:inline-block; 
+width:28%; 
+
+height:30px ;
+}
+.title-welcome_name
+{
+height: 37px;
+}
+.title-view_more
+{
+height:20px;
+}
+
+.div-profile_img
+{
+width: 30px;
+float: right;
+margin-top: 11px;
+}
+.div-notify{
+width: 35px;
+float: right;
+}
+
+.title-box
+{
+height:50px;
+width:100%; 
+display:block; 
+}
+
+.title-innerdiv
+{
+height:50px;
+display:inline-block;
+float: left; 
+}
+
+.box-1
+{
+width:40%;
+padding: 10px;
+}
+.box-2
+{
+width:27.9%;
+}
+.box-3
+{
+width:32%;
+}
+
+.title-profile
+{
+width: 43%;
+height: 60px;
+display: inline-block;
+}
+
+.title-info_box
+{
+width: 57%;
+height: 60px;
+display: inline-block;
+float: right;
+}
+
+.title-bar
+{
+height:10px;
+width:100%;
+}
+
+
+
+
+.div-badge
+{
+position: absolute;top: 7px; right: 122px; border-radius: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+
+.div-badge
+{
+position: absolute;top: 7px; right: 110px; border-radius: 100%;
+}
+}
+.badge-md-profileBtnBg {
+top: 8px;
+right: 108px;
+border-radius: 100%;
+text-indent: -1px;
+font-size: .5rem;
+height: 15px;
+
+width: 14px;
+position: absolute;
+right: 113px;
+padding: 4.1px;
+}
+
+.text-title{
+    color : white;
+    font-size : 2.0rem;
+    font-family: "Century Gothic";  
+}
+
+.text-group_name{
+
+    font-size : 1.6rem;
+    font-family: "Century Gothic";  
+  
+}
+.text-change_name{
+    font-size : 1.0rem; 
+    font-family: "Century Gothic";  
+    color:#b5b5b5;
+}
+.text-search{
+    color:#374862;
+    font-size : 1.2rem; 
+    font-family: "Century Gothic"; 
+}
+
+.text-name{
+    color:black;
+    padding-top: 3px;
+    font-size : 1.4rem; 
+    font-family: "Century Gothic";   
+}
+.text-status{
+    font-size : 1.1rem; 
+    font-family: "Century Gothic Regular";  
+    color:black; 
+}
+.div-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  background-color:#363A45; 
+  height:9vh;
+  margin-top:55px
+}
+.item-md{
+border-bottom:1px solid #DADADA;
+}
+.list-md .item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+}
+.item-inner > ion-icon {
+   
+        min-height: 2.5rem;
+        font-size: 1.3rem;
+        line-height: 1;
+        color: #374862;
+
+}
+.text-bold{
+    font-family: "Century Gothic";     
+}
+.text-members{
+    font-family:Century Gothic Regular; 
+     padding-top: 13px;
+     font-size : 1.6rem;
+}
+
+
+}

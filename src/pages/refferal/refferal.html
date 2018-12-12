@@ -1,0 +1,137 @@
+<!--
+  Generated template for the RefferalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-header>
+        <headerbar></headerbar> 
+  </ion-header>
+  
+  <ion-content> 
+  
+  <img  style="margin-top: 53px; " src="assets/imgs/refferal/inviteheader.png">
+
+
+  <ion-slides  style="position: absolute; top: 33%;"  slidesPerView="2.2">
+
+   <ion-slide loop="true" id="x_0" style="width: 152.273px; margin-left: 10px; margin-right: 18px;" >
+        <div> <p class="p-tag-head" >Step One:</p></div>
+<div id="z_0" class="gift-style" >   <img id="y_0" src="assets/imgs/refferal/jane.png" >    </div>
+<div>
+   <p class="p-tag" >
+     <span style="font-weight: bold !important;">Jane</span> invites a friend. Copy the referral code under the referral programme.
+    </p>
+</div>
+</ion-slide>
+
+
+
+<ion-slide loop="true" id="x_1" style="width: 152.273px; margin-left: 10px; margin-right: 18px;" >
+        <div> <p class="p-tag-head" >Step Two:</p></div>
+<div id="z_1" class="gift-style" >   <img id="y_1" src="assets/imgs/refferal/marcus.png" >    </div>
+<div>
+   <p class="p-tag" >
+     <span style="font-weight: bold !important;">Marcus</span> signs up with Jane's referral code. 500 Redemption points will be added to <span style="font-weight: bold !important;">Jane's</span> account.
+    </p>
+</div>
+</ion-slide>
+
+<ion-slide loop="true" id="x_2" style="width: 152.273px; margin-left: 10px; margin-right: 18px; " >
+        <div> <p class="p-tag-head" >Step Three:</p></div>
+<div id="z_2" class="gift-style" ><img id="y_2" src="assets/imgs/refferal/bella.png" >    </div>
+<div>
+   <p class="p-tag" >
+     <span style="font-weight: bold !important;">Marcus</span> invites  <span style="font-weight: bold !important;">Bella.</span> <span style="font-weight: bold !important;">Bella</span> signs up. 100 Redemption points will be added to account and 500 points to <span style="font-weight: bold !important;">Marcus's</span> account.  
+    </p>
+</div>
+</ion-slide>
+
+
+
+  </ion-slides>
+   
+
+  <div class="profile-strip">
+        <img   src="assets/imgs/refferal/divider.png" >
+
+        <div style=" width: 100%;     text-align: center;">
+            <div style="margin-left: 26%; width: 50%; font-family: Century Gothic Regular;font-size: 1.3rem; color: #373945;">
+                <!-- Share your referral code to get 100 redeem points -->
+                Share Your referral Code to get redemption points
+                <div class="container">
+                        <img style="    width: 81%;margin-top: 10px;" src="assets/imgs/refferal/invitecode_btn.png">
+                        <div class="p-tagstyle">{{refferalcode}}</div>
+                </div>
+                
+            
+            </div>
+
+            <ion-row style="    height: 49px;">
+                    <ion-col col-2 no-margin no-padding></ion-col>
+                    <ion-col col-2 no-margin no-padding>
+                            <div (click)="Messenger()">
+                                <img style="width: 65%;" src="assets/imgs/refferal/fb_btn.png"> 
+                                </div>
+                            </ion-col>
+                            <ion-col col-2 no-margin no-padding>
+                                    <div (click)="TwitterShare()">
+                                <img style="width: 65%;" src="assets/imgs/refferal/twitter_btn.png">
+                                </div>  
+                            </ion-col>
+                            <ion-col col-2 no-margin no-padding>
+                                <div (click)="Instagram()">
+                                        <img style="width: 65%;" src="assets/imgs/refferal/ig_btn.png">  
+                                </div>
+                               
+                            </ion-col>
+                            <ion-col col-2 no-margin no-padding>
+                                    <div (click)="WhatsApp()">
+                                <img style="width: 65%;" src="assets/imgs/refferal/whatsapp_btn.png">
+                                </div>  
+                    </ion-col>
+                    <ion-col col-2 no-margin no-padding></ion-col>
+                </ion-row>
+
+
+             
+
+
+
+
+                <ion-row style="    margin-bottom: 15px;"> 
+                        <ion-col col-1 no-margin no-padding></ion-col>
+                        <ion-col col-10 no-margin no-padding>
+
+                                <p class="ref-terms" no-margin no-padding> Please download the WhatsApp desktop App from the APP STORE if you are sharing on Safari browser.</p>
+   
+                               <div style="font-size: 1rem; color: #050505;font-family: Century Gothic;"> 
+                                    Invite your friends now to accumulate your points and redeem your rewards.  
+                               </div>
+       
+                               <div style="color: #838383;margin-top: 10px;font-family: Century Gothic Regular;font-size: 1.2rem;"> 
+                                Terms & Conditions apply  
+                             </div> 
+                                
+                             <p class="footer-text" no-margin no-padding>NOTE: At the moment, Overseas Account User are not able to redeem any rewards. However, User Points will continue to accumulate for future redemption.</p>
+                             
+                        </ion-col>     
+                        <ion-col col-1 no-margin no-padding></ion-col>
+                    </ion-row>
+
+               
+
+
+        </div>
+
+
+
+       
+    
+  </div>
+
+  
+  </ion-content>

@@ -1,0 +1,57 @@
+page-signupcategorypop {
+    .content-md{
+        background-color: rgba(0,0,0,0.2);
+    }
+    .item-md {
+        padding-left: 0px;
+        border: 1px solid #ADADAD;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        border-radius: 5px;
+        height: 30px;
+        text-indent: 6px;
+    
+    }
+    .item-block
+    {
+        min-height: 3.4rem;
+    }
+    
+    .outer-div{
+        position: relative;
+        background: #fff;
+        text-align: center;
+        height: 41%;
+        border-radius: 16px;
+        top: 51%;
+        transform: perspective(1px) translateY(-50%);
+    }
+
+    .inner-div
+{
+    display: block;
+    width: 100%;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+   .scroll-content{
+    padding: 50px !important;
+        
+    }
+
+    .tittle{
+        color: #272727;
+        font-family: 'Century Gothic';
+        font-size: 23px;
+    }
+
+
+    @media only screen and (max-width: 320px) {
+
+    }
+
+     @media only screen and (min-height: 667px) {
+   
+    }
+}

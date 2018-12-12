@@ -1,0 +1,175 @@
+<!--
+  Generated template for the SavefavouritePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <headerbar></headerbar> 
+</ion-header>
+
+<ion-content padding>
+ <div style="margin-top: 42px;" >
+<ion-card class="card-style" *ngFor="let content of contents;let i=index"  >
+    <ion-card-title class="card-title">
+        <p class="title">{{content.title}}.</p>
+        <p class="subtitle">Post by {{ content.content_writer }}, {{ content.published_date  }}</p>
+     </ion-card-title>
+     <ion-card-content>
+        <div class="container">
+           <img (click)="fav(i)"  class="imgA1" *ngIf="content.is_favorite==0" src="assets/heart_1.png" right>
+           <img   (click)="fav(i)" class="imgA1" *ngIf="content.is_favorite==1" src="assets/heart_2.png" right>
+           
+           
+           <img src="{{content.image}}" *ngIf="content.image!=''"  class="imgB1" (click)="readmore(i)"  >
+           <img *ngIf="content.image==''"  class="imgB1"  src="assets/imgs/NoImageAvailable.jpg" (click)="readmore(i)" >
+           <div class="header-div">
+              <p class="read-text" > {{ content.totalviews }} View |{{ content.comment.length }} comments |{{ content.totalshares }} Share</p>
+              <div class="react-style-div" >
+                 <div *ngFor="let likec of content.likesCount">
+                    <div class="react-inside" *ngIf="likec.like_id==1" >
+                       <img class="col-style" src="assets/icon/Asset1.png" >
+                       <p class="react-p-style">{{ likec.total }}</p>
+                       <p class="text-react">Like</p>
+                    </div>
+                    <div class="react-inside" *ngIf="likec.like_id==5" >
+                       <img  class="col-style" src="assets/icon/Asset2.png" >
+                       <p class="react-p-style">{{ likec.total }}</p>
+                       <p class="text-react left-react">Happy</p>
+                    </div>
+                    <div class="react-inside" *ngIf="likec.like_id==2" >
+                       <img  class="col-style" src="assets/icon/Asset3.png" >
+                       <p class="react-p-style">{{ likec.total }}</p>
+                       <p class="text-react left-react">Surprised</p>
+                    </div>
+                    <div class="react-inside"  *ngIf="likec.like_id==3" >
+                       <img class="col-style" src="assets/icon/Asset4.png" >
+                       <p class="react-p-style">{{ likec.total }}</p>
+                       <p class="text-react">Sad</p>
+                    </div>
+                    <div class="react-inside" *ngIf="likec.like_id==4" >
+                       <img class="col-style" src="assets/icon/Asset5.png" >
+                       <p class="react-p-style">{{ likec.total }}</p>
+                       <p class="text-react">Angry</p>
+                    </div>
+                 </div>
+                 <div *ngIf="content.likesCount?.length ==0">
+                    <div class="react-inside" >
+                       <img class="col-style" src=" assets/imgs/happy-emoji.png" >
+                       <p class="react-p-style">0</p>
+                       <p class="text-react">Like</p>
+                    </div>
+                    <div class="react-inside"  >
+                       <img class="col-style" src="assets/imgs/aww-emoji.png" >
+                       <p class="react-p-style">0</p>
+                       <p class="text-react">Happy</p>
+                    </div>
+                    <div class="react-inside"  >
+                       <img  class="col-style" src="assets/imgs/sad-emoji.png" >
+                       <p class="react-p-style">0</p>
+                       <p class="text-react left-react">Surprised</p>
+                    </div>
+                    <div class="react-inside" >
+                       <img class="col-style" src="assets/imgs/angry-emoji.png" >
+                       <p class="react-p-style">0</p>
+                       <p class="text-react">Sad</p>
+                    </div>  
+                    <div class="react-inside"  >
+                       <img class="col-style" src="assets/imgs/lol-emoji.png" >
+                       <p class="react-p-style">0</p>
+                       <p class="text-react">Angry</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="share-class">
+              <div class="share-box" (click)="facebookShare(i)" >   
+                 <p>
+                    <img src="assets/imgs/share-icon/facebook.png">
+                 </p>
+              </div>
+              <div class="share-box" (click)="twitterShare(i)">
+                 <p>  
+                    <img src="assets/imgs/share-icon/twitter.png">
+                 </p>
+              </div>
+              <div class="share-box" (click)="InstagramShare(i)">
+                 <p>
+                    <img src="assets/imgs/share-icon/instagram.png">
+                 </p>
+              </div>
+              <div class="share-box" (click)="WhatsAppShare(i)">
+                 <p>
+                    <img src="assets/imgs/share-icon/wattsapp.png">
+                 </p>
+              </div>
+              <!-- <div class="share-box" (click)="TumblrShare(i)">  
+                 <p>
+                    <img src="assets/imgs/share-icon/tumbler.png">
+                 </p>
+              </div> -->
+           </div>
+        </div>
+     </ion-card-content>
+  
+    
+  <!-- <ion-card-title class="card-title">
+    {{content.title}}.
+<p class="subtitle">Post by {{ content.content_writer }}, {{ content.published_date  }}</p>
+  </ion-card-title>
+  <ion-card-content>
+        <div class="container"> 
+        <img   class="imgA1" *ngIf="content.is_favorite==1" src="assets/imgs/Facebook-Reactions_0001_Layer-2.png" right>
+        <img src="{{content.image}}" *ngIf="content.image!=''"  class="imgB1" (click)="readmore(i)"  >
+        <img *ngIf="content.image==''"  class="imgB1"  src="assets/imgs/NoImageAvailable.jpg" (click)="readmore(i)" >
+<div class="line-strip">
+  <div class="strip_1"> 
+<ion-row (click)="fabbtnclick(content.likesCount,i)"> 
+  <ion-col>
+ <img class="style-img" src="assets/imgs/Facebook-Reactions_0000_Layer-1.png">
+ </ion-col>
+<ion-col >
+ <p class="p-style">Like</p>
+ </ion-col>
+  </ion-row>
+</div>
+
+<div *ngIf="showreaction==true">
+  <div class="strip_2" *ngIf="i==jindex" id="{{i}}_x"  >
+
+<div class="react-style-div" >
+<div class="react-inside" >
+    <img class="col-style" src=" assets/imgs/happy-emoji.png" >
+    <p class="react-p-style">{{ ehappy }}</p>
+  </div>
+  <div class="react-inside" >
+      <img class="col-style" src="assets/imgs/aww-emoji.png" >
+      <p class="react-p-style">{{ eaww }}</p>
+    </div>
+    <div class="react-inside" >
+        <img  class="col-style" src="assets/imgs/sad-emoji.png" >
+        <p class="react-p-style">{{ esad }}</p>
+      </div>
+
+      <div class="react-inside" >
+          <img class="col-style" src="assets/imgs/angry-emoji.png" >
+          <p class="react-p-style">{{ eangry }}</p>
+        </div>
+        <div class="react-inside" >
+            <img class="col-style" src="assets/imgs/lol-emoji.png" >
+            <p class="react-p-style">{{ elol }}</p>
+          </div>
+
+</div>
+ </div>
+ </div>
+
+<div class="strip_3"  id="{{i}}_y"  >
+      <p class="read-text" > {{ content.totalviews }} View | {{ content.totalshares }} Share</p>
+</div>
+</div>
+</div>
+</ion-card-content> -->
+</ion-card>
+</div>
+</ion-content>

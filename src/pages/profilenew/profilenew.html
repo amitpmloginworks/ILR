@@ -1,0 +1,250 @@
+<!--
+  Generated template for the ProfilenewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-header> 
+  <div class="title-box" >
+    <div class="title-innerdiv box-1"> <img style="height: 33px;" src="assets/icon/logo02.png"> </div>
+  <div class="title-innerdiv box-2">  
+      <ion-badge id="notifications-badge" color="profileBtnBg" style="width: 4%; position: absolute; top: 12px; right: 109px; border-radius: 100%; text-indent: -3px;">1</ion-badge>  
+      <img class="div-notify" src="assets/imgs/profile/notify-01.png">     </div>
+<div class="title-innerdiv box-3">
+    <div class="title-profile"> <img class="div-profile_img" src="assets/imgs/user.png">    </div>
+  <div class="title-info_box">
+  <div class="title-welcome_name" >
+    <div class="welcome-text">   <p class="p-style1">hello<br>Chetan</p>   </div>
+  <div class="arrow-style">
+  <img class="img-style_arrow" src="assets/imgs/6_Select-your-choices.png">
+  </div>
+  </div>
+  <p  class="view-style" style="font-size: .8rem;">View more here</p>
+  </div>
+</div>
+</div>
+<div class="black-line_stripe">    </div>  
+</ion-header>
+
+
+
+<ion-content>
+   
+  <div *ngIf="TeacherProfiles">
+    <div class="outer-div">
+      <div class="outer-div-left">  
+        <div class="img1">
+            <ion-avatar > 
+            <img src="assets/imgs/profile/greydp-01.png" class="img-profiles" >  
+            <p class="avatar-p" no-margin no-padding>  Change profile photo </p>
+            </ion-avatar>
+        </div>
+        
+           </div>
+      <div class="outer-div-right">     <img src="assets/imgs/profile/trophy.png" class="img2">
+       
+      <ion-row style=" margin: 0px !important; padding: 0px !important;">
+      <ion-col col-12 style=" margin: 0px !important; padding: 0px !important;">  <div class="div-txt">7840</div> </ion-col>
+      <ion-col col-12 style=" margin: 0px !important; padding: 0px !important;"><div class="div-txt1"> Earned Points</div></ion-col>
+      <ion-col col-12 style="margin: 0px !important; padding: 0px !important;"> <button ion-button class="btnRedeem">Redeem Points</button></ion-col>
+      <ion-col col-12 style="margin: 0px !important; padding: 0px !important;"> <button ion-button class="btnRenew">Renew Subscription</button></ion-col>
+      <ion-col col-12 style=" margin: 0px !important; padding: 0px !important;"><button ion-button class="btnInvite">Invite a friend</button></ion-col>
+      </ion-row>
+      </div>
+      </div>
+      
+      <ion-row style="margin-top: 265px; width: 100%;">
+          <ion-col  col-9>
+          </ion-col>
+        <ion-col  col-3 text-right>
+            <button color="EditBtn" ion-button outline block  style="margin-left: 42px; width: 30%;height: 1.4em;font-size: 1.4rem;padding-top:3px;font-family: 'Bebas Neue Bold'; border-radius: 4px;" (click)="move()">EDIT</button> 
+        </ion-col>
+      </ion-row>
+      
+      
+      <ion-row style="padding-left: 20px;padding-right: 20px;">
+        <ion-col col-4>
+      <p no-padding no-margin class="text-style" style="margin-top: 4px;">Name</p>
+        </ion-col>
+        <ion-col col-8>
+            <p  no-padding no-margin style="font-family: Quicksand-Regular"><span class="profile-details">Katie Foley</span> (Teacher)</p>
+          </ion-col>
+      
+          <ion-col col-4>
+             <p no-padding no-margin class="text-style" style="margin-top: 4px;">Username</p>
+                </ion-col>
+                <ion-col col-8>
+                   <p class="profile-details" no-padding no-margin>Katie88</p>
+                  </ion-col>
+                  <ion-col col-4 class="text-style">
+                     <p no-padding no-margin style="margin-top: 4px;" >Teacher Class</p>
+                        </ion-col>
+                        <ion-col col-8>
+   
+                         <p class="profile-details" no-padding no-margin>123AB</p>
+                          </ion-col>
+                          <ion-col col-4>
+                     <p no-padding no-margin class="text-style" >School Address</p>
+                        </ion-col>
+                        <ion-col col-8>
+                           <p no-padding no-margin class="text-style">360 Bedok NorthAvenue 3, 469722 Bedok Singapore</p>
+                          </ion-col>  
+                          <ion-col col-4 class="text-style">
+                              <p no-padding no-margin>Bio</p>
+                                 </ion-col>
+                                 <ion-col col-8> 
+                                    <p no-padding no-margin class="text-style">My name is Katie Foley and I have had the privilege being a part of Grace Garden Secondary since 2007 </p>
+                                   </ion-col> 
+                          <ion-col col-12>
+                             <p class="private-info" no-padding no-margin > Private Information</p>
+                                </ion-col>
+                                <ion-col col-4 >
+                                   <p no-padding no-margin class="text-style">Mobile No.</p>
+                                      </ion-col>
+                                      <ion-col col-8>
+                                         <p no-padding no-margin class="text-style">+65 9098789890</p>
+                                        </ion-col> 
+                                        <ion-col col-4>
+                                           <p no-padding no-margin class="text-style">Email Address</p>
+                                              </ion-col>
+                                              <ion-col col-8 >
+                                                 <p no-padding no-margin class="text-style">katiefoley@gmail.com</p>
+                                                </ion-col> 
+      
+                                                <ion-col col-4 >
+                                                   <p no-padding no-margin class="text-style">Residential Address</p>
+                                                      </ion-col>
+                                                      <ion-col col-8 text-wrap>
+                                                         <p no-padding no-margin class="text-style">18 Sin Ming Lane, #08-37, Singapore 573960 </p>
+                                                        </ion-col> 
+      </ion-row>
+      
+  </div>
+ 
+
+
+
+
+
+ 
+  <div class="outer-div">
+    <div class="outer-div-left">  
+      <div class="img1">
+          <ion-avatar > 
+
+          <img src="assets/imgs/profile/greydp-01.png" class="img-profiles" >  
+          <p class="avatar-p" no-margin no-padding>  Change profile photo </p>
+          </ion-avatar>
+      </div>
+      
+         </div>
+    <div class="outer-div-right">     <img src="assets/imgs/profile/trophy.png" class="img2">
+     
+    <ion-row style=" margin: 0px !important; padding: 0px !important;">
+    <ion-col col-12 style=" margin: 0px !important; padding: 0px !important;">  <div class="div-txt">7840</div> </ion-col>
+    <ion-col col-12 style=" margin: 0px !important; padding: 0px !important;"><div class="div-txt1"> Earned Points</div></ion-col>
+    <ion-col col-12 style="margin: 0px !important; padding: 0px !important;"> <button ion-button class="btnRedeem">Redeem Points</button></ion-col>
+    <ion-col col-12 style="margin: 0px !important; padding: 0px !important;"> <button ion-button class="btnRenew">Renew Subscription</button></ion-col>
+    <ion-col col-12 style=" margin: 0px !important; padding: 0px !important;"><button ion-button class="btnInvite">Invite a friend</button></ion-col>
+    </ion-row>
+    </div>
+    </div>
+    
+    <ion-row style="margin-top: 265px; width: 100%;">
+        <ion-col  col-9>
+        </ion-col>
+      <ion-col  col-3 text-right>
+          <button color="EditBtn" ion-button outline block  style="margin-left: 42px; width: 30%;height: 1.4em;font-size: 1.4rem;padding-top:3px;font-family: 'Bebas Neue Bold'; border-radius: 4px;" (click)="EditProfile()">EDIT</button> 
+      </ion-col>
+    </ion-row>
+    
+    
+    <ion-row style="padding-left: 20px;padding-right: 20px;">
+      <ion-col col-4>
+    <p no-padding no-margin class="text-style" style="margin-top: 4px;">Name</p>
+      </ion-col>
+      <ion-col col-8>
+          <p  no-padding no-margin style="font-family: Quicksand-Regular"><span class="profile-details">Katie Foley</span> (Teacher)</p>
+        </ion-col>
+    
+        <ion-col col-4>
+           <p no-padding no-margin class="text-style" style="margin-top: 4px;">Username</p>
+              </ion-col>
+              <ion-col col-8>
+                 <p class="profile-details" no-padding no-margin>Katie88</p>
+                </ion-col>
+
+                <ion-col col-4 class="text-style">
+                   <p no-padding no-margin style="margin-top: 4px;" >Family Name</p>
+                      </ion-col>
+                      <ion-col col-8>
+                          <div *ngIf="ChildDetail">
+                          <ion-item style=" padding-left: 0px !important;" no-lines> 
+                              <ion-avatar item-start style="    margin: 0px !important;">
+                                <img src="assets/imgs/linkuspage/me.png">
+                              </ion-avatar>
+                              <p style="margin-left: 5px;" class="p-right">Ash Lee</p>
+                              <button ion-button item-end class="btnViewProfile">View Profile</button>
+                            </ion-item>
+        
+                            <ion-item style=" padding-left: 0px !important;" no-lines> 
+                                <ion-avatar item-start style="    margin: 0px !important;">
+                                  <img src="assets/imgs/linkuspage/me.png">
+                                </ion-avatar> 
+                                <p style="margin-left: 5px;" class="p-right">Natasha Lee</p>
+                                <button ion-button item-end class="btnViewProfile">View Profile</button>
+                              </ion-item>
+        
+                              <ion-item style=" padding-left: 0px !important;" no-lines> 
+                                  <ion-avatar item-start style="    margin: 0px !important;">
+                                    <img src="assets/imgs/linkuspage/me.png">
+                                  </ion-avatar>
+                                  <p style="margin-left: 5px;" class="p-right">John Lee</p>
+                                  <button ion-button item-end class="btnViewProfile">View Profile</button>
+                                </ion-item>
+
+                              </div>
+                     
+                              <div  *ngIf="ChildDetailBtn"> 
+                                  <button ion-button class="btnAddFamily" (click)="AddFamilyBtn()">Add Family</button>
+                              </div>
+                        </ion-col>
+                      
+                        
+                        <ion-col col-4 class="text-style">
+                            <p no-padding no-margin>Bio</p>
+                               </ion-col>
+                               <ion-col col-8> 
+                                  <p no-padding no-margin class="text-style">My name is Katie Foley and I have had the privilege being a part of Grace Garden Secondary since 2007 </p>
+                                 </ion-col> 
+                        <ion-col col-12>
+                           <p class="private-info" no-padding no-margin > Private Information</p>
+                              </ion-col>
+                              <ion-col col-4 >
+                                 <p no-padding no-margin class="text-style">Mobile No.</p>
+                                    </ion-col>
+                                    <ion-col col-8>
+                                       <p no-padding no-margin class="text-style">+65 9098789890</p>
+                                      </ion-col> 
+                                      <ion-col col-4>
+                                         <p no-padding no-margin class="text-style">Email Address</p>
+                                            </ion-col>
+                                            <ion-col col-8 >
+                                               <p no-padding no-margin class="text-style">katiefoley@gmail.com</p>
+                                              </ion-col> 
+    
+                                              <ion-col col-4 >
+                                                 <p no-padding no-margin class="text-style">Residential Address</p>
+                                                    </ion-col>
+                                                    <ion-col col-8 text-wrap>
+                                                       <p no-padding no-margin class="text-style">18 Sin Ming Lane, #08-37, Singapore 573960 </p>
+                                                      </ion-col> 
+    </ion-row>
+    
+
+
+
+</ion-content>

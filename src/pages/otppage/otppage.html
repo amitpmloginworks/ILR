@@ -1,0 +1,29 @@
+<!--
+  Generated template for the OtppagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header class="style-header">
+  <img style="height: 36px;" src="assets/icon/logo02.png">
+</ion-header>
+
+
+<ion-content padding>  
+
+     <div class="text-block">
+    <p class="p-tag">Please Enter the Six digit Verification Code</p> 
+   <br>
+    <p class="p-tag-t">that has been sent your email.</p>
+     </div>
+
+    <ion-input type="text" [(ngModel)]="OtpNumber" [textMask]="{mask: masks.OtpNumber}"></ion-input>
+
+  <div >
+      <img src="assets/imgs/nextbtn.png" (click)="save()" class="img-style">
+    </div> 
+    <p class="p-style">Did n't receive a code?</p>    
+
+
+</ion-content>

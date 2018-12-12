@@ -1,0 +1,301 @@
+<!--
+  Generated template for the SchooldetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content >
+            <div style="text-align: center; margin-top: 10px; margin-bottom: 5px;">
+                <img src="assets/icon/logo02.png" style="width:40%;">
+          </div> 
+          <div class="black-line_stripe"> </div> 
+ 
+<div style="padding: 25px !important;">
+
+    <div>
+        <img src="assets/icon/infographic.png">
+    </div>
+
+
+    <form [formGroup]="validation">
+    <ion-list  >
+    
+        <div class="outer-div" > 
+            <div class="inner-divimg"> <img src="assets/icon/school.png" style="width: 22px;" >   </div>
+            <div class="div-tittle"> School Name</div>
+        </div> 
+
+        <div>
+       
+            <ion-item style="border: 1px solid #ADADAD;">
+                <ion-input  type="text"   formControlName="SchoolName" [(ngModel)]="SchoolName" 
+                [class.invalid]="!validation.controls.SchoolName.valid && (validation.controls.SchoolName.dirty|| submitAttempt)"
+                    ></ion-input>
+                  </ion-item>
+
+                  <div class="div-updownarrow">
+                      <img src="assets/icon/up-down-arrow.png">
+                    </div>
+
+                  <p *ngIf="!validation.controls.SchoolName.valid && (validation.controls.SchoolName.dirty|| submitAttempt)" class="errormsg">*Enter School Name.</p>
+            </div>
+
+            <div class="outer-div" >
+                <div class="inner-divimg"> <img src="assets/icon/school.png" style="width: 22px;" >   </div>
+                <div class="div-tittle"> School Address</div>
+            </div> 
+    
+
+            <div>
+           
+                <ion-item style="border: 1px solid #ADADAD;">
+              
+                    <ion-input  type="text"   formControlName="SchoolAddress"  [(ngModel)]="SchoolAddress" 
+                    [class.invalid]="!validation.controls.SchoolAddress.valid && (validation.controls.SchoolAddress.dirty|| submitAttempt)"
+                        ></ion-input>
+                      </ion-item>
+                    <p *ngIf="!validation.controls.SchoolAddress.valid && (validation.controls.SchoolAddress.dirty|| submitAttempt)" class="errormsg">*Enter School Address.</p>
+                </div>
+
+
+
+
+
+                
+
+
+                <div class="div-header1-out"  style="margin-top:4px;">       
+                    <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+                        <div class="inner-divimg-LR" >
+                           <img src="assets/icon/studentclass.png" style="width: 22px;" *ngIf="student==1" >   <img src="assets/icon/teacher.png" style="width: 22px;" *ngIf="student==2" >  
+                        </div>
+                        <div class="div-tittle" *ngIf="student==1"> Student Class </div>
+                        <div class="div-tittle" *ngIf="student==2"> Teacher Class </div>
+                    </div>
+                    
+                <div class="div-header1-center"></div>
+                  <div class="div-header1-left">
+                      <div class="inner-divimg-LR" > 
+                        <img src="assets/icon/city.png" style="width: 22px;" >  
+                      </div>
+                      <div class="div-tittle">City (School) </div>
+                  </div>
+                </div>
+        
+
+        
+                <div class="div-content1-out">
+                    <div class="div-content1-LR">
+                      <ion-item style="border: 1px solid #ADADAD;">
+                        <ion-input  type="text" formControlName="StudentDetails"  [(ngModel)]="StudentDetails"
+                        [class.invalid]="!validation.controls.StudentDetails.valid && (validation.controls.StudentDetails.dirty|| submitAttempt)"
+                            ></ion-input>
+                          </ion-item>
+                        <p *ngIf="!validation.controls.StudentDetails.valid && (validation.controls.StudentDetails.dirty|| submitAttempt)" class="errormsg1">*Enter Class.</p>  
+                    </div>
+                    
+                    <div class="div-content1-center"></div>
+                  <div class="div-content1-LR">
+                     
+             <ion-item style="border: 1px solid #ADADAD;">
+        <ion-input  type="text"   formControlName="City"  [(ngModel)]="City"
+
+      [class.invalid]="!validation.controls.City.valid && (validation.controls.City.dirty|| submitAttempt)"
+          ></ion-input>
+      
+        </ion-item>
+      <p *ngIf="!validation.controls.City.valid && (validation.controls.City.dirty|| submitAttempt)" class="errormsg1">*Enter City Name.</p>
+                  </div>
+                </div>
+
+
+               
+
+
+                <div class="div-header1-out" style="margin-top: 6px;">
+                  <div class="div-header1-left">
+                      <div class="inner-divimg-LR" >
+                         <img src="assets/icon/state.png" style="width: 22px;" >  
+                      </div>
+                      <div class="div-tittle"> State (School) </div>
+                  </div>
+                  
+              <div class="div-header1-center"></div>
+                <div class="div-header1-right">
+                    <div class="inner-divimg-LR">   
+                      <img src="assets/icon/country.png" style="width: 22px;" >  
+                    </div>
+                    <div class="div-tittle">Country (School) </div>  
+                </div>
+              </div>
+      
+
+
+
+      
+              <div class="div-content1-out">
+                  <div class="div-content1-LR">
+
+
+                    <ion-item style="border: 1px solid #ADADAD;">
+                        <ion-input  type="text"   formControlName="State"  [(ngModel)]="State"
+                        [class.invalid]="!validation.controls.State.valid && (validation.controls.State.dirty|| submitAttempt)"
+                            ></ion-input>
+                          </ion-item>
+                        <p *ngIf="!validation.controls.State.valid && (validation.controls.State.dirty|| submitAttempt)" class="errormsg1">*Enter State Name.</p>
+                  </div>   
+                  
+                  <div class="div-content1-center"></div>
+                <div class="div-content1-LR">
+                   
+                 
+                    <select-searchable  [(ngModel)]="SchoolCountry" [items]="countryNames" [canSearch]="true" (onChange)="SchoolCountryChange($event)" formControlName="searchModel">
+                    </select-searchable> 
+
+              <p *ngIf="!validation.controls.searchModel.valid && (validation.controls.searchModel.dirty|| submitAttempt)" class="errormsg1">*Enter Country Name.</p>
+     
+      <ion-list *ngIf="countryactive==true">
+        <ion-item *ngFor="let item of items"  (click)="getcountry(item)" >
+          {{ item }}
+        </ion-item>
+      </ion-list> 
+
+
+                </div>
+              </div>
+
+
+
+
+
+  
+
+
+        
+
+
+           <div class="outer-div"      style="margin-top: 22px;" >  
+                <div class="inner-divimg"> <img src="assets/icon/raddress.png" style="width: 22px;" >   </div>
+                <div class="div-tittle"> Residential Address</div>
+            </div> 
+    
+          <ion-item style="border: 1px solid #ADADAD;">
+            <ion-input  type="text"   formControlName="ResAdd"  [(ngModel)]="ResAdd"  
+            [class.invalid]="!validation.controls.ResAdd.valid && (validation.controls.ResAdd.dirty|| submitAttempt)"
+                ></ion-input>
+              </ion-item>
+            <p *ngIf="!validation.controls.ResAdd.valid && (validation.controls.ResAdd.dirty|| submitAttempt)" class="errormsg">*Enter Residential Address.</p>
+
+
+  
+  
+
+            <div class="div-header1-out" style="padding-top: 9px;">
+                <div class="div-header1-left">
+                    <div class="inner-divimg-LR" >   
+                       <img src="assets/icon/state.png" style="width: 22px;" >  
+                    </div>
+                    <div class="div-tittle">  Residential Zipcode </div>
+                </div>
+                
+            <div class="div-header1-center"></div>
+              <div class="div-header1-right">
+                  <div class="inner-divimg-LR"> 
+                    <img src="assets/icon/city.png" style="width: 22px;" >  
+                  </div>
+                  <div  class="div-tittle">Residential City </div>
+              </div>
+            </div>
+    
+
+    
+            <div class="div-content1-out">
+                <div class="div-content1-LR">
+                        <ion-item style="border: 1px solid #ADADAD;">
+                                <ion-input type="text"  formControlName="ResPinCode" [(ngModel)]="ResPinCode"  
+                                [class.invalid]="!validation.controls.ResPinCode.valid && (validation.controls.ResPinCode.dirty|| submitAttempt)"
+                                    ></ion-input>
+                                  </ion-item>
+                                <p *ngIf="!validation.controls.ResPinCode.valid && (validation.controls.ResPinCode.dirty|| submitAttempt)" class="errormsg2">*Enter Residential Zipcode.</p>
+                </div>
+                
+                <div class="div-content1-center"></div>
+              <div class="div-content1-LR">  
+                  
+
+                      <ion-item style="border: 1px solid #ADADAD;">
+                            <ion-input  type="text"   formControlName="ResCity"  [(ngModel)]="ResCity"  
+                            [class.invalid]="!validation.controls.ResCity.valid && (validation.controls.ResCity.dirty|| submitAttempt)"
+                                ></ion-input>
+                              </ion-item>
+                              <p *ngIf="!validation.controls.ResCity.valid && (validation.controls.ResCity.dirty|| submitAttempt)" class="errormsg1">*Enter Residential City.</p>
+
+
+              </div>
+            </div>
+
+            <div class="div-header1-out"  style="margin-top: 6px;">   
+                <div class="div-header1-left">
+                    <div class="inner-divimg-LR" >
+                       <img src="assets/icon/state.png" style="width: 22px;" >  
+                    </div>
+                    <div class="div-tittle">  Residential State</div>
+                </div> 
+                
+            <div class="div-header1-center"></div>
+              <div class="div-header1-right">
+                  <div class="inner-divimg-LR" > 
+                    <img src="assets/icon/country.png" style="width: 22px;" >  
+                  </div>
+                  <div class="div-tittle"> Residential Country</div>
+              </div>
+            </div>
+    
+            <div class="div-content1-out">
+                <div class="div-content1-LR">  
+                        <ion-item style="border: 1px solid #ADADAD;">
+                                <ion-input  type="text"   formControlName="ResState" [(ngModel)]="ResState" 
+                                [class.invalid]="!validation.controls.ResState.valid && (validation.controls.ResState.dirty|| submitAttempt)"
+                                    ></ion-input>
+                                  </ion-item>
+                                <p *ngIf="!validation.controls.ResState.valid && (validation.controls.ResState.dirty|| submitAttempt)" class="errormsg1">*Enter Residential State.</p>  
+                </div>
+                
+                <div class="div-content1-center"></div>
+              <div class="div-content1-LR">
+                      <select-searchable  [(ngModel)]="ResCountrys" [items]="countryNames" [canSearch]="true" (onChange)="ResCountrysChange($event)" formControlName="ResCountry" >    
+                        </select-searchable> 
+                        <p *ngIf="!validation.controls.ResCountry.valid && (validation.controls.ResCountry.dirty|| submitAttempt)" class="errormsg1">*Enter Residential Country.</p>
+              </div>
+            </div>
+
+
+
+
+
+
+
+  
+
+
+
+
+       </ion-list>
+    </form>
+
+
+    <ion-row no-margin no-padding style="    margin-top: 40px;"> 
+        <ion-col col-3 no-margin no-padding></ion-col>
+      <ion-col col-6 text-center no-margin no-padding> 
+          <button ion-button [disabled]="!validation.valid" no-margin no-padding style="box-shadow:none;background-color: #ffffff; height: 10rem; -webkit-box-shadow:none;" (click)="navigatetochilddetail()" > 
+              <img src="assets/imgs/nextbtn.png" style=" display: block; width: 55%;">
+      </button>
+      </ion-col >
+      <ion-col col-3 no-margin no-padding></ion-col>
+    </ion-row>
+
+  </div>
+
+</ion-content>
+

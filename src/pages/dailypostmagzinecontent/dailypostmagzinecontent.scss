@@ -1,0 +1,148 @@
+page-dailypostmagzinecontent {
+    ion-header {
+        background: #fff;
+    }
+    .box-3 {
+        width: 32% !important;
+    }
+    ion-card img {
+        display: initial !important;
+    }
+    .card-style{
+        margin-top: 65px;
+        height: auto;
+    }
+    .read-text{
+        color: red;
+        font-style: italic;
+    }
+        .text-pstyle{
+        font-size: 11px;
+        color:white;
+        margin-top: 3px;
+        margin-left: 10px; 
+    }
+        .nav-bar-style{
+        display: block;
+        text-align: right;
+        margin-top: -22px;
+        margin-right: 9px;
+    }
+    .nav-bar-img{
+        display: inline-block;
+        height: 13px;
+        margin-right: 9px;
+    }
+    
+    .card-style{
+        margin-top: 39px;
+        width: 111%;
+        margin-left: -15px;
+    }
+    .card-content-md {
+        padding: 0px 16px !important;
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    .card-title{
+        font-size: 13px;
+        font-weight: 700;
+        margin-left: 17px;
+        margin-top: 11px; 
+    }
+    .text-box{
+        height: 22px;
+        background-color: rgba(0, 0,0,.5);
+        position: absolute;
+        width: 274px;
+        top: 233px; 
+    }
+
+    /* another page */
+
+    .nav-bar-style{
+        display: block;
+        text-align: right;
+        margin-top: -22px;
+        margin-right: 9px;
+    }
+    .nav-bar-img{
+        display: inline-block;
+        height: 13px;
+        margin-right: 9px;
+    }
+
+    .div-box1{
+display: block;
+width: 100%;
+height:10px;
+
+    }
+    .div-box2{
+        display:inline-block;
+        width:15%;
+        float: left;  
+        height:20px;
+       
+        text-align: right;
+    }
+    .div-box3{
+        display:inline-block;
+        width:33%;
+        float: left; 
+        height:20px;
+      
+    }
+    .div-box4{
+        display:inline-block;
+        width:15%;
+        float: left;  
+        height:20px;
+       
+        text-align: right;
+    }
+    .div-box5{
+        display:inline-block;
+        width:33%;
+        float: left; 
+        height:20px;
+       
+    }
+
+
+.QuestCl
+    {
+    font-size: 16px;
+    margin-left: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #232323;
+    }
+    .AnsCl
+    {
+        font-size: 14px;margin-left: 10px;padding-top:10px
+    }
+
+    .leftRtP{
+        margin-top: -2px;
+        margin-left: 6px;
+    }
+    .pQuest {
+        font-size: 16px;
+    margin-left: 8px;
+    padding-top: 10px;
+    font-weight: bold;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}

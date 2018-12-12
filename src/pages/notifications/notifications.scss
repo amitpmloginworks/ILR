@@ -1,0 +1,85 @@
+
+page-notifications {
+    .nav-bar-style{
+    display: block;
+    text-align: right;
+    margin-top: -22px;
+    margin-right: 9px;
+    }
+    .nav-bar-img{
+    display: inline-block;
+    height: 20px;
+    margin-right: 9px;
+    }
+    .list-style{ 
+    display: contents;
+    }
+    .div-box1{
+    display: block;
+    width:100%;
+    padding: 10px;
+    height: 45px;
+    border-bottom: 1px solid #e2dada;
+    
+    
+    }
+    .div-box2{
+    display: inline-block;
+    width:20%;
+    
+    height:60px ; 
+    float: left;
+    }
+    .div-box3{
+    display: inline-block;
+    width:80%;
+    
+    height: 30px;
+    float: left;
+    }
+    .p-text1{
+    margin-top: 5px;
+    font-weight: 700;
+    font-family: "Century Gothic";
+    font-size: 1.4rem;
+    text-overflow: ellipsis;
+    
+    white-space: nowrap;
+    
+    overflow: hidden;
+    }
+    .p-text2{
+    margin-top: -7px;
+    font-size: 12px;
+    color: #9c9c9c;
+    }
+    .one
+    {
+    background-color:#fff;
+    color:#000
+    }
+    .two
+    {
+    background-color:#EE7C93;
+    color:#fff
+    }
+      
+    .time-notify
+    {
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    display: flex;
+    width: 102%;
+    height: 33px;
+    position: absolute; 
+    background-color: transparent;
+    justify-content: flex-end;
+    }
+    .time-font
+    {
+    margin-right: 23px;
+    font-size: 10px;
+    margin-top: 18px;
+    }
+    }

@@ -1,0 +1,354 @@
+<!--
+  Generated template for the ParentDataPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header> 
+        <headerbar></headerbar> 
+  </ion-header>
+  
+    
+  <ion-content  [ngClass]="{'one':flag1, 'two':flag2, 'three':flag3, 'four':flag4}">
+    <div class="outer-div">
+      <div class="outer-div-left">  
+        <div class="img1"> 
+            <ion-avatar > 
+            <img [ngClass]="{'b1':flag1, 'b2':flag2, 'b3':flag3, 'b4':flag4}" [src]="imageval" class="imagecircle"  (click)="uploadpicture()"> 
+            <p class="avatar-p" no-margin no-padding>  Change profile photo </p>
+            </ion-avatar>
+        </div>
+        
+           </div>
+      <div class="outer-div-right">     <img src="assets/imgs/profile/trophy.png" class="img2">
+       
+      <ion-row style=" margin: 0px !important; padding: 0px !important;">
+      <ion-col col-12 style=" margin: 0px !important; padding: 0px !important;">  <div class="div-txt">{{ EarnPoint }}</div> </ion-col>
+      <ion-col col-12 style=" margin: 0px !important; padding: 0px !important;"><div class="div-txt1"> Earned Points</div></ion-col>
+      <ion-col col-12 style="margin: 0px !important; padding: 0px !important;"> <button ion-button class="btnRedeem" #lock (mouseover)="lock.isHover = true" (mouseout)="lock.isHover = false" (click)="itemSelected()" >Redeem Points</button></ion-col>
+      <ion-col col-12 style="margin: 0px !important; padding: 0px !important;"> <button ion-button class="btnRenew" #lock (mouseover)="lock.isHover = true" (mouseout)="lock.isHover = false" (click)="subcribenew()">Renew Subscription</button></ion-col>
+      <ion-col col-12 style=" margin: 0px !important; padding: 0px !important;"><button ion-button class="btnInvite" #lock (mouseover)="lock.isHover = true" (mouseout)="lock.isHover = false" (click)="InviteFriends()">Invite a friend</button></ion-col>
+      </ion-row>
+      </div> 
+      </div>
+      
+      <ion-row style="margin-top: 265px; width: 100%;">
+          <ion-col  col-9>
+          </ion-col>
+        <ion-col  col-3 text-right>
+            <button color="EditBtn" ion-button outline block  style="margin-left: 42px; width: 30%;height: 1.4em;font-size: 1.4rem;padding-top:3px;font-family: 'Bebas Neue Bold'; border-radius: 4px;" (click)="editAdd()" #lock (mouseover)="lock.isHover = true" (mouseout)="lock.isHover = false">EDIT</button>  
+        </ion-col>
+      </ion-row>
+      
+      
+      
+      <ion-row style="padding-left: 20px;padding-right: 20px;">
+        <ion-col col-4>
+      <p no-padding no-margin class="text-style" style="margin-top: 4px;">Name</p>
+        </ion-col>
+        <ion-col col-8>
+            <p  no-padding no-margin style="font-family: Quicksand-Regular;text-transform: capitalize;"><span class="profile-details">{{ userdata.first_name+' '+userdata.last_name  }}</span> {{ '('+ProfileType+')' }}</p>
+          </ion-col>
+      
+          <ion-col col-4>
+             <p no-padding no-margin class="text-style" style="margin-top: 4px;">Username</p>
+                </ion-col>
+                <ion-col col-8>
+                   <p class="profile-details" no-padding no-margin>{{userdata.username}}</p>
+                  </ion-col>
+  
+
+
+
+
+                  <ion-col col-4 class="text-style" *ngIf="roleType==1">
+                     <p no-padding no-margin style="margin-top: 4px;" >Family Name</p>
+                        </ion-col>
+                        <ion-col col-8 *ngIf="roleType==1">
+                            <div *ngIf="ChildDetail">
+                            <ion-item style=" padding-left: 0px !important;" no-lines *ngFor="let getdata of getfamilylist;let i=index;">  
+                                <ion-avatar item-start style="    margin: 0px !important;">
+                                  <img [src]="getdata.user_image">  
+                                </ion-avatar>
+                                <p style="margin-left: 5px;" class="p-right">{{ getdata.first_name+' '+getdata.last_name }}</p>
+                                <button ion-button item-end class="btnViewProfile" (click)="ShowFamilyBtn(i)">View Profile</button>
+                              </ion-item>
+                                </div>  
+                       
+                                <div  *ngIf="ChildDetailBtn"> 
+                                    <button ion-button class="btnAddFamily" (click)="AddFamilyBtn()">Add Family</button>
+                                </div>
+                          </ion-col>
+                        
+
+
+
+
+
+
+                          <ion-col col-4 class="text-style" *ngIf="roleType==2">
+                            <p no-padding no-margin style="margin-top: 4px;" >Teacher Class</p>
+                               </ion-col>
+                               <ion-col col-8 *ngIf="roleType==2">
+                                <p class="profile-details" no-padding no-margin>{{ userdata.student_class}}</p>
+                                 </ion-col>
+                                 <ion-col col-4 *ngIf="roleType==2">
+                            <p no-padding no-margin class="text-style" >School Address</p>
+                               </ion-col>
+                               <ion-col col-8 *ngIf="roleType==2">
+                                  <p no-padding no-margin class="text-style">{{ userdata.school_address+','+userdata.school_city+','+userdata.school_state+','+userdata.school_country }}</p>
+                                 </ion-col> 
+
+
+
+
+
+
+
+                          
+                          <ion-col col-4 class="text-style">
+                              <p no-padding no-margin>Bio</p> 
+                                 </ion-col>
+                                 <ion-col col-8> 
+                                    <p no-padding no-margin class="text-style"> {{ userdata.bio  }} </p>
+                                   </ion-col> 
+
+
+                          <ion-col col-12>
+                             <p class="private-info" no-padding no-margin > Private Information</p>
+                                </ion-col>
+                                <ion-col col-4 >
+                                   <p no-padding no-margin class="text-style">Mobile No.</p>
+                                      </ion-col>
+                                      <ion-col col-8>
+                                         <p no-padding no-margin class="text-style">{{userdata.phone}}</p>
+                                        </ion-col> 
+                                        <ion-col col-4>
+                                           <p no-padding no-margin class="text-style">Email Address</p>
+                                              </ion-col>
+                                              <ion-col col-8 >
+                                                 <p no-padding no-margin class="text-style">{{userdata.email}}</p>
+                                                </ion-col> 
+      
+                                                <ion-col col-4 >
+                                                   <p no-padding no-margin class="text-style">Residential Address</p>
+                                                      </ion-col>
+                                                      <ion-col col-8 text-wrap>
+                                                         <p no-padding no-margin class="text-style">{{ userdata.shipping_address+','+userdata.shipping_city+','+userdata.shipping_state+','+userdata.shipping_country+','+userdata.shipping_pincode }} </p>
+                                                        </ion-col> 
+      </ion-row>
+      
+  
+  
+      <div style="width:55%" *ngIf="roleType=='2'">   
+        <ion-item  >    
+        <ion-label style="color:#476582;font-size:1.2rem; margin-left:15px">Select Class</ion-label>
+        <ion-select  style="color:#476582;font-size:1.2rem; margin-top:5px" interface="popover" (ionChange)="TeacherClasschange($event)">  
+          <div *ngFor="let classname of TeacherClassList">      
+          <ion-option value="{{ classname.student_class }}">{{ classname.student_class }}</ion-option>  
+           </div>
+        </ion-select>
+      </ion-item>
+      </div>
+    
+      
+        <ion-slides  (ionSlideDidChange)="slideChanged()" *ngIf="roleType=='2'">
+      <ion-slide  >
+
+          <table style="position: absolute;top: 13px; left: 19px; width: 2;width: 89%;    border: 7px solid transparent;">  
+            <div *ngFor="let teacherlist1 of TeacherClass1;let i=index;">
+              <tr >  
+                 <td>{{ i+1+" " }}{{ teacherlist1.student_name }}</td>
+                <td>{{ teacherlist1.student_name }}</td>  
+              </tr>
+              </div>  
+            </table>
+        <!-- <div style="width:100%">
+          <div style="width:33%;max-width:33%;height:100%;float:left; margin-left: 25px;display: inline-block">  
+            <p class="p-style">chetan1.1</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            
+          </div>
+          <div style="width:33%;max-width:33%;height:100%;float:left;margin-left: 25px;display: inline-block">
+            <p class="p-style">chetan1.2</p>
+            <p class="p-style">NatashaLeea</p>  
+            <p class="p-style">AshLeez</p>
+            <p class="p-style">NatashaLees</p>
+            <p class="p-style">AshLee1</p>
+            <p class="p-style">NatashaLee2</p>
+            <p class="p-style">AshLee3</p>
+            <p class="p-style">NatashaLee4</p>
+
+            <p class="p-style">AshLee5</p>
+            <p class="p-style">NatashaLee6</p>
+            <p class="p-style">AshLee7</p>
+            <p class="p-style">NatashaLee8</p>
+            <p class="p-style">AshLee9</p>
+            <p class="p-style">NatashaLee0</p>
+          </div>
+          <div style="width:33%;max-width:33%;height:100%;float:left;margin-left: 25px;display: inline-block;">  
+            <p class="p-style">chetan1.3</p>
+            <p class="p-style">NatashaLee1.3.1</p>
+            <p class="p-style">AshLee1.3.2</p>
+            <p class="p-style">NatashaLee1.3.3</p>
+            <p class="p-style">AshLee1.3.4</p>
+            <p class="p-style">NatashaLee1.3.5</p>
+            <p class="p-style">AshLee1.3.6</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+          </div>
+         </div>
+      </ion-slide> -->
+</ion-slide>
+
+      <ion-slide >
+
+          <table style="position: absolute;top: 13px; left: 19px; width: 2;width: 89%;    border: 7px solid transparent;">  
+              <div *ngFor="let teacherlist1 of TeacherClass2;let i=index;">
+                <tr >
+                   <td>{{ teacherlist1.student_name }}</td>
+                  <td>{{ teacherlist1.student_name }}</td>
+                </tr>
+                </div>  
+              </table>
+
+        <!-- <div style="width:100%">
+          <div style="width:33%;max-width:33%;height:100%;margin-left: 25px;float:left;display: inline-block">
+            <p class="p-style">chetan2.1</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            
+          </div>
+          <div style="width:33%;max-width:33%;height:100%;margin-left: 25px;float:left;display: inline-block">
+            <p class="p-style">chetan2.2</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+          </div>
+          <div style="width:33%;max-width:33%;height:100%;margin-left: 25px;float:left;display:inline-block;">
+            <p class="p-style">chetan2.3</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+          </div>
+         </div>
+      </ion-slide> -->
+
+</ion-slide>  
+
+      <ion-slide >
+          <table style="position: absolute;top: 13px; left: 19px; width: 2;width: 89%;    border: 7px solid transparent;">    
+              <div *ngFor="let teacherlist1 of TeacherClass3;let i=index;">
+                <tr >
+                   <td>{{ teacherlist1.student_name }}</td>
+                  <td>{{ teacherlist1.student_name }}</td>
+                </tr>
+                </div>  
+              </table>
+        
+
+        <!-- <div style="width:100%">
+          <div style="width:32%;max-width:33%;height:100%;margin-left: 25px;float:left;display: inline-block">
+            <p class="p-style">chetan3.1</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+          </div>
+          <div style="width:32%;max-width:33%;height:100%;margin-left: 25px;float:left;display: inline-block">
+            <p class="p-style">chetan3.2</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+          </div>
+          <div style="width:32%;max-width:33%;height:100%;margin-left: 25px;float:left;display: inline-block;">
+            <p class="p-style">chetan3.3</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+            <p class="p-style">AshLee</p>
+            <p class="p-style">NatashaLee</p>
+          </div>
+         </div> -->
+      </ion-slide>
+
+        
+    </ion-slides>
+  
+  </ion-content>

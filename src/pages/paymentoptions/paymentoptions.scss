@@ -1,0 +1,165 @@
+page-paymentoptions {
+
+    .div-subtotal{
+        width: 100%;
+        display: table;
+        border:1px solid gainsboro;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 5px 20px 5px 10px; 
+    }
+    .div-total{ 
+        width: 100%;
+        display: table;
+        border-left:1px solid gainsboro;
+        border-right: 1px solid gainsboro;
+        border-bottom: 1px solid gainsboro;
+        padding: 5px 20px 5px 10px; 
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .payment-text{
+        display: table-cell;
+        font-weight: bold;
+    }
+    .div-main{
+        padding: 16px;
+    }
+    p{
+        margin-top: 1px;
+        margin-bottom: 1px
+    }
+     
+    .txt-choose-payment{
+        font-family: "Century Gothic";
+    font-size: 1.1rem;
+    display: table-cell;
+    font-weight: bold;
+    float: left;
+    margin-left: 10px;
+    margin-right: 3px;
+    margin-top: 15px;
+    width: 50%;
+    
+    }
+    
+    .txt-click-below{
+        font-family: "Century Gothic";
+        display: table-cell;
+        font-size: 8px;
+        float: left;
+        margin-top: 16px;
+        width: 44%;
+    }
+    .img-pay{
+        width:100%;
+       padding: 2px
+    }
+    .txt-pay-with{
+        font-family: "Century Gothic";
+        font-size: 8px;
+        text-align: center;
+        padding: 0px;
+    }
+    
+    .txt-click-button{
+        font-size: 12px;
+        margin: 20px 40px 10px 40px;
+        text-align: center;
+    }
+    
+    .footerdiv
+    {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #454647;
+    color: white;
+    text-align: center;
+    }
+    
+    
+    .select-md .select-icon {
+    position: relative;
+    width: 12px;
+    height: 19px;
+    display: none;
+    }
+    
+    .div-header1
+    {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    }
+    .div-header2
+    {
+    display: block; width: 100%;padding-top: 15px;
+    }
+    
+    .div-header2-1
+    {
+    display: inline-block;width: 47%; float: left;text-align: left;
+    }
+    .div-header2-2
+    {
+    width:3%;display: inline-block; height: 26px; float: left;text-align: left;
+    }
+    .div-header2-3
+    {
+    display: inline-block;width: 6%;height: 1px;float: left;text-align: left;
+    }
+    .div-header2-4
+    {
+    width:3%;display: inline-block;width: 47%;float: left;text-align: left;
+    }
+    .div-header2-5
+    {
+    display: inline-block;height: 26px; float: left; text-align: left;
+    }
+    .div-header2-tittle
+    {
+    font-weight: bold;
+    }
+    .div-contents
+    {
+    margin-top: 10px;height: 40px;display: block;width: 100%;
+    }
+    .div-contents-left
+    {
+    display: inline-block;width: 47%;height: 40px;float: left;text-align: left;
+    }
+    .div-contents-right
+    {
+    display: inline-block;width: 47%;height: 40px;float: left;text-align: left;
+    }
+    
+    .div-contents-center
+    {
+    display: inline-block;width: 6%;height: 40px;float: left;text-align: left;
+    }
+    
+    .item-md {
+    padding-left: 0px;
+    border: 1px solid #ADADAD;
+    padding-left: 0px;
+    margin-bottom: 1px;
+    border-radius: 5px;
+    height: 30px;
+    }
+    
+    .item-block{
+    min-height: 2.8rem;
+    }
+    ion-header {
+        background-color: white;
+      }
+      .scroll-content {
+        margin-top: 53px !important;
+      }
+    
+}

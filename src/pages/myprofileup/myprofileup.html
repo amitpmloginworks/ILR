@@ -1,0 +1,206 @@
+
+
+<ion-content padding class="modal-page" text-center ion-fixed scroll="false"  >
+  <div class="outer-div">
+    <div style="text-align: right;"><img src="assets/icon/referalcode.png" style="width: 15%;margin-right: -7px; margin-top: -7px;" (click)="Closebtn()"></div>
+
+  <div class="inner-div"> 
+   
+
+      <div style=" padding-left: 25px;padding-right: 25px;">
+
+
+
+
+        <div style=" display: block; width: 100%;">
+          <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+              <div  style="    width: 17%;height: 26px; float: left;">
+                 <img src="assets/icon/email.png" style="width: 22px;" >  
+              </div>
+              <div> Email </div>
+          </div>
+          
+      <div style="display: inline-block;width: 6%;height: 1px;float: left;text-align: left;"></div>
+        <div style="width:60%;display: inline-block;width: 47%;float: left;text-align: left;">
+            <div style="    width: 17%;height: 26px; float: left;"> 
+              <img src="assets/icon/raddress.png" style="width: 22px;" >  
+            </div>
+            <div>Phone </div> 
+        </div>
+      </div>
+      
+      <div style="height: 40px;display: block;width: 100%;">
+          <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+            <ion-item style="border: 1px solid #ADADAD;">
+              <ion-input  type="text" readonly [(ngModel)]="useremail" ></ion-input> 
+            </ion-item>
+          </div>
+          
+          <div style="display: inline-block;width: 6%;height: 40px;float: left;text-align: left;"></div>
+        <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+            <ion-item style="border: 1px solid #ADADAD;">
+              <ion-input  type="number" [(ngModel)]="MainPhone" #mobid (keypress)="MobCheck(mobid.value)" ></ion-input>
+            </ion-item>
+
+        </div>
+      </div>
+
+
+
+
+          <div style=" display: block; width: 100%;">
+              <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+                  <div  style="    width: 17%;height: 26px; float: left;">
+                     <img src="assets/icon/firstlastname.png" style="width: 22px;" >  
+                  </div>
+                  <div> Bio </div>
+              </div>
+              
+          <div style="display: inline-block;width: 6%;height: 1px;float: left;text-align: left;"></div>
+            <div style="width:60%;display: inline-block;width: 47%;float: left;text-align: left;">
+                <div style="    width: 17%;height: 26px; float: left;"> 
+                  <img src="assets/icon/raddress.png" style="width: 22px;" >  
+                </div>
+                <div>Address </div> 
+            </div>
+          </div>
+          
+          <div style="height: 40px;display: block;width: 100%;">
+              <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+                <ion-item style="border: 1px solid #ADADAD;">
+                  <ion-input  type="text" [(ngModel)]="MainBio" ></ion-input>
+                </ion-item>
+              </div>
+              
+              <div style="display: inline-block;width: 6%;height: 40px;float: left;text-align: left;"></div>
+            <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+                <ion-item style="border: 1px solid #ADADAD;">
+                  <ion-input  type="text" [(ngModel)]="SchoolAddress" ></ion-input> 
+                </ion-item>
+            </div>
+          </div>
+          
+
+
+
+          <div style=" display: block; width: 100%;">
+              <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+                  <div  style="    width: 17%;height: 26px; float: left;">
+                     <img src="assets/icon/city.png" style="width: 22px;" >  
+                  </div>
+                  <div> City </div>
+              </div>
+              
+          <div style="display: inline-block;width: 6%;height: 1px;float: left;text-align: left;"></div>
+            <div style="width:60%;display: inline-block;width: 47%;float: left;text-align: left;">
+                <div style="    width: 17%;height: 26px; float: left;"> 
+                  <img src="assets/icon/raddress.png" style="width: 22px;" >  
+                </div>
+                <div>State </div> 
+            </div>
+          </div>
+          
+          <div style="height: 40px;display: block;width: 100%;">
+              <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+                <ion-item style="border: 1px solid #ADADAD;">
+                  <ion-input  type="text" [(ngModel)]="SchoolCity" ></ion-input>
+                </ion-item>
+              </div>
+              
+              <div style="display: inline-block;width: 6%;height: 40px;float: left;text-align: left;"></div>
+            <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+                <ion-item style="border: 1px solid #ADADAD;">
+                  <ion-input  type="text" [(ngModel)]="SchoolState" ></ion-input> 
+                </ion-item>
+            </div>
+          </div>
+
+
+
+
+          <div style=" display: block; width: 100%;">
+              <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+                  <div  style="    width: 17%;height: 26px; float: left;">
+                     <img src="assets/icon/country.png" style="width: 22px;" >  
+                  </div>
+                  <div> Country </div>
+              </div>
+              
+          <div style="display: inline-block;width: 6%;height: 1px;float: left;text-align: left;"></div>
+            <div style="width:60%;display: inline-block;width: 47%;float: left;text-align: left;">
+                <div style="    width: 17%;height: 26px; float: left;"> 
+                  <img src="assets/icon/firstlastname.png" style="width: 22px;" >  
+                </div>
+                <div>Pincode </div> 
+            </div>
+          </div>
+          
+
+
+          <div style="height: 40px;display: block;width: 100%;">
+              <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+
+                  <select-searchable  [(ngModel)]="SchoolCountry" [items]="countryNames" [canSearch]="true" (onChange)="SchoolCountryChange($event)">
+                    </select-searchable>   
+              </div>
+              
+              <div style="display: inline-block;width: 6%;height: 40px;float: left;text-align: left;"></div>
+            <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+                <ion-item style="border: 1px solid #ADADAD;">
+                  <ion-input  type="text" [(ngModel)]="SchoolPincode" #mobid (keypress)="PinCodeCheck(mobid.value)" ></ion-input> 
+                </ion-item>
+            </div>
+          </div>
+
+
+
+
+        <div style=" display: block; width: 100%;">
+            <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+                <div  style="    width: 17%;height: 26px; float: left;">
+                   <img src="assets/icon/state.png" style="width: 22px;" >  
+                </div>
+                <div>Password </div>
+            </div>
+            
+        <div style="display: inline-block;width: 6%;height: 1px;float: left;text-align: left;"></div>
+          <div style="width:60%;display: inline-block;width: 47%;float: left;text-align: left;">
+              <div style="    width: 17%;height: 26px; float: left;"> 
+                <img src="assets/icon/state.png" style="width: 22px;" >  
+              </div>
+              <div> Confirm Password</div> 
+          </div>
+        </div>
+        
+
+
+        <div style="height: 40px;display: block;width: 100%;">
+            <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+              <ion-item style="border: 1px solid #ADADAD;">
+                <ion-input  type="text" [(ngModel)]="password" ></ion-input> 
+              </ion-item>
+            </div>
+            
+            <div style="display: inline-block;width: 6%;height: 40px;float: left;text-align: left;"></div>
+          <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+              <ion-item style="border: 1px solid #ADADAD;">
+                <ion-input  type="text" [(ngModel)]="changepass" ></ion-input> 
+              </ion-item>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+          </div> 
+          <button ion-button  no-margin no-padding style="box-shadow:none;    background-color: #ffffff !important;    height: 9rem; -webkit-box-shadow:none; border-radius: 50%;" (click)="Savebtn()"  >
+              <img src="assets/imgs/profile/submitbtn.png"  style=" width: 35%;">
+      </button> 
+  </div> 
+</div>
+</ion-content>
+

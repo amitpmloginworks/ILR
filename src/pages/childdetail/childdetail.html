@@ -1,0 +1,146 @@
+
+<ion-header>
+   <div class="title-style">  <img style="height:48px" src="assets/icon/logo02.png">  </div>
+</ion-header>
+<ion-content >
+   <div class="button-centre" *ngIf="student==2" >
+      <div style="margin-top: -110px; width: 100%; text-align: center;height: 193px;">
+         <p class="login-text" >Students Details</p>
+         <p style="color: grey;margin-top: -42px;">to user existing account</p>
+      </div>
+      <div style="height: 50px; top: 110px; position: absolute; left: 0px; width: 100%; justify-content: center; display: flex;" >
+         <button ion-button (click)="seestudentlist()" color="danger">Show List</button>
+      </div>  
+      <div style=" position: absolute;  height: 50px; bottom: 229px;  left: 0px; display: flex; justify-content: center;  width: 100%;">
+         <button class="login-text" ion-button full color="danger" (click)="navigatetodashboard()" >Next</button>
+      </div>
+   </div>
+   <div *ngIf="student==1">
+      <div> <img src="assets/imgs/linkusupheader.png"></div> 
+      <div class="div-img_box">
+         <div class="div-img_box_child" >
+            <div class="circle-profile"> <img class="img-curve" [src]="image" > </div>
+            <div class="green-straight_strip" *ngIf="ParentLink"></div>
+         </div>
+         <div class="div-img_box_family">
+            <div class="div-img_box_members"> 
+               <div class="green-inclinedleft_strip"  *ngIf="SilblingFirstLink1"></div>
+               <div class="circle-profile">
+                  <img class="img-curve" [src]="UploadImg2" (click)="SilblingFirstBtn('2')" *ngIf="!SiblingFirstBoolean"> 
+                  <img class="img-curve" [src]="UploadImg2" *ngIf="SiblingFirstBoolean"> 
+               </div>
+               <div class="green-flatleft_line"  *ngIf="SilblingFirstLink2"></div>
+               <div class="plus-style"><img style="height:24px;" src="assets/imgs/linkuspage/addsilbling.png"> </div>  
+            </div>
+            <div class="div-img_box_members">
+               <div class="circle-profile">   
+                  <img  class="img-curve" [src]="UploadImg1" (click)="parentsscreen('1')" *ngIf="!ParentBoolean">
+                  <img  class="img-curve" [src]="UploadImg1" *ngIf="ParentBoolean">
+               </div>
+            </div>
+            <div class="plus-style1">  <img style="height:24px;" src="assets/imgs/linkuspage/addsilbling.png"> </div> 
+            <div class="div-img_box_members">
+               <div class="green-inclinedright_strip" *ngIf="SilblingSecLink1"> </div>
+               <div class="circle-profile">
+                  <img  class="img-curve" [src]="UploadImg3" (click)="SilblingSecondBtn('3')"  *ngIf="!SiblingSecondBoolean">
+
+                  <img  class="img-curve" [src]="UploadImg3" *ngIf="SiblingSecondBoolean">
+               </div>
+               <div class="green-flatright_line" *ngIf="SilblingSecLink2" > </div>
+               <div class="plus-style2"> <img style="height:24px;" src="assets/imgs/linkuspage/addsilbling.png"> </div>
+            </div>
+         </div>
+      </div>
+      <div *ngIf="showInputData">
+         <div style=" padding-left: 25px;padding-right: 25px;">
+            <div style="margin-top: 12px; display: block; width: 100%;padding-top: 20px;">
+               <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+                  <div  style="    width: 17%;height: 26px; float: left;">
+                     <img src="assets/icon/firstlastname.png" style="width: 22px;" >  
+                  </div>
+                  <div> Name </div>
+               </div>
+               <div style="display: inline-block;width: 6%;height: 1px;float: left;text-align: left;"></div>
+               <div style="width:60%;display: inline-block;width: 47%;float: left;text-align: left;">
+                  <div style="    width: 17%;height: 26px; float: left;"> 
+                     <img src="assets/icon/email.png" style="width: 22px;" >  
+                  </div>
+                  <div>Email </div>
+               </div>
+            </div>
+            <div style="margin-top: 12px;height: 40px;display: block;width: 100%;">
+               <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+                  <ion-item style="border: 1px solid #ADADAD;">
+                     <ion-input  type="text" [(ngModel)]="MainName" ></ion-input>
+                  </ion-item>
+               </div>
+               <div style="display: inline-block;width: 6%;height: 40px;float: left;text-align: left;"></div>
+               <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+                  <ion-item style="border: 1px solid #ADADAD;">
+                     <ion-input  type="email" [(ngModel)]="MainEmail" ></ion-input> 
+                  </ion-item>
+               </div>
+            </div>
+            <div style="margin-top: 10px; display: block; width: 100%;padding-top: 20px;">
+               <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+                  <div style="    width: 17%;height: 26px; float: left;">
+                     <img src="assets/icon/rs.png" style="width: 22px;" >  
+                  </div>
+                  <div> Relationship </div>
+               </div>
+               <div style="display: inline-block;width: 6%;height: 1px;float: left;text-align: left;"></div>
+               <div style="width:60%;display: inline-block;width: 47%;float: left;text-align: left;">
+                  <div  style="  width: 17%;height: 26px; float: left;">  </div>
+                  <div> </div>
+               </div>
+            </div>
+            <div style="margin-top: 12px;height: 40px;display: block;width: 100%;">
+               <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+                  <ion-item>
+                     <ion-select [(ngModel)]="relationStatus" interface="popover" >
+                     <ion-option [value]="relations.value"  *ngFor="let relations of relationtmplist">{{ relations.name }} </ion-option>
+                     </ion-select>
+                  </ion-item>
+               </div>
+               <div style="display: inline-block;width: 6%;height: 40px;float: left;text-align: left;"></div>
+               <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+                  <div style="border: 1px solid #ADADAD;margin-bottom: 1px; border-radius: 5px;height: 3.2rem;">
+                     <div class="div-uploadimg" (click)="uploadpicture()">Upload Image</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+    
+      <ion-row style="position: absolute; margin-top: 9px;" *ngIf="ShowNextSaveBtn" >
+         <ion-col col-6 >
+            <button ion-button  no-margin no-padding style="box-shadow:none;    background-color: #ffffff !important;    height: 14rem; -webkit-box-shadow:none;"  (click)="SaveData()" [disabled]="!SaveBtnDisable" >
+            <img src="assets/imgs/savebtn.png" style="width: 50%;margin-left: 45%; ">
+            </button>
+         </ion-col>
+         <ion-col col-6 >
+            <button ion-button  no-margin no-padding style="box-shadow:none;    background-color: #ffffff !important;    height: 14rem; -webkit-box-shadow:none;" [disabled]="!NextBtnDisable" (click)="GoToNext()"  >
+            <img src="assets/imgs/nextbtn.png"  style="      width: 50%;   margin-right:45%; ">
+            </button>
+         </ion-col>
+      </ion-row>
+
+
+
+      <ion-row style="position: absolute; bottom: 0px;" *ngIf="ShowSkipBtn">
+         <ion-col col-6 >
+         </ion-col>
+         <ion-col col-6 >
+            <button ion-button no-margin no-padding style="box-shadow:none;background-color: #ffffff !important;height: 14rem; -webkit-box-shadow:none;" (click)="GoToNext()"  >
+            <img src="assets/imgs/linkuspage/skipbtn.png" style="width: 50%;margin-left: 30%;">
+            </button>
+         </ion-col>
+      </ion-row>
+
+
+
+
+   </div>
+</ion-content>

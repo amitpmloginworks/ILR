@@ -1,0 +1,76 @@
+page-profileaddfamily { 
+    .content-md{   
+        background-color: rgba(0,0,0,0.2);
+    }
+ 
+    .outer-div{
+        position: relative;
+        background: #fff;
+        text-align: center;
+        border-radius: 16px;
+        top: 55%;
+        transform: perspective(1px) translateY(-50%);
+    }
+
+    .inner-div
+{
+    display: block;
+    width: 100%;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    height: 150px;
+}
+
+   .scroll-content{
+    padding: 15px !important;  
+    }
+
+    .tittle{
+        font-size: 20px;
+        color: #272727;
+        font-family: 'Century Gothic';
+    }
+
+
+    .div-uploadimg
+{
+    border: 1px solid #ADADAD;
+    margin-bottom: 1px;
+    border-radius: 5px;
+    height: 22px;
+    width: 69%;
+    margin-top: 4px;
+    margin-left: 7px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.item-md {
+    padding-left: 0px;
+    border: 1px solid #ADADAD;
+    padding-left: 0px;
+    margin-bottom: 1px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.item-block {
+min-height: 3.2rem;
+}
+.select-md .select-icon {
+display: none;
+}
+ion-select {
+display: flex;
+overflow: hidden;
+max-width: 70%;
+}
+
+    @media only screen and (max-width: 320px) {
+
+    }
+
+     @media only screen and (min-height: 667px) {
+   
+    }
+}

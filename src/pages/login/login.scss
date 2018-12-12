@@ -1,0 +1,28 @@
+page-login {
+    .button-full-md {
+    text-transform: none;
+    }
+    .button-full-ios {
+        text-transform: none;
+        }
+        .button-md
+        {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            overflow: hidden;
+            font-size: 1.4rem;
+            font-weight: 500;
+
+            transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            margin: 0.4rem 0.2rem;
+            padding: 0 1.1em;
+        }
+        .button-md
+        {
+            margin: 0.8rem 0.2rem;
+        }
+        p {
+         text-align: center;   
+        }
+       
+}

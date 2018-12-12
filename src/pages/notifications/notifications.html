@@ -1,0 +1,29 @@
+<!--
+  Generated template for the NotificationsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->  
+
+<ion-content scroll="false" >
+  <div>
+  <ion-list class="list-style" >
+  
+  <div class="div-box1" *ngFor="let item of notificationList;let flag = even;" [ngClass]="{'one':flag, 'two':!flag}" (click)="BtnNotification(item.type,item.type_id)">
+  
+  <div class="div-box3">
+  <p class="p-text1" [ngClass]="{'one':flag, 'two':!flag}" >{{ item.message }}</p>
+  
+  </div> 
+  <div class="time-notify">
+  <p class="time-font">{{item.time}}</p>
+  </div>
+  </div>
+  </ion-list>
+  
+  </div>
+  
+  </ion-content>   
+  <footer style=" bottom: 0; position: sticky;width: 100%; background-color:white; height: 38px; width: 100%; z-index: 1; text-align: center; background-color: #f3f3f3;">
+  <button ion-button clear style="color: black;" (click)="clearBtn()" >Clear All</button>
+  </footer>

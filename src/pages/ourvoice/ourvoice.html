@@ -1,0 +1,51 @@
+<!--
+  Generated template for the OurvoicePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+   <headerbar></headerbar>
+</ion-header>
+
+ 
+<ion-content padding margin-top>
+  <div  style="margin-top: 59px;">
+  <div  style="margin-bottom: 17px;" *ngFor="let tittlelist of VoiceTittle;let i=index"  >
+
+
+<div (click)="toggle(i,tittlelist)" style=" background-color:#32beb3;height: 47px;display: block;width: 100%;float: left;margin-bottom: 10px ">
+<div style="display: inline-block;width: 30%;float: left;margin-left: 11px;height: 47px;">
+<ion-label style="    width: 217px;">{{ tittlelist }}</ion-label>
+</div>
+<div style="display: inline-block;width: 66%;text-align: end;padding: 12px;" > 
+<img style="width: 22px;" id="showadd_{{i}}"  src="assets/icon/23.png" >
+<img style="width: 22px; display:none;" id="showminus_{{i}}" src="assets/icon/minus.png" >
+
+<div *ngIf="i==checkindex">
+</div>
+</div>
+</div>
+
+
+<div id="x_{{i}}" style="display: none;" >
+  <div  class="x_{{i}}" >
+    <ion-list>
+      <ion-item  *ngFor="let item of arravoicelist">
+        <ion-avatar item-start>
+          <img [src]="item.user_image">
+        </ion-avatar>
+        <h2>{{ item.comment    }}</h2>
+        <p>By {{  item.user_name }}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+</div>
+
+
+
+
+
+</div>
+</div>
+</ion-content>

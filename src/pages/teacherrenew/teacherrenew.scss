@@ -1,0 +1,281 @@
+page-teacherrenew {
+    .logo-box{
+        max-width: 88%; 
+    }
+    .search-box{
+      margin-left:1px  
+    }
+
+    .button-box{
+        color: #fff;
+        background-color: #32BEB3;
+        position: absolute;
+        bottom: 19px;
+        right: 21px;
+        width: 88%;
+        height: 4.5rem !important; 
+    }
+    .slider-box{
+    
+        height: 160px;
+        margin-top: 64px; 
+        display: block;
+        width:100%;
+        height: 160px;     
+    }
+    .slider-card{
+    display: inline-block;
+    width:70%;
+    
+    float: left;
+    height: 160px;
+    }
+    .slider-arrow{
+     display: inline-block;
+     width:15%;
+    
+    float:left;
+    height: 160px;
+    }
+    .slider-arrow-icon{
+        display: inline-block;
+        font-size: 3.1em;
+        color: gray;
+        margin-top: 40px;
+        margin-left: 7px;
+    }
+    .slider-inner-card{
+        display:block;
+        width:100%;
+        height: 160px;
+    }
+    .slider-card-box{
+        display:inline-block;
+        width:33%; 
+        float: left; 
+        height: 160px;
+    }
+    .card-box{
+       
+        margin-top: 50px;
+    }
+    
+    ion-scroll {
+        white-space: nowrap;
+        height: 150px
+      }
+      
+      ion-card{
+        width: 30%;
+        display: inline-block;
+      }
+      .card-md{
+          width: calc(55% - 0px)
+      }
+      .col-left{
+          margin-left:0%
+      }
+      .row{
+          padding-top:19%
+      }
+      .col-right{
+          margin-left:0%;
+          right: -56px;
+      }
+      .col-middle{
+      margin-left:-10%
+      }
+      ion-card img {
+          width:85px;
+      }
+    
+      .swiper-slide {
+        width: 65px !important;
+       margin-right: 40px !important;
+        text-align: center;
+        margin-left: -6px !important;
+      }
+
+      .swiper-container {
+        margin-left: 20px;
+        margin-right: 10px;
+        width:110%;
+      }
+      ion-slides{
+          width:100%
+      }
+       .swiper-slide img {  
+        max-width: 170%;
+        width: 170%;
+       margin-top: 19px;
+        height: 90px;
+        margin-left:9px;
+    }
+    .slide-zoom {
+        width: 120%;
+        margin-left: 10px;
+    }
+    .login-text{
+        height: 50px;
+        margin-top: 19px;
+    }
+    
+    .subscribe-text{
+        color: grey;
+        margin-top: -11px;
+        text-align:center;
+        font-style: italic;
+        font-weight: normal;
+        color: #000;
+    }
+    .magazine-box{
+        margin-top: 74px;
+        font-weight: bold;
+        font-size: 300;
+        font-size: 16px;
+        text-align:center;
+        color: #000;
+    }
+
+
+    .btnRenew{
+        text-transform: capitalize;
+        border-radius: 4px !important;
+        height: 2.2rem !important;
+        font-size: 1.0rem !important;
+        background-color: #D43D66;
+        font-family: "Century Gothic";
+        }
+
+
+
+
+    // header css....
+.black-line_stripe
+{
+    height: 3px;
+    background-color: #1A1E23;
+}
+
+.img-style_arrow{
+    height: 10px;
+    margin-bottom: 3px;
+    margin-left: -6px;
+}   
+
+.welcome-text
+{
+display: inline-block;
+width:64% ;
+height:37px ;
+}
+.arrow-style
+{
+display:inline-block; 
+width:28%; 
+
+height:30px ;
+}
+.title-welcome_name
+{
+    height: 37px;
+}
+.title-view_more
+{
+    height:20px;
+}
+
+.div-profile_img
+{
+    width: 30px;
+    float: right;
+    margin-top: 11px;
+}
+.div-notify{
+    width: 34px;
+    float: right;
+}
+
+.title-box
+{
+    height:50px;
+    width:100%; 
+    display:block; 
+}
+
+.title-innerdiv
+{
+    height:50px;
+    display:inline-block;
+    float: left; 
+}
+
+.box-1
+{
+    width:40%;
+    padding: 10px;
+}
+.box-2
+{
+    width: 27%;
+}
+.box-3
+{
+    width: 33%;
+}
+ 
+.title-profile
+{
+    width: 34%;
+    height: 60px;
+    display: inline-block;
+}
+
+.title-info_box
+{
+    width: 63%;
+    height: 60px;
+    display: inline-block;
+    float: right;
+}
+
+.title-bar
+{
+    height:10px;
+    width:100%;
+}
+
+.scroll-content {
+    padding-bottom: 35px !important;
+}
+
+
+.div-badge
+{
+    position: absolute;top: 7px; right: 122px; border-radius: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+
+    .div-badge
+    {
+        position: absolute;top: 7px; right: 110px; border-radius: 100%;
+    }
+}
+.badge-md-profileBtnBg {
+    top: 8px;
+    right: 108px;
+    border-radius: 100%;
+    text-indent: -1px;
+    font-size: .5rem;
+    height: 15px;
+
+    width: 14px;
+    position: absolute;
+    right: 113px;
+    padding: 4.1px;
+}
+
+
+
+}

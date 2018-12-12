@@ -1,0 +1,347 @@
+page-themechange {
+    .grid div:nth-child(even){
+      
+    }
+    
+    .grid div:nth-child(odd){
+     
+    }
+    
+    .grid{
+         display: grid; 
+         grid-template-columns:1fr 1fr;
+         grid-template-rows:1fr 1fr;
+         position:fixed;
+         width:100%;
+         height:100%;
+         top:0px;
+         left:0px;
+         z-index:1000;
+         height: 273px;
+         position: absolute;
+         top: 148px;
+    } 
+    .circle-img{
+        text-align: center;
+        align-items: center;
+     
+        padding: 13px;
+        height: 121px;
+    width: 121px;
+   
+    margin-left: 13px;
+    }
+    // .title
+    // {
+    //     grid-column-start:1;
+    //     grid-column-end:3; 
+     
+    // }
+    .theme-box-inner
+  {
+    height: 360px;
+    width: 100%;
+    margin-top: 7px;
+   
+  }
+  .theme-up-box
+  {
+    display:block;  
+    height: 180px;
+    width:100%;
+   
+    float: left;
+  }
+  
+  .theme-innerupbox
+  {
+      display: inline-block;
+      height:180px;
+      width:49% ;
+      float: left;
+   
+
+  }
+
+    .theme-box
+   {
+       height:60px;
+      
+       width: 100%;
+       display: flex;
+       justify-content: center;
+   }
+
+   .title-card{
+    margin-top: 94px;
+    align-items: center;
+    text-align: center;
+   }
+   
+    .div-outer{
+        width:100%;
+        height:50%;
+       
+    }
+        .div-inner{
+        border:1px solid black;
+       
+         top:16%;
+        
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width:49%;
+         position:relative;
+         height:80%;
+         float:left
+        }
+    
+    
+        .text-style{
+            position:absolute;
+            margin-top: 16%;
+            font-size:1.4rem;
+            font-family:"Century Gothic"
+        }
+    
+        ion-header {
+            background-color: white;
+          }
+    
+    .outer-div      {     width: 100%; height: auto;  margin-top: 55px; }
+    .outer-div-left     {  width: 55%; float: left; }
+    .outer-div-right    { width: 35%;  float: left;     text-align: center; }
+    .img1   {     text-align: center;    object-fit: cover;     margin-top: 15px;     }
+    .img2 { width: 30%;     margin-top: 35px;      }
+    .img-profiles
+    {
+    width: 70%;
+    height: 22%;
+    display: block;
+    margin: 0 auto;
+    float: right; 
+    border-radius: 70px;
+    }
+    .imagecircle
+    {
+    width: 70%;
+    height: 147px;
+    display: block;
+    margin: 0 auto;
+    float: right; 
+    padding:7px;
+    border:5px solid #39A5C3;
+    border-radius: 50%;
+    }
+    .avatar-p{
+    font-family: "Century Gothic";
+    display: inline-block;
+    margin-left: 55px;
+    font-size: 1.0rem;
+    margin-top: 5px;
+    }
+    
+    .div-txt{ 
+    font-size: 2.9rem;
+    color:#344861;
+    font-family: "Century Gothic";
+    }
+    .div-txt1{
+    font-size: 1.0rem;
+    color:#344861;
+    font-family: "Century Gothic";  
+    }
+    
+    .button-outline-md { 
+    border-color: map-get($colors, profileBtnGrey);
+    }
+     
+    .btnViewProfile{
+    background-color: map-get($colors,profileBtnBg) !important;
+    height: 30px !important;
+    border-radius: 4px !important;
+    font-family: "Century Gothic";
+    }
+    
+    .btnRedeem{
+    text-transform: capitalize;
+    border-radius: 4px !important;
+    height: 2.2rem !important;
+    font-size: 1.0rem !important;
+    background-color: #0F7A8C;
+    font-family: "Century Gothic";
+    }
+    
+    .btnRenew{
+    text-transform: capitalize;
+    border-radius: 4px !important;
+    height: 2.2rem !important;
+    font-size: 1.0rem !important;
+    background-color: #D43D66;
+    font-family: "Century Gothic";
+    }
+    
+    .btnInvite{
+    text-transform: capitalize;
+    border-radius: 4px !important;
+    height: 2.2rem !important;
+    font-size: 1.0rem !important;
+    background-color: #873E85;
+    font-family: "Century Gothic";
+    text-transform : initial;
+    }
+    
+    // header 
+    .black-line_stripe
+    {
+    height: 3px;
+    
+    background-color: black;
+    }
+    .img-style_arrow{
+    height: 10px;
+    margin-bottom: 3px;
+    margin-left: -1px;
+    }
+    
+    .p-style1
+    {
+    font-size: .9rem;
+    margin-top: 12px;
+    margin-left: 3px;
+    }
+    
+    .view-style
+    {
+    font-size: 5.9px !important;
+    margin-top: -1px;
+    margin-left: 4px;
+    }
+    .welcome-text
+    {
+    display: inline-block;
+    width:64% ;
+    height:37px ;
+    }
+    .arrow-style
+    {
+    display:inline-block; 
+    width:28%; 
+    height:30px;
+    }
+    .title-welcome_name
+    {
+    height: 37px;
+    }
+    .title-view_more
+    {
+    height:20px;
+    }
+    
+    .div-profile_img
+    {
+    width: 30px;
+    float: right;
+    margin-top: 11px;
+    }
+    .title-box
+    {
+    height:50px;
+    width:100%; 
+    display:block; 
+    }
+    .title-innerdiv
+    {
+    height:50px;
+    display:inline-block;
+    float: left; 
+    }
+    
+    .box-1
+    {
+    width:40%;
+    padding: 10px;
+    }
+    .box-2
+    {
+    width:29.9%;
+    }
+    .box-3
+    {
+    width:30%;
+    background-color: #e5e5e5;
+    }
+    .title-profile
+    {
+    width: 43%;
+    height: 60px;
+    display: inline-block;
+    }
+    
+    .title-info_box
+    {
+    width: 57%;
+    height: 60px;
+    display: inline-block;
+    float: right;
+    }
+    
+    .title-bar
+    {
+    height:10px;
+    width:100%;
+    }
+    .profile-details{
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #010101;
+    font-family: "Century Gothic"; 
+    }
+    .private-info{
+    color:#354962;
+    font-family: 'Century Gothic';
+    font-size:1.4rem;
+    }
+    
+    .div-notify{
+    width: 35px;
+    float: right;
+    }
+    .text-style{
+    font-family: "Century Gothic Regular";
+    font-size:1.3rem;
+    }
+    
+    
+    .p-right{
+    
+        font-family: "Century Gothic Regular";
+        font-size: 1.3rem;
+    } 
+    
+    .btnViewProfile{
+        background-color: map-get($colors,profileBtnBg) !important;
+        height: 30px !important;
+        border-radius: 4px !important;
+        font-family: "Century Gothic"; 
+        text-transform: capitalize;
+    }
+    .btnAddFamily{
+        background-color: map-get($colors,profileBtnBg) !important;
+        height: 27px !important;
+        width: 33% !important; 
+        border-radius: 4px !important;
+        font-family: "Century Gothic"; 
+        text-transform: capitalize;
+        font-size: 1.2rem;
+    }
+    
+    .item-md{
+        background-color: transparent;
+    }
+    .item-ios{
+        background-color: transparent;
+    }
+              
+}

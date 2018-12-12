@@ -1,0 +1,86 @@
+<!--
+  Generated template for the SubscribeNowPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header> 
+    <headerbar></headerbar> 
+</ion-header> 
+<ion-content> 
+            <img src="assets/imgs/payment/subscriptionheader.png">
+   
+            <div *ngIf="ExpiryShow">
+
+          
+    <ion-row>
+        <ion-col col-12>
+          <p class="row-col-p"> Please choose your subscription </p>
+        </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="trialCon">
+            <ion-col col-12> 
+                    <div (click)="TrialPeriodBtn()"><img src="assets/imgs/payment/14days.png" class="row-col12-div-img"></div>
+            </ion-col>
+        </ion-row>
+
+
+    <p class="p-or" *ngIf="trialCon">OR</p>
+
+        <ion-row [ngStyle]="(trialCon == 'true')?{ 'margin-top': '-15px'  }:{  }">
+            <ion-col col-12>
+                  
+                            
+                  
+                        <div style="text-align: center;" >    
+                                <img src="assets/imgs/payment/pricegold01-c.png"  class="imgTop" *ngIf="ExistUserShow">  
+                                <img src="assets/imgs/payment/pricegold01-c.png"  class="imgTop" *ngIf="NewUserShow"> 
+
+                                <div style="position: absolute; top: -10px; right: 28px; font-size: 12px;font-family: 'Bebas Neue Bold';">{{ AmtDigital }}</div>
+
+                            <img src="assets/imgs/payment/digitalbtn.png" class="row-col12-div-img1" (click)="DigitalBtn()">
+                         
+                         </div>
+                    
+            </ion-col>
+        </ion-row>
+
+        <div class="div-outer" *ngIf="NewUserShow">
+                <div class="div-inner">
+                        <p class="p-tittle">Available for all countries</p>
+                    
+                </div>
+            </div>
+
+            <div class="div-outer" *ngIf="ExistUserShow">
+                <div class="div-inner">
+                        <p class="p-tittle2">For Our Existing Print Subscriber,</p>
+                    <p class="p-tittle2">you may choose to top up SGD{{ AmtDigital }}</p> 
+                    <p class="p-tittle2">to enjoy our digital version.</p>
+                </div>
+            </div>
+
+        <ion-row *ngIf="NewUserShow1">              
+                <ion-col col-12>
+                        <div style="    text-align: center;"> 
+                                <img src="assets/imgs/payment/pricegold01-c.png" class="imgTop">  
+                                <div style=" position: absolute; top: -10px; right: 28px; font-size: 12px;font-family: 'Bebas Neue Bold';">{{ AmtPrintDigital }}</div>    
+                            <img src="assets/imgs/payment/digitalprintbtn.png" class="row-col12-div-img1" (click)="DigitalPrintBtn()"> 
+                            </div>
+                </ion-col>
+            </ion-row>
+
+
+            <div class="div-outer" *ngIf="NewUserShow1">
+                <div class="div-inner">
+                        <p class="p-tittle1">Subscription rates may vary</p>
+                    <p class="p-tittle1">depending on the country registered.</p>
+                </div>
+            </div>
+
+          
+
+
+        </div>
+</ion-content>

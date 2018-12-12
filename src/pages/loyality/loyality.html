@@ -1,0 +1,50 @@
+<!--
+  Generated template for the LoyalityPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <headerbar></headerbar> 
+  
+  </ion-header>
+  
+
+
+<ion-content padding>
+<div style="text-align: center;
+margin-top: 60px;
+font-weight: 700;" > <p  > Total Points Earned</p></div>
+<div style="text-align:center" >
+<p style="color: red;
+font-weight: 700;
+font-size: 26px;
+margin-top: -12px;" >{{totalPoints}}</p>
+</div>
+
+
+<div class="article-box" >
+<div class="article-box1">
+<p style="font-weight:700" >Article</p>
+</div>
+<div class="article-box2" >
+  <p style="font-weight:700" >Points</p>
+  </div>
+
+</div>
+<ion-list class="list-style" >
+   
+    <div class="div-box1" *ngFor="let value of loyalitypoints" >
+       <div class="div-box2" >
+        <img style="    width: 50px;" [src]="value.image">
+       </div>
+       <div class="div-box3" >
+          <p class="p-text1" >{{value.title}}</p>
+
+           <p  class="points-p" >{{value.points}}</p>
+       </div> 
+
+     </div>
+</ion-list>
+</ion-content>

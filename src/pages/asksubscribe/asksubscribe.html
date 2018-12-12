@@ -1,0 +1,50 @@
+<!--
+  Generated template for the AsksubscribePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+    
+<!-- <ion-content >
+   <div style="text-align: center; margin-top: 10px; margin-bottom: 5px;">
+      <img src="assets/icon/logo02.png" style="width:50%;">
+   </div>
+   <div class="black-line_stripe">    </div>
+   <div style="padding-left:16px !important;padding-right:16px !important;">
+      <h1 style=" margin-top: 137px; text-align: center; font-size: 29px; padding: 0px;font-weight: bold;">Subscribe Now</h1>
+      <p style="text-align: center; margin-top: -9px; padding: 0px;color: #D94D4D;">Upgrade your Membership</p>
+      <p style="text-align: center;font-weight: 500;" >Already Have a Print Copy Subscription </p>
+      <ion-list [(ngModel)]="event" radio-group (ionChange)="mcqAnswer(event)">
+      <div style="display:block;width:100%;     display: flex; justify-content: center;">
+         <div style=" float: left; display: inline-block; width: 27%; margin-left: 50px;">
+            <ion-radio value="yes" color="danger" ></ion-radio>
+            <ion-label style=" margin-left: 21px;
+               margin-top: -19px;width: 28px;">Yes</ion-label>
+         </div>
+         <div style="float: left; display: inline-block; width: 30%;">
+            <ion-radio value="no" color="danger" ></ion-radio>
+            <ion-label style="    margin-left: 21px;
+               margin-top: -19px;width: 28px;">No</ion-label>
+         </div>
+      </div>
+      </ion-list>
+      <ion-item style="border: 1px solid #d0c9c9;" *ngIf="events=='yes'">
+         <ion-input placeholder="Enter Offical Receipt Number" [(ngModel)]="ReciptNumber"></ion-input>
+      </ion-item>
+      <button style="margin-top: 25px;" color="danger" ion-button full (click)="Subscribe()">Subscribe Now</button>
+   </div>
+</ion-content> -->
+
+
+
+<ion-content padding class="modal-page" text-center ion-fixed scroll="false">
+  <div class="div-main">     
+      <img src="assets/popupbi.png" style="width:100%;">
+      <div class="centered">
+        <p class="p-text">ARE YOU AN EXISTING PRINT</p>  
+        <p class="p-text"s>SUBSCRIBER?</p>
+        <button ion-button (click)="mcqAnswer('yes')">YES I'M AN EXISTING PRINT SUBSCRIBER</button>
+        <button ion-button (click)="mcqAnswer('no')">NO I'M AN EXISTING PRINT SUBSCRIBER</button>
+      </div>
+  </div>
+</ion-content> 

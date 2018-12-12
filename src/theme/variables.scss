@@ -1,0 +1,156 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  //primary:    #488aff,
+  primary: #f53d3d, 
+  secondary:  #32db64,
+  danger:     #32beb3,
+  light:      #f4f4f4,
+  dark:       #222,
+  redtheme: #f53d3d, 
+  homeclr:    #32beb3,
+
+  // profile page ....
+  profileBtnGrey:#c3c3c3, 
+   profileBtnBg: #0fb1b0,
+   EditBtn:#c6c6c6,
+   yellowprofile: #F5D58D,
+
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$font-family-md-base: "Josefin Sans", "Roboto", "Helvetica Neue", sans-serif,"Quicksand-Regular";
+$font-family-wp-base: "Josefin Sans", "Segoe UI", "Quicksand-Regular", sans-serif;
+
+$popover-ios-width: 95%;
+
+.toolbar-title-ios {
+  font-family: "noto-sans-regular";
+}
+
+
+.toolbar-title-md {
+  font-family: "noto-sans-regular";
+}
+
+.toolbar-title-wp {
+  font-family:"noto-sans-regular";
+}
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+$toolbar-ios-button-font-size:1.9rem;
+
+$popover-md-width: 95%;
+.toolbar-title-md {
+  font-family: "noto-sans-regular";
+}
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+// @font-face {
+//   font-family: "NotoSans-Regular";
+//   src: url(../assets/fonts/NotoSans-Regular.ttf) format("truetype");
+// }
+
+
+
+
+// @font-face {
+//   font-family: "NotoSans-Bold";
+//   src: url(../assets/fonts/NotoSans-Bold.ttf) format("truetype");
+// }
+@font-face {
+    font-family: "Quicksand-Regular";
+    src: url(../assets/fonts/Quicksand-Regular.otf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Century Gothic";
+    src: url(../assets/fonts/911Fonts.com_CenturyGothicBold__-_911fonts.com_fonts_pMgo.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Century Gothic Regular";
+    src: url(../assets/fonts/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Lobster";
+    src: url(../assets/fonts/Lobster_1_4.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "CenturyGothic";
+    src: url(../assets/fonts/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Bebas Neue Bold";
+    src: url(../assets/fonts/bebas_neue-2/BebasNeue-Bold.otf) format("truetype");
+  }
+
+ 
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

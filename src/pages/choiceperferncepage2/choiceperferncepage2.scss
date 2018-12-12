@@ -1,0 +1,326 @@
+page-choiceperferncepage2 {
+.slide-zoom {
+    text-align: center;
+    display: block;
+    width: 100%;
+    
+}
+.img-style_slide1
+{
+    height: 272px;
+    margin-left: -11px;
+}
+.content-style
+{
+    height: 119px;
+    width: 46px;
+    position: absolute;
+    z-index: 2;
+    top: -4px;
+    left: 8px;
+    display:none;
+}
+.text-style
+{
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+}
+.img-src
+{
+    position: absolute;
+    height: 26px;
+    margin-top: 122px;
+    margin-left: 18px;
+}
+
+.swiper-slide {
+    width: 89px !important;
+
+
+}
+    .img-style_slide
+    {
+        height: 272px;
+        
+        
+    }
+ .slider-style
+ {
+    height: 267px;
+    width: 88%;
+    
+    display: inline-block;
+ }
+ .arrow-style_slide
+ {
+    z-index: 2;
+    background-color: #fff;
+    position: absolute;
+    display: inline-block;
+    width: 11%;
+    height: 42%;
+    justify-content: end;
+    overflow: hidden;
+    margin-top: 21px;
+ }
+
+
+.slide_box
+{
+    height: 100%;
+    width: 100%;
+   
+justify-content:center;
+display:flex; 
+align-items:center;  
+}
+.slide-div
+{
+
+height: 40%;
+width: 100%;
+
+
+
+}
+
+.img-style_text
+{
+    position: absolute;
+    top: 114px;  
+    justify-content:center;
+    display:flex;
+    width:100%;  
+}
+.img-style
+{
+    height: 119px;
+}
+.black-line_stripe
+{
+    height: 5px;
+    background-color: black;
+}
+
+.img-style_arrow{
+    height: 10px;
+    margin-bottom: 3px;
+    margin-left: -1px;
+}
+
+.p-style1
+{
+    font-size: .9rem;
+    margin-top: 12px;
+    margin-left: 3px;
+}
+
+.view-style
+{
+    font-size: 5.9px !important;
+    margin-top: -1px;
+    margin-left: 4px;
+    color: grey;
+}
+.welcome-text
+{
+display: inline-block;
+width:64% ;
+
+height:37px ;
+}
+.arrow-style
+{
+display:inline-block; 
+width:28%; 
+
+height:30px ;
+}
+.title-welcome_name
+{
+    height: 37px;
+    
+}
+.title-view_more
+{
+    height:20px;
+ 
+}
+
+.div-profile_img
+{
+    width: 30px;
+    float: right;
+    margin-top: 11px;
+}
+.title-box
+{
+    height:50px;
+    width:100%; 
+    
+    display:block; 
+}
+.title-innerdiv
+{
+    height:50px;
+
+    display:inline-block;
+    float: left; 
+}
+.box-1
+{
+    width:40%;
+    padding: 10px;
+}
+.box-2
+{
+    width:29.9%;
+}
+.box-3
+{
+    width:30%;
+    background-color: #cbcece;
+}
+.title-profile
+{
+    width: 43%;
+  
+    height: 60px;
+    display: inline-block;
+}
+.title-info_box
+{
+    width: 57%;
+ 
+    height: 60px;
+    display: inline-block;
+    float: right;
+}
+
+
+.title-bar
+{
+    height:10px;
+    width:100%;
+   
+}
+
+.p-style
+{
+    z-index: 1;
+  
+    position: absolute;
+    top: 65px;
+    left: 11px;
+    color: #fff;
+    justify-content: center;
+}
+.div-box1{
+    background-color: #45BFB3;
+    height: 21px;
+    width: 26px;
+}
+.title-head{
+ display:flex;
+ justify-content:center ;
+ margin-top: -2px;
+ margin-bottom: 24px;    
+}
+.big-box{
+    height: 52vh;
+    border: 18px solid #45BFB3;
+}
+ion-row {
+    text-align: center;
+    }
+.checkbox-style{
+margin-left: -4px;
+margin-top: -4px;
+}
+
+
+
+.button-style{
+background-color: #32beb3;
+position: absolute;
+
+bottom: 0px;
+top: 682px;
+left: 22px;
+
+margin-bottom: 20px;
+right: 19px;
+width: 88%;
+}
+
+.para-text-div-box{
+    margin-top: 88px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 8px;
+}
+.card-box{
+    height: 77px ! important;
+    width: 80px;
+    margin-left: -9px;
+
+    margin-top: 12px;
+
+
+}
+.div-box{
+    border: 1px solid white;
+height: 19px;
+width: 65px;
+margin-top: -70px;
+margin-left: 12px;
+padding: 3px;
+position: relative;
+}
+.para-text{
+    color: white;
+    font-family: noto-sans;
+    text-align: center;
+    margin-top: -4px;
+    font-size: 1.3rem;
+}
+.div-check-box{
+    height: 19px;
+width: 20px;
+border: 1px solid white;
+margin-top: 16px;
+margin-left: 19px;
+border-radius: 11px;
+padding: 2px;
+}
+.checkbox-ios-danger .checkbox-checked  {
+    border-color: transparent;
+    background-color: transparent;
+}
+[col-4] {
+    padding:0px;
+    
+}
+.row{
+    position: absolute;
+    bottom: -57px;
+    z-index: 2;
+}
+.button-md {
+    height: 5.4rem !important;
+}
+
+.black-line_stripe
+{
+    height: 2px;
+  background-color: #515254;
+}
+
+.button-md {
+    height: 12.4rem !important;
+}  
+
+
+}

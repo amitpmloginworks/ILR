@@ -1,0 +1,401 @@
+page-groups {
+    ion-header {
+        background-color: white;
+      }
+
+.outer-div      {     width: 100%; height: auto;  margin-top: 55px; }
+.outer-div-left     {  width: 55%; float: left; }
+.outer-div-right    { width: 35%;  float: left;     text-align: center; }
+.img1   {     text-align: center;    object-fit: cover;     margin-top: 15px;     }
+.img2 { width: 30%;     margin-top: 35px;      }
+.img-profiles
+{
+width: 70%;
+height: 22%;
+display: block;
+margin: 0 auto;
+float: right;  
+border-radius: 100px;
+}
+.avatar-p{
+display: inline-block;
+margin-left: 70px;
+font-size: 1.0rem;
+margin-top: 5px;
+font-family: "Century Gothic"; 
+}
+
+.div-txt{ 
+font-size: 2.9rem;
+color:#344861;
+font-family: "Century Gothic";                           
+}
+.div-txt1{
+color:#344861;
+font-family: "Century Gothic";
+font-size: 1.0rem;
+}
+.black-line_stripe
+{
+height: 5px;
+background-color :  #363A45;
+}
+
+.img-style_arrow{
+height: 12px;
+margin-bottom: 0px;
+margin-left: -2px;
+}
+
+.welcome-text
+{
+display: inline-block;
+width:64% ;
+height:37px ;
+}
+.arrow-style
+{
+display:inline-block; 
+width:28%; 
+
+height:30px ;
+}
+.title-welcome_name
+{
+height: 37px;
+}
+.title-view_more
+{
+height:20px;
+}
+
+.div-profile_img
+{
+width: 30px;
+float: right;
+margin-top: 11px;
+}
+.div-notify{
+width: 35px;
+float: right;
+}
+
+.title-box
+{
+height:50px;
+width:100%; 
+display:block; 
+}
+
+.title-innerdiv
+{
+height:50px;
+display:inline-block;
+float: left; 
+}
+
+.box-1
+{
+width:40%;
+padding: 10px;
+}
+.box-2
+{
+width:27.9%;
+}
+
+
+.title-profile
+{
+width: 39%;
+height: 60px;
+display: inline-block;
+}
+
+.title-info_box
+{
+width: 61%;
+height: 60px;
+display: inline-block;
+float: right;
+}
+
+.title-bar
+{
+height:10px;
+width:100%;
+}
+
+
+
+
+.div-badge
+{
+position: absolute;top: 7px; right: 122px; border-radius: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+
+.div-badge
+{
+position: absolute;top: 7px; right: 110px; border-radius: 100%;
+}
+}
+.badge-md-profileBtnBg {
+top: 8px;
+right: 108px;
+border-radius: 100%;
+text-indent: -1px;
+font-size: .5rem;
+height: 15px;
+
+width: 14px;
+position: absolute;
+right: 113px;
+padding: 4.1px;
+}
+
+.div_create_group{
+width:33%;
+background-color:#E9BC75; 
+text-align:center;
+height:9vh;
+float:left
+}
+.div_group_list{
+width:34%;
+background-color: #94C7DA;
+height:9vh;
+float:left  
+}
+.div_join_group{
+width:33%;
+background-color: #DD8287;
+height:9vh;float:left
+}
+.text-header{
+text-align:center;
+margin-top: 9px;
+color : white;
+font-size : 1.7rem;
+font-family: "Bebas Neue Bold";
+letter-spacing: 1px
+
+
+
+}
+
+
+.item-style{
+border:1px solid #CCCCCC;
+border-radius:7px 
+}
+
+.label-md{
+margin-left: 12px;
+margin-bottom: 28px;
+font-family: "Century Gothic";
+}
+.text-browse{
+color:#FFF;
+font-family: "Century Gothic";
+padding-top: -4px;
+margin-top: 16px;
+}
+.btn-browse{
+background-color: #5DBCB4;
+text-align: center;
+margin-left: -1px;
+border-radius:0px 8px 8px 0px;
+}
+.btn-save{
+float:right;
+background-color:#E9BC75;
+border-radius: 8px;
+font-family: "Century Gothic";
+text-transform: initial;
+margin-top: 15px;
+box-shadow: none;
+}
+
+.segment-md .segment-button{
+background-color: #272727;
+color:#FFF;
+padding:0px;
+opacity: 1;
+height:5.2rem;
+}
+
+.segment-md-primary .segment-button.activated, .segment-md-primary .segment-button.segment-activated{
+color:#FFF;
+background-color: #272727;
+opacity: 1;
+}
+
+.segment-md-redtheme .segment-button.activated, .segment-md-redtheme .segment-button.segment-activated {
+color: #fff;
+opacity: 1;
+}
+
+ion-segment {
+margin-top:40px;
+}
+
+.searchbar-md {
+background-color: #D1D2D4;
+padding-bottom: 9px;
+}
+.searchbar-md .searchbar-input {
+border-radius:8px;
+text-align:center;
+}
+
+:-ms-input-placeholder {  
+text-align: center; 
+}
+
+.item-border{
+border-bottom: 1px solid #DBDBDB;
+}
+
+.btn-join{
+border-radius: 5px;
+font-family: "Century Gothic";
+text-transform: initial;
+width:22%;
+font-size:1.5rem ! important;
+box-shadow: none;
+
+}
+.group-name{
+
+color : white;
+font-size : 1.5rem;
+font-family: "Century Gothic"; 
+}
+.list-md .item-block .item-inner {
+border-bottom: 0px solid #dedede;
+}
+.searchbar-md .searchbar-search-icon {
+left:22%;
+}
+.footer-input{
+border: 2px solid #ecebeb;
+height: 37px;
+border-radius:5px;
+width: 70%;
+margin-left: 20%;
+}
+
+.searchbar-md .searchbar-input{
+
+box-shadow: none;
+
+}
+.searchbar-ios .searchbar-input{
+box-shadow: none ;
+
+}
+.div-status{
+background-color: #71E346;
+width: 83%;
+height: 10px;
+border-radius: 50%;
+.second{
+width: 90%;  
+}
+}
+
+.text-active{
+padding-top: 4px;
+font-family:'Century Gothic';
+color:#7c7c7c;
+font-size: 1.0rem;
+}
+.text-info{
+font-family:'Century Gothic Regular';
+color:black;
+}
+.text-members{
+font-size:1.3rem;
+font-family:'Century Gothic Regular';
+color:black ;
+}
+.text-name{
+font-size:1.6rem;
+font-family:'Century Gothic';
+color:black
+}
+.text-alert{
+color:red;
+margin-left: 13px;
+} 
+
+
+.box-3
+{
+width:32% !important;
+}
+
+.toolbar-background-md {
+border-color: #b2b2b2;
+background: #FFF;
+}
+.text-placeholder{
+.text-input-md {
+font-family: monospace ! important ;
+padding-top: 2px; 
+font-weight:600;
+margin-top: 10px;
+
+}
+}
+
+::placeholder {
+font-family:"Century Gothic Regular";
+font-size:1.4rem;
+}
+
+:-ms-input-placeholder { 
+font-family:"Century Gothic Regular";
+font-size:1.4rem;
+}
+
+::-ms-input-placeholder { 
+font-family:"Century Gothic Regular";
+font-size:1.4rem;
+}  
+    
+.groplistmsg
+{
+    font-family: "Century Gothic";
+    font-size: 1.6rem;
+    margin-top: 25px;
+}
+
+
+// border bottom input remove here ... 
+
+.item-md.item-block .item-inner,
+.item-md.item-input.input-has-focus .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner,
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner,
+.list-md .item-input.input-has-focus:last-child,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child,
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+    border-bottom: none;
+    box-shadow: none;
+}
+.list-md .item-input.input-has-focus:last-child .item-inner,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner,
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child .item-inner {
+    box-shadow: none; 
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+    border-bottom-color: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;  
+}
+
+
+}

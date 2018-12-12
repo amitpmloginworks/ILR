@@ -1,0 +1,64 @@
+<!--
+  Generated template for the ChoiceofperferencePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content >
+   <div style="text-align: center; margin-top: 10px; margin-bottom: 5px;">
+      <img src="assets/icon/logo02.png" style="width:40%;">
+   </div>
+   <div class="black-line_stripe"> </div>
+   <div  class="img-style_text" >
+      <img class="img-style" src="assets/imgs/ChoiceOfIntrest/writingstyleheade.png">
+   </div>
+   <div class="slide_box" >
+      <div class="slide-div" >
+         <div class="slider-style">
+            <ion-slides  style="position: absolute; top: 82px;"  slidesPerView="3.1"  (ionSlideDidChange)="slideChanged()" >
+               <ion-slide  loop="true"   (click)="showImage(i)" id="x_{{i}}"  *ngFor="let value of type_list;let i=index" class="slide-style">
+               <div id="z_{{i}}" >
+                  <img id="y_{{i}}"  class="img-style_slide"  [src]="value.mobile_image" >
+               </div>
+               <p class="text-style" >{{value.name}}</p>
+               </ion-slide>
+            </ion-slides>
+         </div>
+         <div  (click)="goToNextSlide()" class="arrow-style_slide" >
+            <img class="img-src" src="assets/imgs/ChoiceOfIntrest/rightarrow.png">
+         </div>
+      </div>
+   </div>
+      
+
+   <!-- <ion-row >
+      <ion-col col-3></ion-col>
+      <ion-col col-6 text-center>
+         <button ion-button [disabled]="BtnDisable" no-margin no-padding style="box-shadow:none;background-color: #ffffff; height: 10.4rem !important; -webkit-box-shadow:none;" (click)="next()" >
+         <img src="assets/imgs/nextbtn.png" style="    width: 52%;" >
+         </button>
+      </ion-col>
+      <ion-col col-3></ion-col>
+   </ion-row> -->
+
+
+  
+   <ion-row style="position: absolute; margin-top: 9px;"  >
+      <ion-col col-6 >     
+         <button ion-button  no-margin no-padding style="box-shadow:none;background-color: #ffffff !important;;  height: 10.4rem !important; -webkit-box-shadow:none;"  (click)="SkipBtn()" [disabled]="!BtnDisable" >
+         <img src="assets/imgs/linkuspage/skipbtn.png" style="width: 50%; margin-left: 45%; ">
+         </button>
+      </ion-col>
+      <ion-col col-6 >
+         <button ion-button  no-margin no-padding style="box-shadow:none;    background-color: #ffffff !important; height: 10.4rem !important; -webkit-box-shadow:none;" [disabled]="BtnDisable" (click)="next()"  >
+         <img src="assets/imgs/nextbtn.png"  style="      width: 50%;   margin-right:45%; ">
+         </button>
+      </ion-col>
+   </ion-row>
+
+
+
+
+</ion-content>

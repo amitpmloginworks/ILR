@@ -1,0 +1,358 @@
+page-home {
+    .button_style
+    {
+        height:80px;
+        width:100%;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+        
+    }
+    .colorstrip
+    {
+        background-color:#fff 
+    }
+.changecolorstrip
+{
+    background-color:#fff 
+}
+    .color1
+    {
+        background-color: #EE7C93;
+        border-bottom:4px solid #D34D6E 
+    }
+    .color2
+    {
+        background-color: #E7E75A;
+        border-bottom:4px solid #AFAB42 
+    }
+    .color3
+    {
+        background-color: #73CACB;
+        border-bottom:4px solid #2A8487
+    }
+    .textONcentre
+    {
+        font-family: 'Bebas Neue Bold';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 4.4rem;
+        margin: 27px;
+    }
+    .textONcentre1
+    {
+        margin: 0;
+        font-family: 'Bebas Neue Bold';
+        font-size: 4.0rem;
+        color: #fff  ;
+        margin-top: 5px
+    }
+
+
+
+    .p-text1
+    {
+     position: absolute;
+     top: 160px;
+    justify-content: center;
+    color: #a8a4a4;
+    font-size: 1rem;
+    }
+    .p-text2
+    {
+     position: absolute;
+     top: 206px;
+    justify-content: center;
+    color: #a8a4a4;
+    font-size: 1rem;
+    }
+    .p-text3
+    {
+     position: absolute;
+     top: 252px;
+    justify-content: center;
+    color: #a8a4a4;
+    font-size: 1rem;
+    }
+
+   .p-text  
+    {
+     position: absolute;
+     top: 158px;
+    justify-content: center;
+    color: #a8a4a4;
+    font-size: 1rem;
+    }
+    .plus-button_style
+    {
+        position: absolute;
+        height: 29px;
+       
+        justify-content: center;
+    }
+.logo-button
+{
+    height: 65px;
+    margin-top: -38px; 
+
+}
+.header{
+    align-items: center;
+    text-align: center;
+}
+.pos_img0
+{
+    top: 102px;
+}
+
+.pos_img1
+{
+    top: 136px; 
+}
+
+.pos_img2
+{
+    top: 185px;
+}
+
+.pos_img3
+{
+    top: 140px;
+}
+
+.pos_img4
+{
+    top: 232px;
+}
+
+.logo-img
+{
+    // height: 50%;
+    margin-top: 29px;
+
+}
+
+  .logo-tag_style
+  {
+    // height: 65%;
+    // width: 100%;
+    // background-color:#fff;
+    // z-index: 0;
+    // position: absolute;
+    // justify-content: center;
+    // display: flex;
+    // align-items: center;
+    display: grid; 
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr;
+    height: 65%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+
+  
+
+
+ .button-style
+ {
+     margin-bottom:-4px; 
+   
+ }
+ .title
+ {
+    padding: 75px;
+ }
+ 
+    .footer-style
+ {
+    height:auto ;
+    width: 100%;
+    background-color:black;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+
+ }
+
+ @media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+
+
+ .line-strip
+ {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+     
+ }
+
+.line-strip_div
+{
+height:100%;
+width:15%;
+background-color:#eeeeee;  
+z-index: 1;
+justify-content: center;
+display: flex;
+
+}
+.line-strip_div1
+{
+    height:100%;
+width:15%;
+background-color:#fff;  
+z-index: 1;
+justify-content: center;
+display: flex;
+}
+
+.toolbar-md {
+    padding: 0px;
+    min-height: 70px;
+    text-align: center;
+}
+
+
+.scroll-content{
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+ }
+ 
+.language-box{
+height: 25px;
+width:62px;
+border:1px solid #373737;
+}
+
+.language-box-p{
+color: #373737;  
+margin-top: -4px;
+font-family: "NotoSans-Regular" !important;
+font-size: 1.5rem;
+}
+
+.font-box-text{
+ color: #373737;
+ margin-top: 0px;
+ font-size: 1.5rem;
+ width: 66px;
+ margin-top: -3px;
+ font-family: "NotoSans-Regular" !important;
+
+}
+.font-box{
+ display:block;
+ margin-top: -5px;
+ max-width: 120%;
+ width: 115%;
+}
+
+.add-box{
+ display:inline-block; width:35%; float:left; border:1px solid #373737;background-color: #373737;
+ text-align: center;
+ height:25px;
+}
+.sub-box{
+ display:inline-block; width:35%; float:left; border:1px solid #373737; text-align: center;height:25px;
+}
+ion-icon {
+ display: inline-block;
+ font-size: 1em;
+}
+
+.ionrow-p
+{
+ color: #373737;
+     font-size: 26px;  font-family: "NotoSans-Regular","NotoSans-Bold"; 
+}
+
+.button-md-homeclr {
+ background-color: #32beb3 !important;
+ font-family: "NotoSans-Regular" !important; 
+}
+
+
+ 
+body {
+    text-align:center;
+    padding:8rem 3rem;
+}
+
+.header-style
+{
+    height: 88px;
+    width: 100%;
+    background-color: #373737;
+    position: absolute;
+    z-index: 2;
+}
+
+// new design 
+
+.centered
+{
+    font-size: 26px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#main{ 
+    width: 100%;
+    margin: 0 auto;
+}
+
+.button-md {
+    background-color: #EC707F;
+    height: 8.5rem !important;
+    font-family: "NotoSans-Regular" !important; 
+    text-transform: capitalize;
+    width: 100%;
+    font-size: 1.5rem ! important;
+   }
+
+   .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    height: 0px !important;
+   }
+   .toolbar-background{
+    height: 78%;
+   }
+   
+   @media screen and (max-height: 640px) {
+
+.logo-img  
+{
+// height: 35%;
+}
+.logo-button
+{
+margin-top: -13px;
+}
+.textONcentre {
+font-size: 4.1rem;
+
+}
+.plus-button_style {
+height: 19px;
+}
+.p-text {
+top: 153px;
+}
+}
+
+
+
+
+
+}

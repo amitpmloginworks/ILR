@@ -1,0 +1,146 @@
+  
+
+  
+  <ion-content padding>   
+   <div style="text-align: center; object-fit: cover;">
+      <img  src="assets/imgs/whoareyou.png" style="width: 75%; height: 44px;"  > 
+   </div>
+   <div style="text-align: center;    object-fit: cover;">
+      <div class="img-outer_box" >
+         <div class="img-box"> 
+            <img class="image-profile"  src="{{ image }}" (click)="uploadpicture(1)"  [ngStyle]="(image == 'assets/imgs/001-social.png'  )?{   }:{ 'border-radius': '50%' }"  id="imgfile" >   
+          </div>
+      </div>
+   </div>
+   <ion-list style="margin-top: 2px;" >
+      <div class="outer-div">
+         <div class="inner-divimg"> <img src="assets/icon/selectrole.png" style="width: 22px;" >   </div>
+         <div class="texttittle"> Select Role </div>
+      </div>
+      <ion-item>
+         <ion-select [(ngModel)]="student" interface="popover" >
+         <ion-option value="0">Select </ion-option>
+         <ion-option value="1">Student </ion-option>
+         <ion-option value="2">Teacher </ion-option>
+         </ion-select>
+      </ion-item>
+      <div style=" width: 14px; height: 14px; float: right; top: -23px; display: flex; position: relative; left: -5px;">
+         <img src="assets/icon/up-down-arrow.png">
+      </div>
+      <form [formGroup]="validation">
+         <div style="display: block; width: 100%;padding-top: 20px;">
+            <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+               <div class="inner-divimg" style="width: 18%;">
+                  <img src="assets/icon/firstlastname.png" style="width: 22px;" >  
+               </div>
+               <div class="texttittle"> First Name </div>
+            </div>
+            <div style="display: inline-block;width: 6%;height: 1px;float: left;text-align: left;"></div>
+            <div style="width:60%;display: inline-block;width: 47%;float: left;text-align: left;">
+               <div class="inner-divimg" style="width: 18%;"> 
+                  <img src="assets/icon/firstlastname.png" style="width: 22px;" >   
+               </div>
+               <div class="texttittle"> Last Name </div>
+            </div>
+         </div>
+         <div style="height: 40px;display: block;width: 100%;">
+            <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+               <ion-item style="    border: 1px solid #ADADAD;">
+                  <ion-input  type="text" [(ngModel)]="FirstName"   formControlName="FirstName" [class.invalid]="!validation.controls.FirstName.valid && (validation.controls.FirstName.dirty|| submitAttempt)"
+                  ></ion-input>
+               </ion-item>
+               <p *ngIf="!validation.controls.FirstName.valid && (validation.controls.FirstName.dirty|| submitAttempt)" class="errormsg">*Enter First Name.</p>
+            </div>
+            <div style="display: inline-block;width: 6%;height: 40px;float: left;text-align: left;"></div>
+            <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+               <ion-item style="    border: 1px solid #ADADAD;">
+                  <ion-input  type="text"   formControlName="LastName" [(ngModel)]="LastName"  
+                  [class.invalid]="!validation.controls.LastName.valid && (validation.controls.LastName.dirty|| submitAttempt)"
+                  ></ion-input>
+               </ion-item>
+               <p *ngIf="!validation.controls.LastName.valid && (validation.controls.LastName.dirty|| submitAttempt)" class="errormsg">*Enter Last Name.</p>
+            </div>
+         </div>
+         <div class="outer-div" style="padding-top: 20px; ">
+            <div class="inner-divimg" style="width: 8%;"> <img src="assets/icon/email.png" style="width: 22px;" >   </div>
+            <div class="texttittle"> Email</div>
+         </div>
+         <div>
+            <ion-item style="    border: 1px solid #ADADAD;">
+               <ion-input #usrid  (blur)="UsrEmailCheck(usrid.value)"  (keyup)="UsrEmailCheck(usrid.value)"   type="email"   formControlName="Email_Id" [(ngModel)]="Email_Id"  
+               [class.invalid]="!validation.controls.Email_Id.valid && (validation.controls.Email_Id.dirty|| submitAttempt)"
+               ></ion-input>
+            </ion-item>
+            <p *ngIf="!validation.controls.Email_Id.valid && (validation.controls.Email_Id.dirty|| submitAttempt)" class="errormsg">*Enter Email.</p>
+            <p *ngIf="existalert==true" class="errormsg">*Email_Id already exist.</p>
+         </div>
+         <div style=" display: block; width: 100%;     padding-top: 20px;">
+            <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+               <div class="inner-divimg" style="width: 17%;">
+                  <img src="assets/icon/phone.png" style="width: 22px;" >  
+               </div>
+               <div class="texttittle"> Phone </div>
+            </div>
+            <div style="display: inline-block;width: 6%;height: 1px;float: left;text-align: left;"></div>
+            <div style="width:60%;display: inline-block;width: 47%;float: left;text-align: left;">
+               <div class="inner-divimg" style="width: 17%; margin-left: 13px;"> 
+                  <img src="assets/icon/age.png" style="width: 22px;" >  
+               </div>
+               <div class="texttittle">Age </div>
+            </div>
+         </div>
+         <div style="height: 40px;display: block;width: 100%;">
+            <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+               <ion-item style="    border: 1px solid #ADADAD;">
+                  <ion-input  type="number"   formControlName="PhoneNo" 
+                  [(ngModel)]="PhoneNo" 
+                  [class.invalid]="!validation.controls.PhoneNo.valid && (validation.controls.PhoneNo.dirty|| submitAttempt)"
+                  ></ion-input>
+               </ion-item>
+               <p *ngIf="!validation.controls.PhoneNo.valid && (validation.controls.PhoneNo.dirty|| submitAttempt)" class="errormsg">*Enter Phone Number.</p>
+            </div>
+            <div style="display: inline-block;width: 6%;height: 40px;float: left;text-align: left;"></div>
+            <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+               <ion-item no-lines style="border: 1px solid #ADADAD;padding-left: 0px; margin-bottom: 13px; border-radius: 8px;height: 30px;">
+                  <ion-input  type="number"   formControlName="Age" 
+                  [(ngModel)]="Age"
+                  [class.invalid]="!validation.controls.Age.valid && (validation.controls.Age.dirty|| submitAttempt)"
+                  ></ion-input>
+               </ion-item>
+               <p *ngIf="!validation.controls.Age.valid && (validation.controls.Age.dirty|| submitAttempt)" class="errormsg">*Enter Age.</p>
+            </div>
+         </div>
+      </form>
+      <div style=" display: block; width: 100%; padding-top: 39px;">
+         <div style="display: inline-block;width: 47%; float: left;text-align: left;">
+            <div class="inner-divimg" style="width: 17%;">
+               <img src="assets/icon/gender.png" style="width: 22px;" >  
+            </div>
+            <div class="texttittle"> Gender </div>
+         </div>
+         <div style="display: inline-block;width: 6%;height: 1px;float: left;text-align: left;"></div>
+         <div style="width:60%;display: inline-block;width: 47%;float: left;text-align: left;">
+            <div class="inner-divimg" style="width: 16%;"> 
+            </div>
+            <div> </div>
+         </div>
+      </div>
+      <div style="height: 40px;display: block;width: 100%;">
+         <div style="display: inline-block;width: 47%;height: 40px;float: left;text-align: left;">
+            <ion-item  >
+               <ion-select [(ngModel)]="gender"  interface="popover"> 
+               <ion-option value="1" >Male</ion-option>
+               <ion-option value="2" >Female</ion-option>  
+               </ion-select>      
+            </ion-item>
+         </div>
+         <div style="display: inline-block;width: 6%;height: 40px;float: left;text-align: left;"></div>
+         <div style="display: inline-block;width: 47%;height: 40px;    margin-top: -20px;float: left;text-align: left;">    
+            <button ion-button [disabled]="!validation.valid" no-margin no-padding style="box-shadow:none;background-color: #ffffff;    height: 10.0rem; -webkit-box-shadow:none;" (click)="navigatetoschooldetails()" >
+            <img src="assets/imgs/nextbtn.png" style="margin-left: auto;  display: block;       width:55%; margin-bottom: 10px;"  > 
+            </button>
+         </div>
+      </div>
+   </ion-list>
+</ion-content>
+    

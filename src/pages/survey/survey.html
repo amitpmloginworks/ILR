@@ -1,0 +1,171 @@
+<!--
+  Generated template for the SurveyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <headerbar></headerbar> 
+  </ion-header>
+
+<ion-content padding>
+    
+  <ion-list style="margin-top: 57px;    border: 2px solid #EC707F;">
+   
+    <button no-lines ion-item style="background-color:#EC707F;color: #fff;">
+       Survey 
+      </button>   
+      <div *ngFor="let item of ContestListArr">
+        <div *ngIf="item.status == 0 ">
+            <button style="color: #337ab7;" no-lines ion-item  (click)="GetDataById(item.survey_id)" [ngStyle]="(item.status == 1  )?{'text-decoration': 'line-through'}:{}">
+                {{ item.title }}
+              </button>
+        </div>
+        <div *ngIf="item.status == 1 "> 
+            <button style="color: #337ab7;" no-lines ion-item [ngStyle]="(item.status == 1  )?{'text-decoration': 'line-through'}:{}">
+                {{ item.title }}
+              </button>
+          </div>
+         
+      </div>
+    
+    
+  </ion-list>
+
+<p class="title-box" >{{ survey_name }}</p>
+
+<div style="height:auto;    margin-bottom: 10px;" >
+
+    <div *ngIf="surveyForm"> 
+        <form [formGroup]="surveyForm">
+            <div formArrayName="answers">
+    <div  *ngFor="let question of answers; let i = index" [formGroupName]="i">
+
+      <div *ngIf="question.type == 'checkbox'">
+        <P class="pQuest" >
+         {{ i+1 }}.  {{ question.question }}
+        </P>
+        <ion-row>
+            <ion-col col-12>
+              <ng-container>
+                <div formArrayName="answer_by_user">
+                  <div *ngFor="let choice of question.answers; let j = index" >
+                    <ion-item no-lines *ngIf="choice.id !=0">
+                      <ion-label style="white-space: normal;">{{ choice.id }}</ion-label>
+                      <ion-checkbox color="redtheme" (ionChange)="onChange(choice.id, $event.checked, i)" value="choice.id"></ion-checkbox>
+                    </ion-item>
+                  </div>
+                </div>
+              </ng-container>
+            </ion-col>
+          </ion-row>
+        </div>  
+
+        <div *ngIf="question.type == 'dropdown'">
+            <P class="pQuest" >
+             {{ i+1 }}.  {{ question.question }}
+            </P>
+            <ion-row>
+                <ion-col col-12>
+                  <ng-container>
+                    <div formArrayName="answer_by_user">
+                        <ion-item no-lines style="background-color:#EC707F;color:#fff " >
+                            <ion-label style="color: #fff">None Selected</ion-label>
+                            <ion-select style="color:#fff" #C (ionChange)="onChangeDrop(C.value,question.id,i)"  multiple="true" okText="Okay" cancelText="Dismiss" text-wrap >
+                              <div *ngFor="let choice of question.answers; let j = index" >
+                              <ion-option color="redtheme"  style="color:#fff" [value]="choice.id" *ngIf="choice.id !=0">{{ choice.id }}</ion-option>
+                              </div>
+                              </ion-select>
+                        </ion-item>
+                    </div>
+                  </ng-container>
+                </ion-col>
+              </ion-row>
+            </div>
+
+
+            <div *ngIf="question.type == 'mcq'">
+                <P class="pQuest" >
+                 {{ i+1 }}.  {{ question.question }}
+                </P>
+                <ion-row>
+                    <ion-col col-12>
+                      <ng-container>
+                          <div formArrayName="answer_by_user">
+                              <ion-list radio-group #radiobtn  (ionChange)="RadioChange(question.id, $event, i)" >
+                              <div *ngFor="let choice of question.answers; let j = index">
+                                <ion-item no-lines *ngIf="choice.id !=0">
+                                  <ion-radio color="redtheme"  item-left [value]="choice.id" ></ion-radio>
+                                  <ion-label style="white-space: normal;">{{ choice.id }}</ion-label>
+                                 
+                                </ion-item>
+                              </div>
+                            </ion-list>
+                            </div>
+                      </ng-container>
+                    </ion-col>
+                  </ion-row>
+                </div>
+
+                <div *ngIf="question.type == 'open'">
+                  <P class="pQuest" >
+                   {{ i+1 }}.  {{ question.question }}
+                  </P>
+                  <ion-row>
+                      <ion-col col-12>
+                        <ng-container>
+                            <div formArrayName="answer_by_user">
+                                <ion-list   >
+                                  <ion-item >
+                                      <ion-textarea color="redtheme" (ionBlur)="Openchange(question.id, $event, i)" pin="true">
+                                      </ion-textarea>
+                                  </ion-item>
+                              </ion-list>
+                              </div>
+                        </ng-container>
+                      </ion-col>
+                    </ion-row>
+                  </div>
+
+ 
+                <div *ngIf="question.type == 'slider'">
+                  <P class="pQuest" >
+                   {{ i+1 }}.  {{ question.question }}
+                  </P>
+                  <ion-row> 
+                      <ion-badge id="{{'range_'+i}}" ></ion-badge>    
+                      <ion-col col-12>
+                        <ng-container>
+                            <div formArrayName="answer_by_user">
+                                <ion-list   >
+                                  <ion-item > 
+                                      <ion-range color="redtheme"  snaps="true" [min]="question.min_value" [max]="question.max_value" (ionBlur)="Sliderchange(question.id, $event, i)" pin="true" >
+                                          <ion-label range-left>
+                                       {{question.min_value}}
+                                            </ion-label>
+                                            <ion-label range-right>
+                                             {{question.max_value}}
+                                              </ion-label>
+                                      </ion-range>
+                                      
+                                  </ion-item>
+                              </ion-list>
+                              </div>
+                        </ng-container>
+                      </ion-col>
+                    </ion-row>
+                  </div>
+
+        </div>
+      </div>
+    </form> 
+      </div>     
+</div>
+
+<button  style="
+margin-top: -7px;
+background-color: #EC707F;
+
+margin-bottom: 42px;" [hidden]="mcqsBtnHide" ion-button full (click)="SurveyBtn()" >Submit</button>
+
+</ion-content>

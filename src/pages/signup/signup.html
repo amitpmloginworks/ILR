@@ -1,0 +1,61 @@
+
+
+<ion-header>
+    <ion-navbar hideBackButton>
+      <img src="assets/icon/header.png"><div class="centered"> CREATE AN ACCOUNT </div>
+    </ion-navbar>
+  </ion-header> 
+
+    <ion-content >
+      
+
+
+       <ion-row style=" margin-top: 95px; margin-bottom: 6px;" text-center>
+    <ion-col col-12>
+    <div text-center>
+     <img style="height: 165px;" src="assets/imgs/fflogo.png">
+    </div>
+  </ion-col>
+  </ion-row>
+
+      
+      <ion-list>
+        <form [formGroup]="ValidateForm">
+
+          <ion-item >
+            <ion-input #usrid  (blur)="UsrEmailCheck(usrid.value)"  (keyup)="UsrEmailCheck(usrid.value)"  type="email"   formControlName="username"  style=" text-transform: lowercase;"  [class.invalid]="!ValidateForm.controls.username.valid && (ValidateForm.controls.username.dirty|| submitAttempt)"  placeholder="Enter your Username/Email Address"></ion-input>
+          </ion-item>
+          <p *ngIf="!ValidateForm.controls.username.valid && (ValidateForm.controls.username.dirty|| submitAttempt)" style="color:red;margin-left: 13px; ">*Enter  UserName.</p>
+          
+          <p *ngIf="existalert==true" class="errormsg">*UserName already exist.</p> 
+
+ 
+          <ion-item >
+            <ion-input   formControlName="password"  [class.invalid]="!ValidateForm.controls.password.valid && (ValidateForm.controls.password.dirty || submitAttempt)"
+               type="password"  placeholder="Enter your Password"></ion-input>
+          </ion-item>
+          <p *ngIf="!ValidateForm.controls.password.valid && (ValidateForm.controls.password.dirty|| submitAttempt)" class="errormsg">*Password length must be of 4 to 15 characters</p>   
+        </form>
+        </ion-list>
+ 
+        <p text-center style="color: #242021; font-weight: 800;">OR</p>
+        <div text-center>
+            <img src="assets/imgs/googlebtn.png" style="margin-left: auto; margin-right: auto; display: block;    width: 40%; margin-bottom: 10px;"  (click)="loginWithGoogle()">
+            <img src="assets/imgs/fbbtn.png" style="margin-left: auto; margin-right: auto; display: block;    width: 40%;margin-bottom: 10px;" (click)="loginWithFB()">
+               
+        </div>
+          
+        <!-- <p text-center class="p-terms"  >By Continuing you accept the <a style=" text-decoration: underline;color: #636363;">Terms of Use</a> and <a style="    text-decoration: underline;color: #636363;">Privacy Policy.</a></p> -->
+  
+    <ion-row style=" margin-bottom: 10px !important;">
+        <ion-col col-3></ion-col>
+      <ion-col col-6 text-center>
+          <button ion-button [disabled]="!ValidateForm.valid" no-margin no-padding style="box-shadow:none;background-color: #ffffff; height: 10rem; -webkit-box-shadow:none;" (click)="navigateToLogin()" >
+              <img src="assets/imgs/nextbtn.png" style="    width: 52%;" >
+      </button>
+      </ion-col>
+      <ion-col col-3></ion-col>
+    </ion-row>
+      </ion-content>
+    
+

@@ -1,0 +1,20 @@
+<!--
+  Generated template for the DailypostmagzinecontentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+   <headerbar></headerbar>
+</ion-header>
+<ion-content padding style="margin-top:10px;">
+   <ion-card  class="card-style" *ngFor="let dp of daily_posts">
+      <ion-card-title class="card-title">
+         {{dp.title}}
+      </ion-card-title>
+      <ion-card-content>
+         <img src="{{dp.image}}">
+      </ion-card-content>
+   </ion-card>
+</ion-content>
